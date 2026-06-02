@@ -1,0 +1,14 @@
+{
+  "projectId": "6a1f6599fbdac6aa63405d89",
+  "slug": "shikha-website-mpx9i9ph",
+  "framework": "nextjs",
+  "kind": "marketing-site",
+  "pages": ["/", "/platform", "/solutions", "/pricing"],
+  "notes": "Tyashin's own marketing website. Pricing is fetched live from the public /api/v1/billing/all-pricing getter — never hardcoded.",
+  "tyashinOwnedRoutes": [
+    "/brand-kit.css",
+    "/tyashin-runtime.js",
+    "/sitemap.xml",
+    "/robots.txt"
+  ]
+}
