@@ -2,8 +2,6 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import SiteShell from "@/components/SiteShell";
 
-const NOINDEX = process.env.ROBOTS_NOINDEX === "true";
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://tyashin.com"),
   title: {
@@ -20,9 +18,6 @@ export const metadata: Metadata = {
     url: "https://tyashin.com",
   },
   icons: { icon: "/favicon.svg" },
-  robots: NOINDEX
-    ? { index: false, follow: false, googleBot: { index: false, follow: false } }
-    : undefined,
 };
 
 export const viewport: Viewport = {

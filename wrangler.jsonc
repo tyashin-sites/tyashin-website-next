@@ -8,7 +8,6 @@
     "binding": "ASSETS"
   },
   "vars": {
-    "TYASHIN_API_URL": "https://website-api.tyashin.com",
-    "ROBOTS_NOINDEX": "true"
+    "TYASHIN_API_URL": "https://website-api.tyashin.com"
   }
 }
