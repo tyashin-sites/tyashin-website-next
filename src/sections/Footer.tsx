@@ -28,6 +28,13 @@ export default function Footer() {
               The AI growth &amp; commerce OS for modern storefronts. Built on the edge, priced for
               the real world.
             </p>
+            <a
+              href="/linkedin"
+              className="mt-5 inline-flex items-center gap-2 rounded-full border border-ink-line px-3.5 py-1.5 text-xs text-white/60 transition-colors hover:text-white"
+            >
+              <span className="h-1.5 w-1.5 rounded-full bg-[#3b9bff]" />
+              Also from Tyashin: grow your LinkedIn →
+            </a>
           </div>
           {COLUMNS.map((col) => (
             <div key={col.title}>

@@ -11,6 +11,7 @@ const LINKS = [
   { label: "Platform", href: "/platform" },
   { label: "Solutions", href: "/solutions" },
   { label: "Pricing", href: "/pricing" },
+  { label: "For LinkedIn", href: "/linkedin" },
 ];
 
 export default function Nav() {
