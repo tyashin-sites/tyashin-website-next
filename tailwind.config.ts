@@ -19,8 +19,8 @@ export default {
         },
       },
       fontFamily: {
-        display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
-        sans: ['"Inter"', 'system-ui', 'sans-serif'],
+        display: ['var(--font-display)', '"Space Grotesk"', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-sans)', '"Inter"', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
         'accent-gradient': 'linear-gradient(110deg, #7C5CFF 0%, #5B8DEF 45%, #22D3EE 100%)',

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { prefersReducedMotion } from '@/lib/utils';
+import { isFinePointer, prefersReducedMotion } from '@/lib/utils';
 
 /**
  * Interactive constellation field rendered on a 2D canvas.
@@ -20,8 +20,11 @@ export default function AuroraCanvas() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const reduced = prefersReducedMotion();
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    // Animate only on desktop pointers with motion allowed. On touch/mobile
+    // (coarse pointer) and under reduced-motion we paint ONE static frame — no
+    // rAF loop, no listeners — removing the biggest mobile CPU / TBT cost.
+    const interactive = isFinePointer() && !prefersReducedMotion();
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.75);
     let w = 0;
     let h = 0;
     let particles: P[] = [];
@@ -37,7 +40,7 @@ export default function AuroraCanvas() {
       canvas.height = h * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-      const density = Math.min(110, Math.floor((w * h) / 14000));
+      const density = Math.min(90, Math.floor((w * h) / 16000));
       particles = Array.from({ length: density }, () => {
         const x = Math.random() * w;
         const y = Math.random() * h;
@@ -128,8 +131,8 @@ export default function AuroraCanvas() {
     const onResize = () => build();
 
     build();
-    if (reduced) {
-      // static single frame, no animation, no interaction
+    if (!interactive) {
+      // Static single frame — mobile/touch & reduced-motion. No loop/listeners.
       draw();
       stop();
       return () => {};

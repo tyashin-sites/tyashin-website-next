@@ -1,6 +1,22 @@
 import type { Metadata, Viewport } from "next";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import SiteShell from "@/components/SiteShell";
+
+// Self-hosted, preloaded, swap — no render-blocking external font request,
+// no layout shift. Exposed as CSS vars consumed by tailwind's font families.
+const sans = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
+  display: "swap",
+});
+const display = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-display",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tyashin.com"),
@@ -32,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className={`dark ${sans.variable} ${display.variable}`}>
       <body>
         <SiteShell>{children}</SiteShell>
       </body>
