@@ -7,6 +7,9 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
+  "kv_namespaces": [
+    { "binding": "NEXT_INC_CACHE_KV", "id": "426d3a7563b14b9ab194d8495ae1c7ef" }
+  ],
   "vars": {
     "TYASHIN_API_URL": "https://website-api.tyashin.com"
   }
