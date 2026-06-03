@@ -7,23 +7,24 @@ interface PricingState {
   data: AllPricing;
   live: boolean;
   loading: boolean;
-  /** Force a currency (null = let the server geo-detect). */
-  setCurrency: (code: string | null) => void;
-  currencyOverride: string | null;
 }
 
 const PricingContext = createContext<PricingState | null>(null);
 
+/**
+ * Fetches pricing ONCE, localised to the visitor's currency. Currency is
+ * resolved entirely server-side from the Cloudflare geo header (visitor's
+ * country → currency, USD fallback) by the platform's getAllPricing business
+ * logic — there is intentionally no client-side currency override.
+ */
 export function PricingProvider({ children }: { children: ReactNode }) {
   const [data, setData] = useState<AllPricing>(FALLBACK);
   const [live, setLive] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [currencyOverride, setCurrencyOverride] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
-    setLoading(true);
-    fetchAllPricing(currencyOverride ?? undefined).then((res) => {
+    fetchAllPricing().then((res) => {
       if (cancelled) return;
       setData(res.data);
       setLive(res.live);
@@ -32,20 +33,10 @@ export function PricingProvider({ children }: { children: ReactNode }) {
     return () => {
       cancelled = true;
     };
-  }, [currencyOverride]);
+  }, []);
 
   return (
-    <PricingContext.Provider
-      value={{
-        data,
-        live,
-        loading,
-        currencyOverride,
-        setCurrency: setCurrencyOverride,
-      }}
-    >
-      {children}
-    </PricingContext.Provider>
+    <PricingContext.Provider value={{ data, live, loading }}>{children}</PricingContext.Provider>
   );
 }
 
@@ -54,16 +45,3 @@ export function usePricing(): PricingState {
   if (!ctx) throw new Error('usePricing must be used within PricingProvider');
   return ctx;
 }
-
-/** Currencies the visitor can manually switch between (platform supports all). */
-export const SELECTABLE_CURRENCIES = [
-  'USD',
-  'INR',
-  'EUR',
-  'GBP',
-  'CAD',
-  'AUD',
-  'SGD',
-  'AED',
-  'JPY',
-] as const;

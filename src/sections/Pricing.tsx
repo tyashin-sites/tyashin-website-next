@@ -4,7 +4,7 @@ import { Check } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import Button from '@/components/Button';
 import { cn } from '@/lib/utils';
-import { usePricing, SELECTABLE_CURRENCIES } from '@/lib/usePricing';
+import { usePricing } from '@/lib/usePricing';
 import type { Tier } from '@/lib/pricing';
 
 const CTA_LABEL: Record<string, string> = {
@@ -15,7 +15,7 @@ const CTA_LABEL: Record<string, string> = {
 };
 
 export default function Pricing() {
-  const { data, loading, live, currencyOverride, setCurrency } = usePricing();
+  const { data, loading, live } = usePricing();
   const plans = data.platform.plans;
 
   return (
@@ -28,37 +28,14 @@ export default function Pricing() {
           </h2>
           <p className="mt-5 text-white/55">
             One subscription replaces a dozen. Free to start, shown in{' '}
-            <span className="text-white/80">{data.displayCurrency}</span>{' '}
-            {data.country ? `(detected for ${data.country})` : ''} — billed via{' '}
+            <span className="text-white/80">{data.displayCurrency}</span> — billed via{' '}
             {data.gateway === 'razorpay' ? 'Razorpay' : 'Stripe'}.
           </p>
         </Reveal>
 
-        {/* currency switcher */}
-        <Reveal delay={0.05} className="mt-8 flex justify-center">
-          <div className="border-ink-line bg-ink-card/60 inline-flex flex-wrap items-center justify-center gap-1 rounded-full border p-1">
-            {SELECTABLE_CURRENCIES.map((cur) => {
-              const active = (currencyOverride ?? data.displayCurrency) === cur;
-              return (
-                <button
-                  key={cur}
-                  onClick={() => setCurrency(cur)}
-                  data-cursor="hover"
-                  className={cn(
-                    'rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors',
-                    active ? 'bg-accent-gradient text-ink' : 'text-white/55 hover:text-white'
-                  )}
-                >
-                  {cur}
-                </button>
-              );
-            })}
-          </div>
-        </Reveal>
-
         <div
           className={cn(
-            'mt-12 grid grid-cols-1 gap-5 transition-opacity lg:grid-cols-4',
+            'mt-14 grid grid-cols-1 gap-5 transition-opacity lg:grid-cols-4',
             loading && 'opacity-50'
           )}
         >
