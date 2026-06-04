@@ -140,7 +140,7 @@ export default function ChatShowcase() {
 
               {/* input */}
               <div className="border-ink-line bg-ink-soft mt-4 flex items-center gap-2 rounded-full border px-4 py-2.5">
-                <span className="flex-1 text-sm text-white/30">
+                <span className="flex-1 text-sm text-white/50">
                   Ask about products, orders, shipping…
                 </span>
                 <span className="bg-accent-gradient text-ink inline-flex h-7 w-7 items-center justify-center rounded-full">

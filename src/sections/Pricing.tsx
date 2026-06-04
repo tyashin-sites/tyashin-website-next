@@ -46,7 +46,7 @@ export default function Pricing() {
           ))}
         </div>
 
-        <p className="mt-8 text-center text-xs text-white/30">
+        <p className="mt-8 text-center text-xs text-white/50">
           {live
             ? 'Live pricing from the Tyashin billing service.'
             : 'Showing reference pricing — connect to see your local currency.'}{' '}
@@ -84,7 +84,7 @@ function PlanCard({ tier }: { tier: Tier }) {
         <span className="font-display text-4xl font-semibold text-white">
           {tier.priceFormatted}
         </span>
-        {tier.price > 0 && <span className="mb-1 text-sm text-white/45">/mo</span>}
+        {tier.price > 0 && <span className="mb-1 text-sm text-white/55">/mo</span>}
       </div>
       <ul className="mt-6 flex-1 space-y-2.5">
         {features.map((f) => (

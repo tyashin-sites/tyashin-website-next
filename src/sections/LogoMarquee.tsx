@@ -17,7 +17,7 @@ const RUNS_ON = [
 export default function LogoMarquee() {
   return (
     <section className="border-ink-line bg-ink-soft/40 relative border-y py-8">
-      <p className="mb-6 text-center text-xs uppercase tracking-[0.25em] text-white/35">
+      <p className="mb-6 text-center text-xs uppercase tracking-[0.25em] text-white/50">
         Ports from · runs on · pays out through
       </p>
       <div className="relative">
@@ -28,7 +28,7 @@ export default function LogoMarquee() {
           {RUNS_ON.map((name) => (
             <span
               key={name}
-              className="font-display whitespace-nowrap text-xl font-medium text-white/30 transition-colors hover:text-white/70"
+              className="font-display whitespace-nowrap text-xl font-medium text-white/50 transition-colors hover:text-white/70"
             >
               {name}
             </span>

@@ -84,7 +84,7 @@ export default function Hero() {
           </Button>
         </div>
 
-        <p className="hero-in mt-6 text-xs text-white/35" style={{ animationDelay: '0.48s' }}>
+        <p className="hero-in mt-6 text-xs text-white/50" style={{ animationDelay: '0.48s' }}>
           No card required · Free plan forever · India &amp; global payments built in
         </p>
       </motion.div>

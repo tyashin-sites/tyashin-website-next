@@ -24,7 +24,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-10 md:grid-cols-5">
           <div className="col-span-2">
             <Wordmark className="h-7" />
-            <p className="mt-4 max-w-xs text-sm text-white/45">
+            <p className="mt-4 max-w-xs text-sm text-white/55">
               The AI growth &amp; commerce OS for modern storefronts. Built on the edge, priced for
               the real world.
             </p>
@@ -38,13 +38,13 @@ export default function Footer() {
           </div>
           {COLUMNS.map((col) => (
             <div key={col.title}>
-              <h4 className="font-display text-sm font-semibold text-white">{col.title}</h4>
+              <h3 className="font-display text-sm font-semibold text-white">{col.title}</h3>
               <ul className="mt-4 space-y-2.5">
                 {col.links.map((l) => (
                   <li key={l}>
                     <a
                       href="#"
-                      className="text-sm text-white/45 transition-colors hover:text-white"
+                      className="text-sm text-white/55 transition-colors hover:text-white"
                     >
                       {l}
                     </a>
@@ -55,7 +55,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="border-ink-line mt-14 flex flex-col items-center justify-between gap-4 border-t pt-8 text-xs text-white/35 sm:flex-row">
+        <div className="border-ink-line mt-14 flex flex-col items-center justify-between gap-4 border-t pt-8 text-xs text-white/50 sm:flex-row">
           <p>© {new Date().getFullYear()} Tyashin · Aapastech Pvt Ltd. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <a href="#" className="transition-colors hover:text-white/70">
