@@ -48,8 +48,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`dark ${sans.variable} ${display.variable}`}>
-      <body>
+    // Inline `backgroundColor: #06070A` (colors.ink.DEFAULT) on BOTH <html>
+    // and <body> so the dark canvas paints on the very first frame — before
+    // the render-blocking Tailwind bundle loads. Without this the viewport
+    // flashes white for ~2-3 blank filmstrip frames, which was inflating
+    // mobile Speed Index to 7.5s even though FCP/LCP were fine.
+    <html
+      lang="en"
+      className={`dark ${sans.variable} ${display.variable}`}
+      style={{ backgroundColor: '#06070A' }}
+    >
+      <body style={{ backgroundColor: '#06070A' }}>
         <SiteShell>{children}</SiteShell>
       </body>
     </html>
