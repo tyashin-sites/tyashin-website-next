@@ -27,7 +27,11 @@ export default function SiteShell({ children }: { children: ReactNode }) {
         className="fixed inset-x-0 top-0 z-[55] h-0.5 origin-left bg-accent-gradient"
       />
       <Nav />
-      <main className="relative">{children}</main>
+      {/* overflow-x-clip is the single guard against decorative orbs / marquees
+          leaking horizontal scroll (which also stretched the fixed nav past the
+          viewport on mobile). `clip` — not `hidden` — does NOT create a scroll
+          container, so it leaves the sticky scroll-pin sections intact. */}
+      <main className="relative overflow-x-clip">{children}</main>
       <Footer />
     </PricingProvider>
   );

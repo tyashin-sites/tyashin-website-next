@@ -21,7 +21,10 @@ export default function Hero() {
     <section
       id="top"
       ref={ref}
-      className="relative flex min-h-[100svh] items-center justify-center overflow-hidden"
+      // pt-28/pb-16: keep hero content clear of the fixed nav. With min-h (not
+      // h) the section grows when content is taller than a short mobile
+      // viewport, so the badge/headline never tuck up under the nav bar.
+      className="relative flex min-h-[100svh] items-center justify-center overflow-hidden pb-16 pt-28"
     >
       {/* interactive constellation */}
       <div className="absolute inset-0 -z-10">

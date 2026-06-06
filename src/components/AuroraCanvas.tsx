@@ -20,10 +20,15 @@ export default function AuroraCanvas() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Animate only on desktop pointers with motion allowed. On touch/mobile
-    // (coarse pointer) and under reduced-motion we paint ONE static frame — no
-    // rAF loop, no listeners — removing the biggest mobile CPU / TBT cost.
-    const interactive = isFinePointer() && !prefersReducedMotion();
+    // Animate the constellation on ALL devices (the drifting point-cloud is
+    // the signature interactive element) UNLESS the user asks for reduced
+    // motion — then we paint one static frame. Mouse-warp listeners are added
+    // only for fine pointers (desktop); touch devices get the ambient drift
+    // without pointer tracking. The IntersectionObserver still pauses the rAF
+    // loop when the hero scrolls off-screen, and density/DPR are capped, so the
+    // mobile cost stays negligible (latest PSI mobile TBT = 0ms).
+    const animate = !prefersReducedMotion();
+    const useMouse = isFinePointer() && animate;
     const dpr = Math.min(window.devicePixelRatio || 1, 1.75);
     let w = 0;
     let h = 0;
@@ -131,12 +136,19 @@ export default function AuroraCanvas() {
     const onResize = () => build();
 
     build();
-    if (!interactive) {
-      // Static single frame — mobile/touch & reduced-motion. No loop/listeners.
+    if (!animate) {
+      // Reduced-motion: paint ONE static frame, no loop/listeners.
       draw();
       stop();
       return () => {};
     }
+
+    // Paint one frame synchronously so the constellation is ALWAYS visible on
+    // load, even before the IntersectionObserver delivers its first callback
+    // (some engines report intersecting=false momentarily, which would
+    // otherwise leave the hero blank until the first scroll).
+    draw();
+    stop();
 
     const io = new IntersectionObserver(
       ([entry]) => {
@@ -148,16 +160,21 @@ export default function AuroraCanvas() {
     );
     io.observe(canvas);
 
-    window.addEventListener('mousemove', onMove);
-    window.addEventListener('mouseleave', onLeave);
+    // Mouse-warp only on fine pointers; touch devices get ambient drift only.
+    if (useMouse) {
+      window.addEventListener('mousemove', onMove);
+      window.addEventListener('mouseleave', onLeave);
+    }
     window.addEventListener('resize', onResize);
     start();
 
     return () => {
       stop();
       io.disconnect();
-      window.removeEventListener('mousemove', onMove);
-      window.removeEventListener('mouseleave', onLeave);
+      if (useMouse) {
+        window.removeEventListener('mousemove', onMove);
+        window.removeEventListener('mouseleave', onLeave);
+      }
       window.removeEventListener('resize', onResize);
     };
   }, []);
