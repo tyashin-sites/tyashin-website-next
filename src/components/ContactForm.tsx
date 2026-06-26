@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, type FormEvent } from 'react';
+import { useEffect, useState, type FormEvent } from 'react';
 import { ArrowRight, Check, AlertCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -8,9 +8,17 @@ const TOPICS = ['Pricing', 'Demo', 'Partnership', 'Other'] as const;
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
-export default function ContactForm({ initialTopic }: { initialTopic?: string }) {
+export default function ContactForm() {
   const [status, setStatus] = useState<Status>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const [topic, setTopic] = useState<string>('Pricing');
+
+  useEffect(() => {
+    const fromQuery = new URLSearchParams(window.location.search).get('topic');
+    if (fromQuery && (TOPICS as readonly string[]).includes(fromQuery)) {
+      setTopic(fromQuery);
+    }
+  }, []);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -90,7 +98,8 @@ export default function ContactForm({ initialTopic }: { initialTopic?: string })
         <select
           id="topic"
           name="topic"
-          defaultValue={initialTopic && (TOPICS as readonly string[]).includes(initialTopic) ? initialTopic : 'Pricing'}
+          value={topic}
+          onChange={(e) => setTopic(e.target.value)}
           className="border-ink-line focus:border-cyan-glow/60 mt-2 w-full appearance-none rounded-xl border bg-black/40 px-4 py-3 text-sm text-white outline-none transition-colors"
         >
           {TOPICS.map((t) => (

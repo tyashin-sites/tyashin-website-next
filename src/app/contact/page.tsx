@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import { headers } from 'next/headers';
-import { MessageCircle, Mail, Clock } from 'lucide-react';
+import { Mail, Clock } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import ContactForm from '@/components/ContactForm';
+import WhatsAppPanel from '@/components/WhatsAppPanel';
 
 export const metadata: Metadata = {
   title: 'Contact Tyashin',
@@ -11,30 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/contact' },
 };
 
-const WHATSAPP_IN = '919667747082';
-const WHATSAPP_CA = '14378000190';
-const WHATSAPP_TEXT = encodeURIComponent("Hi Tyashin — I'd like to learn more.");
-
-type WhatsAppRoute = { number: string; display: string; region: 'India' | 'Canada' };
-
-function whatsappFor(country: string | null): WhatsAppRoute {
-  if (country === 'IN') {
-    return { number: WHATSAPP_IN, display: '+91 96677 47082', region: 'India' };
-  }
-  return { number: WHATSAPP_CA, display: '+1 437 800 0190', region: 'Canada' };
-}
-
-export default async function ContactPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ topic?: string }>;
-}) {
-  const headerList = await headers();
-  const country = headerList.get('cf-ipcountry');
-  const wa = whatsappFor(country);
-  const { topic } = await searchParams;
-  const waHref = `https://wa.me/${wa.number}?text=${WHATSAPP_TEXT}`;
-
+export default function ContactPage() {
   return (
     <section className="relative py-28">
       <div className="bg-radial-fade pointer-events-none absolute inset-x-0 top-0 h-[480px]" />
@@ -53,32 +30,12 @@ export default async function ContactPage({
 
         <div className="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_minmax(0,420px)]">
           <Reveal delay={0.05}>
-            <ContactForm initialTopic={topic} />
+            <ContactForm />
           </Reveal>
 
           <Reveal delay={0.15}>
             <aside className="flex h-full flex-col gap-5">
-              <a
-                href={waHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-ink-line bg-ink-card/60 group flex items-start gap-4 rounded-3xl border p-6 transition-colors hover:border-white/25"
-              >
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-emerald-500/15 text-emerald-300">
-                  <MessageCircle className="h-5 w-5" />
-                </div>
-                <div>
-                  <div className="font-display text-base font-semibold text-white">
-                    Chat on WhatsApp
-                  </div>
-                  <div className="mt-1 text-sm text-white/55">
-                    {wa.display} · {wa.region} team
-                  </div>
-                  <div className="mt-2 text-xs text-white/40">
-                    Usually replies in minutes during business hours.
-                  </div>
-                </div>
-              </a>
+              <WhatsAppPanel />
 
               <a
                 href="mailto:hello@tyashin.com"
