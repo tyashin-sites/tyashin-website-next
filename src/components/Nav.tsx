@@ -12,6 +12,7 @@ const LINKS = [
   { label: "Solutions", href: "/solutions" },
   { label: "Pricing", href: "/pricing" },
   { label: "For LinkedIn", href: "/linkedin" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Nav() {
