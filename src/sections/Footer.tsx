@@ -2,18 +2,37 @@
 
 import Wordmark from '@/components/Wordmark';
 
-const COLUMNS = [
+type FooterLink = { label: string; href: string };
+
+const COLUMNS: { title: string; links: FooterLink[] }[] = [
   {
     title: 'Platform',
-    links: ['AI Chatbot', 'SEO Autopilot', 'Auto-Blogging', 'Payments', 'Plugins'],
+    links: [
+      { label: 'AI Chatbot', href: '#' },
+      { label: 'SEO Autopilot', href: '#' },
+      { label: 'Auto-Blogging', href: '#' },
+      { label: 'Payments', href: '#' },
+      { label: 'Plugins', href: '#' },
+    ],
   },
   {
     title: 'Solutions',
-    links: ['Port from Lovable', 'Shopify alternative', 'Edge SSR', 'For India'],
+    links: [
+      { label: 'Port from Lovable', href: '#' },
+      { label: 'Shopify alternative', href: '#' },
+      { label: 'Edge SSR', href: '#' },
+      { label: 'For India', href: '#' },
+    ],
   },
   {
     title: 'Company',
-    links: ['About', 'Pricing', 'Docs', 'Status', 'Contact'],
+    links: [
+      { label: 'About', href: '#' },
+      { label: 'Pricing', href: '/pricing' },
+      { label: 'Docs', href: '#' },
+      { label: 'Status', href: '#' },
+      { label: 'Contact', href: '/contact' },
+    ],
   },
 ];
 
@@ -41,12 +60,12 @@ export default function Footer() {
               <h3 className="font-display text-sm font-semibold text-white">{col.title}</h3>
               <ul className="mt-4 space-y-2.5">
                 {col.links.map((l) => (
-                  <li key={l}>
+                  <li key={l.label}>
                     <a
-                      href="#"
+                      href={l.href}
                       className="text-sm text-white/55 transition-colors hover:text-white"
                     >
-                      {l}
+                      {l.label}
                     </a>
                   </li>
                 ))}
