@@ -36,7 +36,7 @@ export default function CTA() {
         </Reveal>
         <Reveal delay={0.2}>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-            <Button href="https://app.tyashin.com">
+            <Button href="https://admin.tyashin.com">
               Start free <ArrowRight className="h-4 w-4" />
             </Button>
             <Button href="#demo" variant="ghost">

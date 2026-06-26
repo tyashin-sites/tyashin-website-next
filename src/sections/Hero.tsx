@@ -79,7 +79,7 @@ export default function Hero() {
           className="hero-in mt-10 flex flex-wrap items-center justify-center gap-3"
           style={{ animationDelay: '0.38s' }}
         >
-          <Button href="#cta">
+          <Button href="https://admin.tyashin.com">
             Start free <ArrowRight className="h-4 w-4" />
           </Button>
           <Button href="#demo" variant="ghost">

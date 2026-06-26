@@ -14,6 +14,13 @@ const CTA_LABEL: Record<string, string> = {
   business: 'Talk to us',
 };
 
+const SIGNUP_URL = 'https://admin.tyashin.com';
+const CONTACT_URL = '/contact';
+
+function ctaHrefFor(tier: string): string {
+  return tier === 'business' ? CONTACT_URL : SIGNUP_URL;
+}
+
 export default function Pricing() {
   const { data, loading, live } = usePricing();
   const plans = data.platform.plans;
@@ -95,7 +102,7 @@ function PlanCard({ tier }: { tier: Tier }) {
         ))}
       </ul>
       <div className="mt-7">
-        <Button href="#cta" variant={highlight ? 'primary' : 'ghost'} className="w-full">
+        <Button href={ctaHrefFor(tier.tier)} variant={highlight ? 'primary' : 'ghost'} className="w-full">
           {CTA_LABEL[tier.tier] ?? 'Get started'}
         </Button>
       </div>
