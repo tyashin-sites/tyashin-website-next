@@ -11,6 +11,7 @@ const LINKS = [
   { label: "Platform", href: "/platform" },
   { label: "Solutions", href: "/solutions" },
   { label: "Pricing", href: "/pricing" },
+  { label: "Blog", href: "/blog", external: true },
   { label: "For LinkedIn", href: "/linkedin" },
   { label: "Contact", href: "/contact" },
 ];
@@ -44,12 +45,23 @@ export default function Nav() {
         <div className="hidden items-center gap-1 md:flex">
           {LINKS.map((l) => (
             <Magnetic key={l.href} strength={0.25}>
-              <Link
-                href={l.href}
-                className="rounded-full px-4 py-2 text-sm text-white/65 transition-colors hover:text-white"
-              >
-                {l.label}
-              </Link>
+              {/* /blog is platform-served (not a Next route) — use a plain <a>
+                  for a full navigation; <Link> would client-route and 404. */}
+              {"external" in l && l.external ? (
+                <a
+                  href={l.href}
+                  className="rounded-full px-4 py-2 text-sm text-white/65 transition-colors hover:text-white"
+                >
+                  {l.label}
+                </a>
+              ) : (
+                <Link
+                  href={l.href}
+                  className="rounded-full px-4 py-2 text-sm text-white/65 transition-colors hover:text-white"
+                >
+                  {l.label}
+                </Link>
+              )}
             </Magnetic>
           ))}
         </div>
