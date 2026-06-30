@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import {
   Brain,
   Clock,
@@ -15,12 +15,12 @@ import Button from "@/components/Button";
 
 const LI = "https://linkedin.tyashin.com";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Tyashin for LinkedIn",
   description:
     "Tyashin for LinkedIn learns your voice, writes posts that sound like you, times them for peak visibility, and publishes automatically — so you stay seen while you focus on the work.",
-  alternates: { canonical: "/linkedin" },
-};
+  path: "/linkedin",
+});
 
 const FEATURES = [
   {
