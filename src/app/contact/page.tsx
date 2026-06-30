@@ -1,15 +1,15 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import { Mail, Clock } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import ContactForm from '@/components/ContactForm';
 import WhatsAppPanel from '@/components/WhatsAppPanel';
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: 'Contact Tyashin',
   description:
     'Get in touch with the Tyashin team. Reach us by form, email, or WhatsApp — replies within one business day.',
-  alternates: { canonical: '/contact' },
-};
+  path: '/contact',
+});
 
 export default function ContactPage() {
   return (

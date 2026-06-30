@@ -26,12 +26,20 @@ export const metadata: Metadata = {
   },
   description:
     "Bring your site or port it from Lovable. Tyashin runs the AI chatbot that sells, the SEO autopilot that gets you found, payments for India and the world, and a plugin marketplace — all on the edge.",
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Tyashin — AI growth & commerce OS",
     description:
       "Make your storefront a self-growing business. AI chatbot, SEO autopilot, global payments, plugin marketplace — on the edge.",
     type: "website",
     url: "https://tyashin.com",
+    siteName: "Tyashin",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tyashin — AI growth & commerce OS",
+    description:
+      "Make your storefront a self-growing business. AI chatbot, SEO autopilot, global payments, plugin marketplace — on the edge.",
   },
   icons: { icon: "/favicon.svg" },
 };
