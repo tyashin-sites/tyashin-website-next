@@ -4,34 +4,35 @@ import Wordmark from '@/components/Wordmark';
 
 type FooterLink = { label: string; href: string };
 
+// Every href MUST resolve to a real, existing page (200) — never `#` or a
+// route that doesn't exist. Feature links point at the page that describes
+// them (/platform, /solutions); there are no per-feature pages yet.
 const COLUMNS: { title: string; links: FooterLink[] }[] = [
   {
     title: 'Platform',
     links: [
-      { label: 'AI Chatbot', href: '#' },
-      { label: 'SEO Autopilot', href: '#' },
-      { label: 'Auto-Blogging', href: '#' },
-      { label: 'Payments', href: '#' },
-      { label: 'Plugins', href: '#' },
+      { label: 'AI Chatbot', href: '/platform' },
+      { label: 'SEO Autopilot', href: '/platform' },
+      { label: 'Auto-Blogging', href: '/platform' },
+      { label: 'Payments', href: '/platform' },
+      { label: 'Plugins', href: '/platform' },
     ],
   },
   {
     title: 'Solutions',
     links: [
-      { label: 'Port from Lovable', href: '#' },
-      { label: 'Shopify alternative', href: '#' },
-      { label: 'Edge SSR', href: '#' },
-      { label: 'For India', href: '#' },
+      { label: 'Port from Lovable', href: '/solutions' },
+      { label: 'Shopify alternative', href: '/solutions' },
+      { label: 'Edge SSR', href: '/solutions' },
+      { label: 'For India', href: '/solutions' },
     ],
   },
   {
     title: 'Company',
     links: [
-      { label: 'About', href: '#' },
+      { label: 'About', href: '/about' },
       { label: 'Pricing', href: '/pricing' },
       { label: 'Blog', href: '/blog' },
-      { label: 'Docs', href: '#' },
-      { label: 'Status', href: '#' },
       { label: 'Contact', href: '/contact' },
     ],
   },
@@ -78,10 +79,10 @@ export default function Footer() {
         <div className="border-ink-line mt-14 flex flex-col items-center justify-between gap-4 border-t pt-8 text-xs text-white/50 sm:flex-row">
           <p>© {new Date().getFullYear()} Tyashin · Aapastech Pvt Ltd. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="#" className="transition-colors hover:text-white/70">
+            <a href="/privacy" className="transition-colors hover:text-white/70">
               Privacy
             </a>
-            <a href="#" className="transition-colors hover:text-white/70">
+            <a href="/terms" className="transition-colors hover:text-white/70">
               Terms
             </a>
             <span className="flex items-center gap-1.5">
