@@ -6,7 +6,9 @@ import { Plus } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import { cn } from '@/lib/utils';
 
-const FAQS = [
+export type FaqItem = { q: string; a: string };
+
+export const FAQS: FaqItem[] = [
   {
     q: 'Is Tyashin an AI website builder?',
     a: "It's more than that. Tyashin generates a real site, then runs the business behind it — store, CRM, AI chatbot, SEO, content, analytics and payments. The site is the starting line, not the finish.",
@@ -33,53 +35,79 @@ const FAQS = [
   },
 ];
 
-export default function FAQ() {
-  const [open, setOpen] = useState<number | null>(0);
+/**
+ * Reusable accordion. Shared by the homepage/pricing FAQ section and the
+ * dedicated /faq page (which renders one per category) so the markup and
+ * interaction live in exactly one place.
+ */
+export function FaqAccordion({
+  items,
+  defaultOpen = null,
+}: {
+  items: FaqItem[];
+  defaultOpen?: number | null;
+}) {
+  const [open, setOpen] = useState<number | null>(defaultOpen);
 
+  return (
+    <div className="divide-ink-line border-ink-line divide-y border-y">
+      {items.map((f, i) => {
+        const isOpen = open === i;
+        return (
+          <Reveal key={f.q} delay={i * 0.04}>
+            <button
+              onClick={() => setOpen(isOpen ? null : i)}
+              data-cursor="hover"
+              className="flex w-full items-center justify-between gap-4 py-5 text-left"
+            >
+              <span className="font-display text-lg font-medium text-white">{f.q}</span>
+              <span
+                className={cn(
+                  'border-ink-line flex h-7 w-7 shrink-0 items-center justify-center rounded-full border text-white/70 transition-transform duration-300',
+                  isOpen && 'border-violet-glow/50 text-violet-glow rotate-45'
+                )}
+              >
+                <Plus className="h-4 w-4" />
+              </span>
+            </button>
+            <AnimatePresence initial={false}>
+              {isOpen && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                  className="overflow-hidden"
+                >
+                  <p className="pb-6 pr-10 text-white/55">{f.a}</p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </Reveal>
+        );
+      })}
+    </div>
+  );
+}
+
+export default function FAQ() {
   return (
     <section id="faq" className="relative py-28">
       <div className="mx-auto max-w-3xl px-6">
         <Reveal className="text-center">
           <p className="text-violet-glow text-sm font-medium uppercase tracking-[0.2em]">FAQ</p>
           <h2 className="mt-4 text-4xl font-semibold sm:text-5xl">Questions, answered</h2>
+          <p className="mt-4 text-white/55">
+            More detail on our{' '}
+            <a href="/faq" className="text-violet-glow underline underline-offset-2">
+              full FAQ page
+            </a>
+            .
+          </p>
         </Reveal>
 
-        <div className="divide-ink-line border-ink-line mt-12 divide-y border-y">
-          {FAQS.map((f, i) => {
-            const isOpen = open === i;
-            return (
-              <Reveal key={f.q} delay={i * 0.04}>
-                <button
-                  onClick={() => setOpen(isOpen ? null : i)}
-                  data-cursor="hover"
-                  className="flex w-full items-center justify-between gap-4 py-5 text-left"
-                >
-                  <span className="font-display text-lg font-medium text-white">{f.q}</span>
-                  <span
-                    className={cn(
-                      'border-ink-line flex h-7 w-7 shrink-0 items-center justify-center rounded-full border text-white/70 transition-transform duration-300',
-                      isOpen && 'border-violet-glow/50 text-violet-glow rotate-45'
-                    )}
-                  >
-                    <Plus className="h-4 w-4" />
-                  </span>
-                </button>
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                      className="overflow-hidden"
-                    >
-                      <p className="pb-6 pr-10 text-white/55">{f.a}</p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </Reveal>
-            );
-          })}
+        <div className="mt-12">
+          <FaqAccordion items={FAQS} defaultOpen={0} />
         </div>
       </div>
     </section>
