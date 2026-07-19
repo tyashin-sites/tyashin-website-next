@@ -21,9 +21,13 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
   {
     title: 'Solutions',
     links: [
-      { label: 'Port from Lovable', href: '/solutions' },
-      { label: 'Shopify alternative', href: '/solutions' },
-      { label: 'Edge SSR', href: '/solutions' },
+      // Anchor targets below are section ids that exist on /use-cases —
+      // keep them in sync if a scenario id changes.
+      { label: 'Use cases', href: '/use-cases' },
+      { label: 'Port a prototype', href: '/use-cases#prototype-to-business' },
+      { label: 'Sell beyond marketplaces', href: '/use-cases#beyond-marketplaces' },
+      { label: 'For agencies', href: '/use-cases#agencies' },
+      { label: 'Edge SSR', href: '/platform' },
       { label: 'For India', href: '/solutions' },
     ],
   },
