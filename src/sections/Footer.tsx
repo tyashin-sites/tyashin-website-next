@@ -83,7 +83,10 @@ export default function Footer() {
         </div>
 
         <div className="border-ink-line mt-14 flex flex-col items-center justify-between gap-4 border-t pt-8 text-xs text-white/50 sm:flex-row">
-          <p>© {new Date().getFullYear()} Tyashin · Aapastech Pvt Ltd. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} Tyashin — a product of AAPASTECH PRIVATE LIMITED (CIN:
+            U72900DL2022PTC395508), Delhi, India. All rights reserved.
+          </p>
           <div className="flex items-center gap-6">
             <a href="/privacy" className="transition-colors hover:text-white/70">
               Privacy

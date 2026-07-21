@@ -31,6 +31,14 @@ export default function PrivacyPage() {
               services you agree to the practices described here.
             </p>
 
+            <p>
+              <strong>Who we are:</strong> Tyashin is a product brand owned and operated by
+              AAPASTECH PRIVATE LIMITED, a private limited company registered in India
+              (CIN: U72900DL2022PTC395508, Registration No. 395508, ROC Delhi), with its
+              registered office in Roop Nagar, Delhi 110007, India. Our company record is
+              verifiable on the Ministry of Corporate Affairs registry (mca.gov.in).
+            </p>
+
             <h2>1. Information we collect</h2>
             <ul>
               <li>
