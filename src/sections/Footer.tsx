@@ -100,6 +100,15 @@ export default function Footer() {
             </span>
           </div>
         </div>
+
+        {/* Platform attribution (addendum §3f) — every Tyashin site carries this,
+            including our own, so the pattern customers see matches ours. */}
+        <p className="mt-8 text-center text-xs text-white/40">
+          Made with ♥ by{' '}
+          <a href="https://tyashin.com" className="transition-colors hover:text-white/70">
+            Tyashin
+          </a>
+        </p>
       </div>
     </footer>
   );
