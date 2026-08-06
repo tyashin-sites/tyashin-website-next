@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import SiteShell from "@/components/SiteShell";
+import { SITE_URL } from "@/lib/seo";
 
 // Self-hosted, preloaded, swap — no render-blocking external font request,
 // no layout shift. Exposed as CSS vars consumed by tailwind's font families.
@@ -19,7 +20,7 @@ const display = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tyashin.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Tyashin — The AI growth & commerce OS for modern storefronts",
     template: "%s · Tyashin",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     description:
       "Make your storefront a self-growing business. AI chatbot, SEO autopilot, global payments, plugin marketplace — on the edge.",
     type: "website",
-    url: "https://tyashin.com",
+    url: SITE_URL,
     siteName: "Tyashin",
   },
   twitter: {
