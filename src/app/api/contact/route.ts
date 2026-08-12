@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const TYASHIN_API_URL = process.env.TYASHIN_API_URL ?? 'https://website-api.tyashin.com';
+import { tyashinApiUrl } from '@/lib/tyashin';
 
 type Body = {
   name?: string;
@@ -67,7 +67,7 @@ export async function POST(req: NextRequest) {
 
   let upstream: Response;
   try {
-    upstream = await fetch(`${TYASHIN_API_URL}/contact/public/submit`, {
+    upstream = await fetch(tyashinApiUrl('/contact/public/submit'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'X-API-Key': apiKey },
       body: JSON.stringify(payload),

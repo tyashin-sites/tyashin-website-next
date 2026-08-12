@@ -1,6 +1,7 @@
 'use client';
 
 import Wordmark from '@/components/Wordmark';
+import NewsletterForm from '@/components/NewsletterForm';
 
 type FooterLink = { label: string; href: string };
 
@@ -62,6 +63,13 @@ export default function Footer() {
               <span className="h-1.5 w-1.5 rounded-full bg-[#3b9bff]" />
               Also from Tyashin: grow your LinkedIn →
             </a>
+
+            <div className="mt-8">
+              <h3 className="font-display text-sm font-semibold text-white">
+                Product updates, monthly
+              </h3>
+              <NewsletterForm />
+            </div>
           </div>
           {COLUMNS.map((col) => (
             <div key={col.title}>
