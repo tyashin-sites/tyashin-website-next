@@ -29,7 +29,7 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
       { label: 'Sell beyond marketplaces', href: '/use-cases#beyond-marketplaces' },
       { label: 'For agencies', href: '/use-cases#agencies' },
       { label: 'Edge SSR', href: '/platform' },
-      { label: 'For India', href: '/solutions' },
+      { label: 'Payments & currencies', href: '/solutions' },
     ],
   },
   {

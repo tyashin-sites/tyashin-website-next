@@ -1,6 +1,6 @@
 'use client';
 
-import { Cpu, GitBranch, Lock, IndianRupee, Database } from 'lucide-react';
+import { Cpu, GitBranch, Lock, Globe, Database } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import TiltCard from '@/components/TiltCard';
 
@@ -21,9 +21,9 @@ const POINTS = [
     body: 'No third-party cookies, no forced Google Analytics. Cookieless analytics, signed webhooks, and a GDPR audit trail come standard.',
   },
   {
-    icon: IndianRupee,
-    title: 'India-aware, globally ready',
-    body: 'Razorpay, GST, WhatsApp ordering and COD are first-class — alongside Stripe and multi-currency for the rest of the world.',
+    icon: Globe,
+    title: 'Local payment rails, everywhere you sell',
+    body: 'Cards and wallets through Stripe, multi-currency detected automatically, and market-specific rails — UPI, cash-on-delivery, WhatsApp ordering, local tax rules — as first-class citizens, not bolt-ons.',
   },
   {
     icon: Database,

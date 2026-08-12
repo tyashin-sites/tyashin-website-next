@@ -42,7 +42,7 @@ const ITEMS: Item[] = [
   {
     icon: ShoppingBag,
     title: 'Full e-commerce',
-    body: 'Products, variants, cart, checkout, orders, coupons, shipping zones, tax/GST, returns, reviews, COD.',
+    body: 'Products, variants, cart, checkout, orders, coupons, shipping zones, regional tax rules, returns, reviews, cash-on-delivery.',
   },
   {
     icon: Users,
@@ -102,7 +102,7 @@ const ITEMS: Item[] = [
   {
     icon: CreditCard,
     title: 'Global billing',
-    body: 'Razorpay for INR, Stripe for everything else — currency auto-detected, vouchers and offline payments built in.',
+    body: 'Stripe and Razorpay side by side, currency auto-detected from where the shopper is, with vouchers and offline payments built in.',
   },
 ];
 

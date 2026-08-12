@@ -15,10 +15,10 @@ const SCRIPT: Msg[] = [
     from: 'bot',
     text: 'Yes — the Walnut 6-seater is in stock (4 left). It ships free in 3–5 days. Want me to hold one for you?',
   },
-  { from: 'user', text: "What's the price in INR?" },
+  { from: 'user', text: "What's the price?" },
   {
     from: 'bot',
-    text: '₹48,900, or 3 months EMI at ₹16,300 via Razorpay. I can also apply code WELCOME10 for 10% off your first order. 🛒',
+    text: "€1,290 — that's your local currency, detected automatically. Pay by card, or split it over 3 monthly payments. I can also apply code WELCOME10 for 10% off your first order. 🛒",
   },
 ];
 

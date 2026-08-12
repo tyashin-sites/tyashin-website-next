@@ -27,7 +27,7 @@ const STEPS = [
     n: '04',
     icon: ShoppingBag,
     title: 'Sell, anywhere',
-    body: 'Razorpay and Stripe, multi-currency checkout, CRM, reviews, returns. The whole funnel, one platform, one bill.',
+    body: 'Stripe and Razorpay, multi-currency checkout, CRM, reviews, returns. The whole funnel, one platform, one bill.',
   },
 ];
 

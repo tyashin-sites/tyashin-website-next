@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s · Tyashin",
   },
   description:
-    "Bring your site or port it from Lovable. Tyashin runs the AI chatbot that sells, the SEO autopilot that gets you found, payments for India and the world, and a plugin marketplace — all on the edge.",
+    "Bring your site or port it from Lovable. Tyashin runs the AI chatbot that sells, the SEO autopilot that gets you found, payments in every market you sell to, and a plugin marketplace — all on the edge.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Tyashin — AI growth & commerce OS",

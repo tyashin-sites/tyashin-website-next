@@ -12,7 +12,7 @@ export const metadata = pageMetadata({
 const STATS = [
   { value: 'Edge-native', label: 'Built on Cloudflare Workers, fast everywhere' },
   { value: 'AI-first', label: 'Chatbot, SEO autopilot & auto-blogging built in' },
-  { value: 'India-ready', label: 'UPI, Razorpay & Stripe, priced for the real world' },
+  { value: 'Multi-currency', label: 'Stripe, Razorpay & local rails, priced for the real world' },
 ];
 
 export default function AboutPage() {
@@ -58,8 +58,8 @@ export default function AboutPage() {
               Tyashin brings it into one platform: port a design from Lovable or Bolt, make it
               a fast server-rendered site on the edge, and switch on AI chat, automated SEO and
               blogging, payments, and analytics as you need them. It&rsquo;s built for speed,
-              discoverability, and the economics of real-world businesses — especially in
-              India and other emerging markets.
+              discoverability, and the economics of real-world businesses — in every market
+              where a small team is trying to sell online.
             </p>
             <p>
               Tyashin is built and operated by{' '}

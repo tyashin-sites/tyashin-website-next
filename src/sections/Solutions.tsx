@@ -8,29 +8,29 @@ import { cn } from '@/lib/utils';
 
 const SOLUTIONS = [
   {
-    id: 'india',
-    label: 'Indian D2C',
-    icon: Store,
-    headline: 'Razorpay, GST, WhatsApp & COD — first-class, not afterthoughts.',
-    body: 'Sell to India the way India buys. INR pricing, Razorpay checkout, GST tax rules, regional shipping zones, cash-on-delivery, and deep WhatsApp cart links.',
-    points: [
-      'Razorpay checkout + UPI',
-      'GST-compliant tax rules',
-      'WhatsApp catalog ordering',
-      'Cash on Delivery, auto-confirmed',
-    ],
-  },
-  {
     id: 'global',
-    label: 'Global D2C',
+    label: 'Cross-border D2C',
     icon: Globe,
     headline: 'Multi-currency, Stripe, and GDPR-grade UX out of the box.',
-    body: 'Currency auto-detected at signup and locked thereafter. Stripe checkout, consent banner, returns and reviews — the scattered stack, unified.',
+    body: "Currency is detected from your shopper's location and locked to their order. Stripe checkout, consent banner, returns and reviews — the scattered stack, unified.",
     points: [
       'Stripe, 9+ currencies',
       'Auto currency detection',
       'GDPR consent + privacy workflows',
       'Returns & verified reviews',
+    ],
+  },
+  {
+    id: 'local-rails',
+    label: 'Local-rail markets',
+    icon: Store,
+    headline: 'Where cards are not how people pay, we speak the local rail.',
+    body: 'Plenty of markets run on bank transfers, wallets, chat apps and cash. India is the deepest example today — UPI and Razorpay checkout, local tax rules, regional shipping zones, cash-on-delivery and WhatsApp cart links — all first-class rather than bolted on.',
+    points: [
+      'Local gateway + wallet checkout',
+      'Region-specific tax rules',
+      'Chat-app catalog ordering',
+      'Cash on delivery, auto-confirmed',
     ],
   },
   {

@@ -22,8 +22,8 @@ export const FAQS: FaqItem[] = [
     a: 'Completely. Generated sites are real Next.js committed to a GitHub repo you own — fork, edit and redeploy freely. Your customer and store data live in one isolated, exportable place.',
   },
   {
-    q: 'How do payments work in India vs the rest of the world?',
-    a: "Currency is detected automatically. INR is billed through Razorpay (with UPI, GST and COD); every other currency goes through Stripe. You don't wire anything up.",
+    q: 'How do payments and currencies work?',
+    a: "Currency is detected from your shopper's location and locked to their order. Payments route to the gateway that serves that market — Stripe for cards and wallets, Razorpay where UPI, cash-on-delivery and local tax rules matter. You don't wire anything up.",
   },
   {
     q: "What's included vs. paid?",

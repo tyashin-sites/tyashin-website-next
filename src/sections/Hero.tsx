@@ -71,8 +71,8 @@ export default function Hero() {
         >
           Tyashin is the AI growth &amp; commerce OS. Bring or port your site — we run the chatbot
           that <em className="not-italic text-white/90">sells</em>, the SEO autopilot that gets you{' '}
-          <em className="not-italic text-white/90">found</em>, and payments for India and the world.
-          All on the edge.
+          <em className="not-italic text-white/90">found</em>, and payments that work in
+          every market you sell to. All on the edge.
         </p>
 
         <div
@@ -88,7 +88,7 @@ export default function Hero() {
         </div>
 
         <p className="hero-in mt-6 text-xs text-white/50" style={{ animationDelay: '0.48s' }}>
-          No card required · Free plan forever · India &amp; global payments built in
+          No card required · Free plan forever · Multi-currency payments built in
         </p>
       </motion.div>
 

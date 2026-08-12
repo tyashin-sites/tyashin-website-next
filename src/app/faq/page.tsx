@@ -7,7 +7,7 @@ import { FAQ_GROUPS, ALL_FAQS } from '@/lib/faq';
 export const metadata = pageMetadata({
   title: 'Frequently Asked Questions',
   description:
-    'Answers about Tyashin — getting started, moving an existing site, pricing, payments in India and worldwide, SEO and AI search, and who owns your code and data.',
+    'Answers about Tyashin — getting started, moving an existing site, pricing, multi-currency payments, SEO and AI search, and who owns your code and data.',
   path: '/faq',
 });
 
