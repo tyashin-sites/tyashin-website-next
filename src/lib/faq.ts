@@ -59,7 +59,7 @@ export const FAQ_GROUPS: FaqGroup[] = [
       },
       {
         q: 'Which currency will I be billed in?',
-        a: 'Currency is detected automatically. Indian customers are billed in INR through Razorpay; everywhere else is billed through Stripe in the appropriate currency.',
+        a: "Currency is detected from your shopper's location and locked to their order. Payments route to the gateway that serves that market — Stripe for cards and wallets, Razorpay where local rails like UPI and cash on delivery matter.",
       },
       {
         q: 'Can I cancel any time?',
@@ -71,8 +71,8 @@ export const FAQ_GROUPS: FaqGroup[] = [
     title: 'Selling and payments',
     items: [
       {
-        q: 'How do payments work in India versus the rest of the world?',
-        a: "INR is billed through Razorpay, including UPI, GST handling and cash on delivery. Every other currency goes through Stripe. You don't have to wire either of them up yourself.",
+        q: 'How do payments and currencies work across markets?',
+        a: "Currency is auto-detected and each order routes to the gateway that serves that market. Stripe covers cards, wallets and multi-currency checkout; Razorpay covers markets that run on local rails — UPI, regional tax handling and cash on delivery. You don't have to wire either of them up yourself.",
       },
       {
         q: 'Can I run a full online store?',
