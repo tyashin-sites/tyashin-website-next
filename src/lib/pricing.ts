@@ -36,6 +36,8 @@ export interface PluginPricing {
   symbol: string;
   recurringValue: { headline: string; points: string[] } | null;
   tiers: Tier[];
+  /** External subscribe/learn-more URL for vendor plugins billed off-platform. */
+  link?: string;
 }
 
 export interface AllPricing {
@@ -300,6 +302,22 @@ export const FALLBACK: AllPricing = {
           features: ['500,000 page views/mo', 'Custom events + funnels'],
         },
       ],
+    },
+    {
+      id: 'thridify',
+      name: 'Thridify 3D & AR',
+      description:
+        'Best-in-class 3D product viewing, 360° spin and app-free AR — let shoppers configure your products and place them in their space at true scale. Subscribe via Thridify; it connects to your Tyashin store in a click.',
+      category: 'experience',
+      pluginType: 'vendor-service',
+      pricingModel: 'paid',
+      billingManagedBy: 'thridify',
+      hasPaidTiers: false,
+      currency: 'USD',
+      symbol: '$',
+      recurringValue: null,
+      tiers: [],
+      link: 'https://thridify.com',
     },
   ],
 };
