@@ -36,6 +36,7 @@ const ICONS: Record<string, LucideIcon> = {
 };
 
 function priceLabel(p: PluginPricing): { text: string; tone: 'free' | 'included' | 'paid' } {
+  if (p.billingManagedBy === 'thridify') return { text: 'via Thridify', tone: 'paid' };
   const paidTiers = p.tiers.filter((t) => t.price > 0);
   if (paidTiers.length > 0) {
     const min = paidTiers.reduce((a, b) => (a.price < b.price ? a : b));
@@ -115,6 +116,17 @@ export default function Plugins() {
                         </span>
                       ))}
                     </div>
+                  )}
+
+                  {p.link && (
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border-ink-line text-violet-glow mt-4 border-t pt-4 text-sm font-medium hover:underline"
+                    >
+                      Subscribe at Thridify →
+                    </a>
                   )}
                 </SpotlightCard>
               </Reveal>
