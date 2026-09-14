@@ -3,9 +3,9 @@ import Reveal from '@/components/Reveal';
 import Button from '@/components/Button';
 
 export const metadata = pageMetadata({
-  title: 'Use Cases',
+  title: 'Use cases — launch, sell direct & get found',
   description:
-    'What are you trying to do? Launch a D2C brand, build a direct channel beyond marketplaces, turn a prototype into a real store, get found on Google and AI search, or deliver client sites faster.',
+    'Launch a D2C brand, sell beyond marketplaces, turn a Lovable prototype into a real store, get found on Google and AI search, or ship client sites faster.',
   path: '/use-cases',
 });
 

@@ -5,9 +5,9 @@ import FAQ from "@/sections/FAQ";
 import CTA from "@/sections/CTA";
 
 export const metadata = pageMetadata({
-  title: "Pricing",
+  title: "Pricing — free to start, one subscription",
   description:
-    "One subscription replaces a dozen tools. Free to start, shown in your local currency, billed via Razorpay (India) or Stripe (global). Plugins billed separately with a free tier on each.",
+    "Free to start, no card. One subscription replaces a dozen tools, billed in your currency via Razorpay (India) or Stripe. Every plugin has a free tier.",
   path: "/pricing",
 });
 

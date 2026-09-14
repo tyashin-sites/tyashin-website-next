@@ -5,7 +5,7 @@ import Button from '@/components/Button';
 export const metadata = pageMetadata({
   title: 'How Tyashin Compares',
   description:
-    'An honest look at the common ways to get a business online — DIY builders, agencies, AI prototype tools, custom builds and marketplaces — and where Tyashin fits.',
+    'An honest look at the ways to get a business online: DIY builders, agencies, AI prototype tools, custom builds and marketplaces, and where Tyashin fits.',
   path: '/compare',
 });
 

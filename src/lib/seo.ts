@@ -17,6 +17,18 @@ const SITE_NAME = "Tyashin";
 export const SITE_URL = "https://tyashin.com";
 
 /**
+ * Default social preview (1200×630, generated from tools/og-image.html).
+ * Every page declares `summary_large_image`; without an image that card is
+ * blank and the platform's SEO audit flags og:image on every route.
+ */
+export const OG_IMAGE = {
+  url: "/og.png",
+  width: 1200,
+  height: 630,
+  alt: "Tyashin — The AI growth & commerce OS for modern storefronts",
+};
+
+/**
  * Per-page metadata helper.
  *
  * `metadataBase` (https://tyashin.com) is set once in the root layout, so the
@@ -44,11 +56,13 @@ export function pageMetadata({
       url: path,
       siteName: SITE_NAME,
       type: "website",
+      images: [OG_IMAGE],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [OG_IMAGE.url],
     },
   };
 }

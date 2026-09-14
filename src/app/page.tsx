@@ -9,6 +9,7 @@ import Differentiators from "@/sections/Differentiators";
 import Plugins from "@/sections/Plugins";
 import Pricing from "@/sections/Pricing";
 import FAQ from "@/sections/FAQ";
+import LatestPosts from "@/sections/LatestPosts";
 import CTA from "@/sections/CTA";
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
       <Plugins />
       <Pricing />
       <FAQ />
+      <LatestPosts />
       <CTA />
     </>
   );

@@ -5,9 +5,9 @@ import ChatShowcase from "@/sections/ChatShowcase";
 import CTA from "@/sections/CTA";
 
 export const metadata = pageMetadata({
-  title: "Platform",
+  title: "Platform — AI storefront, chatbot, SEO & payments",
   description:
-    "One platform replaces a dozen tools — AI website generator, edge SSR hosting, e-commerce, CRM, AI chatbot, SEO autopilot, blog, analytics, payments and more. One dashboard, one database, all on the edge.",
+    "One platform replaces a dozen tools: AI website generator, edge hosting, e-commerce, CRM, AI chatbot, SEO autopilot, blog, analytics and payments.",
   path: "/platform",
 });
 

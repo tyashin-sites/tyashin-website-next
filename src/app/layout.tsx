@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import SiteShell from "@/components/SiteShell";
-import { SITE_URL } from "@/lib/seo";
+import { OG_IMAGE, SITE_URL } from "@/lib/seo";
 
 // Self-hosted, preloaded, swap — no render-blocking external font request,
 // no layout shift. Exposed as CSS vars consumed by tailwind's font families.
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s · Tyashin",
   },
   description:
-    "Bring your site or port it from Lovable. Tyashin runs the AI chatbot that sells, the SEO autopilot that gets you found, payments in every market you sell to, and a plugin marketplace — all on the edge.",
+    "Bring your site or port it from Lovable. Tyashin runs the AI chatbot that sells, the SEO autopilot that gets you found, and payments in every market.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Tyashin — AI growth & commerce OS",
@@ -35,12 +35,14 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE_URL,
     siteName: "Tyashin",
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: "Tyashin — AI growth & commerce OS",
     description:
       "Make your storefront a self-growing business. AI chatbot, SEO autopilot, global payments, plugin marketplace — on the edge.",
+    images: [OG_IMAGE.url],
   },
   icons: { icon: "/favicon.svg" },
 };

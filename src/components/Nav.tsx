@@ -28,8 +28,10 @@ export default function Nav() {
 
   return (
     <motion.header
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
+      // Slide only — an opacity:0 header in the SSR HTML stays invisible until
+      // framer-motion hydrates, which reads as a missing nav on slow devices.
+      initial={{ y: -80 }}
+      animate={{ y: 0 }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4"
     >

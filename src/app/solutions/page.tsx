@@ -5,9 +5,9 @@ import Differentiators from "@/sections/Differentiators";
 import CTA from "@/sections/CTA";
 
 export const metadata = pageMetadata({
-  title: "Solutions",
+  title: "Solutions for D2C brands, creators & agencies",
   description:
-    "One platform, many businesses — Indian D2C, global D2C, creators, agencies, and regulated industries. Razorpay, GST and WhatsApp first-class; Stripe and GDPR for the world.",
+    "Indian D2C, global D2C, creators, agencies and regulated industries. Razorpay, GST and WhatsApp built in; Stripe and GDPR for the rest of the world.",
   path: "/solutions",
 });
 

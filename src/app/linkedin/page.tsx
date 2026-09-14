@@ -18,7 +18,7 @@ const LI = "https://linkedin.tyashin.com";
 export const metadata = pageMetadata({
   title: "Tyashin for LinkedIn",
   description:
-    "Tyashin for LinkedIn learns your voice, writes posts that sound like you, times them for peak visibility, and publishes automatically — so you stay seen while you focus on the work.",
+    "Tyashin for LinkedIn learns your voice, writes posts that sound like you, schedules them for peak visibility and publishes automatically. Stay seen.",
   path: "/linkedin",
 });
 

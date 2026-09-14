@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;width:1200px;height:630px;overflow:hidden;background:#06070A;font-family:Inter,system-ui,sans-serif;color:#fff}
+  .wrap{position:relative;width:1200px;height:630px;padding:72px 84px;box-sizing:border-box}
+  .orb{position:absolute;border-radius:999px;filter:blur(120px);opacity:.55}
+  .o1{width:720px;height:520px;left:420px;top:-260px;background:#7C5CFF}
+  .o2{width:520px;height:420px;left:-140px;top:330px;background:#22D3EE;opacity:.28}
+  .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse at 60% 40%,#000 30%,transparent 75%)}
+  .brand{display:flex;align-items:center;gap:14px;font-family:'Space Grotesk',Inter,sans-serif;font-weight:600;font-size:34px;letter-spacing:-.01em}
+  .brand svg{width:44px;height:44px}
+  h1{font-family:'Space Grotesk',Inter,sans-serif;font-weight:600;font-size:74px;line-height:1.02;letter-spacing:-.025em;margin:92px 0 0;max-width:980px}
+  .grad{background:linear-gradient(90deg,#7C5CFF,#5B8DEF 50%,#22D3EE);-webkit-background-clip:text;background-clip:text;color:transparent}
+  p{font-size:28px;line-height:1.35;color:rgba(255,255,255,.62);margin:28px 0 0;max-width:900px}
+  .pill{position:absolute;right:84px;bottom:66px;display:flex;gap:10px;font-size:20px;color:rgba(255,255,255,.55)}
+  .pill span{border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:8px 16px;background:rgba(255,255,255,.04)}
+  .url{position:absolute;left:84px;bottom:70px;font-size:22px;color:rgba(255,255,255,.5);letter-spacing:.06em}
+</style></head>
+<body><div class="wrap">
+  <div class="orb o1"></div><div class="orb o2"></div><div class="grid"></div>
+  <div class="brand">
+    <svg viewBox="0 0 32 32" fill="none"><defs><linearGradient id="g" x1="0" y1="0" x2="32" y2="32"><stop offset="0" stop-color="#7C5CFF"/><stop offset=".5" stop-color="#5B8DEF"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs><path d="M16 2 L28 9 V23 L16 30 L4 23 V9 Z" stroke="url(#g)" stroke-width="1.6" opacity=".5"/><path d="M10 11 H22 M16 11 V22" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round"/></svg>
+    Tyashin
+  </div>
+  <h1>Your storefront,<br>now a <span class="grad">self-growing</span> business.</h1>
+  <p>The AI growth &amp; commerce OS — chatbot that sells, SEO autopilot, global payments. All on the edge.</p>
+  <div class="url">tyashin.com</div>
+  <div class="pill"><span>AI chatbot</span><span>SEO autopilot</span><span>Payments</span></div>
+</div></body></html>
