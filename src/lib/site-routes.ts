@@ -8,16 +8,16 @@
  * this list as XML; the platform's sitemap-index then references that file.
  *
  * This marketing site is entirely STATIC (no dynamic `[slug]` routes), so there
- * is no `generateStaticParams` to derive from here — the list below is the
+ * is no `generateStaticParams` to derive from here; the list below is the
  * hand-kept mirror of `src/app/**\/page.tsx`. A `page.tsx` that renders an
  * indexable page and is missing here is the exact bug this file fixes; add it.
  *
  * EXCLUDED on purpose (do not add):
  *  - utility / non-page routes (`robots.txt`, `sitemap-*.xml`, `/api/*`).
- *  - blog POST URLs — this site has no blog; blog posts (if any) are
+ *  - blog POST URLs: this site has no blog; blog posts (if any) are
  *    platform-owned content and live in the platform's `/sitemap-content.xml`.
  *
- * Do NOT create `app/sitemap.ts` (path `/sitemap.xml`) — the platform owns that
+ * Do NOT create `app/sitemap.ts` (path `/sitemap.xml`); the platform owns that
  * path and index-references this one.
  */
 
@@ -54,10 +54,13 @@ const STATIC_ROUTES: SiteRoute[] = [
   { path: "/contact", priority: 0.6, changeFrequency: "monthly" },
   { path: "/privacy", priority: 0.3, changeFrequency: "yearly" },
   { path: "/terms", priority: 0.3, changeFrequency: "yearly" },
+  { path: "/dpa", priority: 0.3, changeFrequency: "yearly" },
+  { path: "/grievance", priority: 0.3, changeFrequency: "yearly" },
+  { path: "/grievance/hi", priority: 0.3, changeFrequency: "yearly" },
 ];
 
 /**
- * The complete, ordered list of indexable site paths — THE list the page
+ * The complete, ordered list of indexable site paths: THE list the page
  * sitemap emits.
  */
 export function getSiteRoutes(): SiteRoute[] {

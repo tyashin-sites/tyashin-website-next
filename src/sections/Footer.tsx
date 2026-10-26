@@ -5,7 +5,7 @@ import NewsletterForm from '@/components/NewsletterForm';
 
 type FooterLink = { label: string; href: string };
 
-// Every href MUST resolve to a real, existing page (200) — never `#` or a
+// Every href MUST resolve to a real, existing page (200), never `#` or a
 // route that doesn't exist. Feature links point at the page that describes
 // them (/platform, /solutions); there are no per-feature pages yet.
 const COLUMNS: { title: string; links: FooterLink[] }[] = [
@@ -22,7 +22,7 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
   {
     title: 'Solutions',
     links: [
-      // Anchor targets below are section ids that exist on /use-cases —
+      // Anchor targets below are section ids that exist on /use-cases;
       // keep them in sync if a scenario id changes.
       { label: 'Use cases', href: '/use-cases' },
       { label: 'Port a prototype', href: '/use-cases#prototype-to-business' },
@@ -92,15 +92,21 @@ export default function Footer() {
 
         <div className="border-ink-line mt-14 flex flex-col items-center justify-between gap-4 border-t pt-8 text-xs text-white/50 sm:flex-row">
           <p>
-            © {new Date().getFullYear()} Tyashin — a product of AAPASTECH PRIVATE LIMITED (CIN:
+            © {new Date().getFullYear()} Tyashin, a product of AAPASTECH PRIVATE LIMITED (CIN:
             U72900DL2022PTC395508), Delhi, India. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             <a href="/privacy" className="transition-colors hover:text-white/70">
               Privacy
             </a>
             <a href="/terms" className="transition-colors hover:text-white/70">
               Terms
+            </a>
+            <a href="/grievance" className="transition-colors hover:text-white/70">
+              Grievance Officer
+            </a>
+            <a href="/dpa" className="transition-colors hover:text-white/70">
+              DPA
             </a>
             <span className="flex items-center gap-1.5">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
@@ -109,7 +115,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Platform attribution (addendum §3f) — every Tyashin site carries this,
+        {/* Platform attribution (addendum §3f): every Tyashin site carries this,
             including our own, so the pattern customers see matches ours. */}
         <p className="mt-8 text-center text-xs text-white/40">
           Made with ♥ by{' '}
