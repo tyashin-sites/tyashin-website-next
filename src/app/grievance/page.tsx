@@ -6,7 +6,7 @@ import LegalDoc from '@/components/LegalDoc';
 const base = pageMetadata({
   title: 'Grievance Officer',
   description:
-    'Complain to Tyashin (Aapastech Private Limited) about our service, content we host or your personal data: how to complain, our response times and how to appeal.',
+    'Complain to Tyashin (Aapastech Private Limited and Aapastech OÜ) about our service, content we host or your personal data: how to complain, response times and appeals.',
   path: '/grievance',
 });
 
@@ -47,7 +47,11 @@ export default function GrievancePage() {
               <br />
               Aapastech Private Limited
               <br />
-              8/3, 2nd Floor, Roop Nagar, Delhi 110007, India
+              8/3, 2nd Floor, Roop Nagar, Delhi 110007, India (registered office; send legal
+              notices here)
+              <br />
+              1st Floor, 145, Sector 44, Gurugram, Haryana 122003, India (principal place of
+              business)
               <br />
               Email: <a href="mailto:contact@aapastech.com">contact@aapastech.com</a>
               <br />
@@ -105,7 +109,29 @@ export default function GrievancePage() {
                 Protection Act, 2023 apply, you can complain to the Data Protection Board of
                 India after using this process.
               </li>
+              <li>
+                In the European Union you can complain to the Estonian Data Protection
+                Inspectorate (Andmekaitse Inspektsioon, <a href="https://www.aki.ee">www.aki.ee</a>)
+                or to the data protection authority where you live. Shikha Gupta is also the
+                privacy contact for Aapastech OÜ.
+              </li>
             </ul>
+
+            <p>
+              <strong>Who runs Tyashin.</strong> Tyashin is run by two companies in the same
+              group. If you pay in Indian rupees, or use Tyashin in India without paying, your
+              contract is with <strong>Aapastech Private Limited</strong>, a company registered
+              in India (CIN U72900DL2022PTC395508, registered office 8/3, 2nd Floor, Roop
+              Nagar, Delhi 110007; principal place of business 1st Floor, 145, Sector 44,
+              Gurugram, Haryana 122003), which is also the data fiduciary for your personal
+              data. If you pay in any other currency, or use Tyashin outside India without
+              paying, your contract is with <strong>Aapastech OÜ</strong>, a company registered
+              in Estonia (registry code 16453146, VAT EE102489493, Tornimäe tn 3 // 5 // 7,
+              10145 Tallinn), which is the controller of your personal data under the EU
+              General Data Protection Regulation. Aapastech Private Limited builds and operates
+              the platform for both. In this document "Tyashin", "we" and "us" mean whichever
+              of them you deal with.
+            </p>
 
             <p>
               This page is also available in <a href="/grievance/hi">Hindi</a>. Ask us at the

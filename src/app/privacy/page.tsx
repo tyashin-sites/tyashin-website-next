@@ -5,7 +5,7 @@ import LegalDoc from '@/components/LegalDoc';
 export const metadata = pageMetadata({
   title: 'Privacy Policy',
   description:
-    'What personal data Tyashin (Aapastech Private Limited) collects and why, who we share it with, how long we keep it, your rights in India and how to complain.',
+    'What personal data Tyashin (Aapastech Private Limited in India, Aapastech OÜ elsewhere) collects and why, who we share it with, how long we keep it, your rights and how to complain.',
   path: '/privacy',
 });
 
@@ -34,15 +34,23 @@ export default function PrivacyPage() {
 
             <h2 id="who-we-are">1. Who we are</h2>
             <p>
-              Tyashin is run by Aapastech Private Limited, a company registered in India (CIN
-              U72900DL2022PTC395508) with its registered office at 8/3, 2nd Floor, Roop Nagar,
-              Delhi 110007. In this document "Tyashin", "we" and "us" mean Aapastech Private
-              Limited.
+              Tyashin is run by two companies in the same group. If you pay in Indian rupees,
+              or use Tyashin in India without paying, your contract is with{' '}
+              <strong>Aapastech Private Limited</strong>, a company registered in India (CIN
+              U72900DL2022PTC395508, registered office 8/3, 2nd Floor, Roop Nagar, Delhi
+              110007; principal place of business 1st Floor, 145, Sector 44, Gurugram, Haryana
+              122003), which is also the data fiduciary for your personal data. If you pay in
+              any other currency, or use Tyashin outside India without paying, your contract is
+              with <strong>Aapastech OÜ</strong>, a company registered in Estonia (registry
+              code 16453146, VAT EE102489493, Tornimäe tn 3 // 5 // 7, 10145 Tallinn), which is
+              the controller of your personal data under the EU General Data Protection
+              Regulation. Aapastech Private Limited builds and operates the platform for both.
+              In this document "Tyashin", "we" and "us" mean whichever of them you deal with.
             </p>
             <p>
-              For the personal data described in sections 2 and 3, we are the data fiduciary:
-              we decide why and how it is used. For personal data that our customers collect
-              on their own sites, the customer decides and we process it on their behalf (see
+              For the personal data described in sections 2 and 3, the company you deal with
+              decides why and how it is used. For personal data that our customers collect on
+              their own sites, the customer decides and we process it on their behalf (see
               section 4).
             </p>
 
@@ -141,7 +149,7 @@ export default function PrivacyPage() {
               buy from their sites: contact form and lead details, orders and delivery
               addresses, newsletter sign-ups, shopper accounts, chat conversations, analytics,
               error reports, and visitors' IP addresses and device details. For this data the
-              business is the data fiduciary and we are its processor. We process the data only
+              business is the data fiduciary (or controller) and we are its processor. We process the data only
               to run the site and the features the business has turned on, and only on its
               instructions. The <a href="/dpa">Tyashin Data Processing Addendum</a> sets out
               the terms.
@@ -159,6 +167,16 @@ export default function PrivacyPage() {
               global network, your data can be processed in any country where it operates.
             </p>
             <ul>
+              <li>
+                <strong>Aapastech Private Limited</strong> (India), our group company. Builds
+                and operates the platform, and processes personal data for customers of
+                Aapastech OÜ.
+              </li>
+              <li>
+                <strong>14818032 Canada Inc.</strong> (Canada), our group company. Operates YOM
+                together with Aapastech Private Limited, and processes personal data for
+                customers of Aapastech OÜ.
+              </li>
               <li>
                 <strong>Cloudflare, Inc.</strong> (United States; global network). Hosts and
                 delivers tyashin.com, the admin app, our customers' sites and our API. Holds
@@ -210,8 +228,9 @@ export default function PrivacyPage() {
                 or site name, the page where an error happened and the error message.
               </li>
               <li>
-                <strong>YOM</strong> (the Aapastech analytics service at yom.aapastech.com,
-                running on Cloudflare). Analytics for the admin app and for sites that use our
+                <strong>YOM</strong> (yom.aapastech.com; India and Canada, running on
+                Cloudflare), operated by our group companies Aapastech Private Limited and
+                14818032 Canada Inc. Analytics for the admin app and for sites that use our
                 analytics features.
               </li>
             </ul>
@@ -233,7 +252,7 @@ export default function PrivacyPage() {
             </p>
             <p>We do not sell personal data.</p>
 
-            <h2 id="your-rights">6. Your rights</h2>
+            <h2 id="your-rights">6. Your rights in India</h2>
             <p>
               You can ask us for a summary of the personal data we hold about you and what we
               do with it, ask us to correct, complete, update or delete it, withdraw any
@@ -244,18 +263,38 @@ export default function PrivacyPage() {
               identity, but only with information we already hold.
             </p>
 
-            <h2 id="retention">7. How long we keep data</h2>
+            <h2 id="gdpr">7. Your rights under the GDPR</h2>
+            <p>
+              <strong>If your contract is with Aapastech OÜ.</strong> Aapastech OÜ is the
+              controller. We process your account and billing data to perform our contract with
+              you, tax records to meet legal obligations, and security logs, fraud checks and
+              aggregate usage statistics on the basis of our legitimate interest in running a
+              safe and reliable service; you can object to that last use at any time. We send
+              marketing email only with your consent. You can ask for access to your data,
+              correction, deletion, restriction, a portable copy, and you can object or
+              withdraw consent, by emailing{' '}
+              <a href="mailto:contact@aapastech.com">contact@aapastech.com</a>. You can complain
+              to the Estonian Data Protection Inspectorate (Andmekaitse Inspektsioon,{' '}
+              <a href="https://www.aki.ee">www.aki.ee</a>) or to the authority where you live.
+              Our group company Aapastech Private Limited in India operates the platform for
+              Aapastech OÜ, and some of our service providers are in the United States; these
+              transfers are covered by the European Commission's Standard Contractual Clauses,
+              and you can ask us for a copy.
+            </p>
+
+            <h2 id="retention">8. How long we keep data</h2>
             <p>
               We keep personal data while your account is active and as long as we need it for
               the purpose you gave it for, then delete it. Some records stay longer because the
               law requires it: invoices and tax records for 8 years, and security logs for at
-              least 180 days. Indian law also requires us to keep personal data, related
-              traffic data and processing logs for one year from processing; when we delete
-              your data from our systems we keep a sealed copy for the rest of that year, which
-              nobody uses except to meet that legal duty, and then destroy it.
+              least 180 days. From 13 May 2027 Indian law will also require us to keep personal
+              data, related traffic data and processing logs for one year from processing. From
+              then, when we delete your data from our systems we will keep a sealed copy for
+              the rest of that year, which nobody uses except to meet that legal duty, and then
+              destroy it.
             </p>
 
-            <h2 id="transfers">8. Where data goes</h2>
+            <h2 id="transfers">9. Where data goes</h2>
             <p>
               We use service providers in other countries, listed on our{' '}
               <a href="#sub-processors">sub-processors list</a>. Transfers out of India follow
@@ -263,7 +302,7 @@ export default function PrivacyPage() {
               transfer data to any country the Government of India restricts.
             </p>
 
-            <h2 id="security">9. Security</h2>
+            <h2 id="security">10. Security</h2>
             <p>
               We keep a documented information security programme: encryption in transit,
               access limited to staff who need it, logging, and incident response. If a breach
@@ -271,7 +310,7 @@ export default function PrivacyPage() {
               requires.
             </p>
 
-            <h2 id="children">10. Children</h2>
+            <h2 id="children">11. Children</h2>
             <p>
               Tyashin is a service for businesses and is not for anyone under 18. Do not create
               an account or send us personal data if you are under 18. If you think a child
@@ -280,33 +319,47 @@ export default function PrivacyPage() {
               delete it.
             </p>
 
-            <h2 id="complaints">11. Complaints and our Grievance Officer</h2>
+            <h2 id="complaints">12. Complaints and our Grievance Officer</h2>
             <p>
               Contact our Grievance Officer (see <a href="/grievance">/grievance</a>). If you
               are not satisfied, you can complain to the Data Protection Board of India once
-              the relevant provisions apply.
+              the relevant provisions apply. If your contract is with Aapastech OÜ, section 7
+              explains how to complain to a data protection authority in the European Union.
             </p>
             <p>
               <strong>Grievance Officer:</strong> Shikha Gupta, Aapastech Private Limited, 8/3,
               2nd Floor, Roop Nagar, Delhi 110007, India. Email{' '}
               <a href="mailto:contact@aapastech.com">contact@aapastech.com</a>, phone{' '}
-              <a href="tel:+919667747082">+91 96677 47082</a>.
+              <a href="tel:+919667747082">+91 96677 47082</a>. Shikha Gupta is also the privacy
+              contact for Aapastech OÜ.
             </p>
 
-            <h2 id="changes">12. Changes to this policy</h2>
+            <h2 id="changes">13. Changes to this policy</h2>
             <p>
               We may update this policy. When we do, we change the date at the top of this
               page, and if a change matters to you we tell you by email or in the product
               before it takes effect.
             </p>
 
-            <h2 id="contact">13. Contact us</h2>
+            <h2 id="contact">14. Contact us</h2>
             <p>
-              Aapastech Private Limited, 8/3, 2nd Floor, Roop Nagar, Delhi 110007, India.
-              Email <a href="mailto:contact@aapastech.com">contact@aapastech.com</a>.
+              Email <a href="mailto:contact@aapastech.com">contact@aapastech.com</a>, or write to
+              the company you deal with:
             </p>
+            <ul>
+              <li>
+                <strong>Aapastech Private Limited</strong>, CIN U72900DL2022PTC395508.
+                Registered office (for legal notices): 8/3, 2nd Floor, Roop Nagar, Delhi 110007,
+                India. Principal place of business: 1st Floor, 145, Sector 44, Gurugram, Haryana
+                122003, India.
+              </li>
+              <li>
+                <strong>Aapastech OÜ</strong>, registry code 16453146, VAT EE102489493.
+                Tornimäe tn 3 // 5 // 7, 10145 Tallinn, Estonia.
+              </li>
+            </ul>
             <p>
-              Ask us at the address above if you need this policy in Hindi or in another
+              Ask us at contact@aapastech.com if you need this policy in Hindi or in another
               language listed in the Eighth Schedule to the Constitution of India, and we will
               send it within 7 days.
             </p>

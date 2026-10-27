@@ -5,7 +5,7 @@ import LegalDoc from '@/components/LegalDoc';
 export const metadata = pageMetadata({
   title: 'Data Processing Addendum',
   description:
-    'The Tyashin Data Processing Addendum: how Aapastech Private Limited processes personal data of your site visitors and buyers on your behalf, as your processor.',
+    'The Tyashin Data Processing Addendum: how we process personal data of your site visitors and buyers on your behalf as your processor, including the GDPR Article 28 terms.',
   path: '/dpa',
 });
 
@@ -33,10 +33,18 @@ export default function DpaPage() {
 
             <h2 id="who-we-are">1. Who we are</h2>
             <p>
-              Tyashin is run by Aapastech Private Limited, a company registered in India (CIN
-              U72900DL2022PTC395508) with its registered office at 8/3, 2nd Floor, Roop Nagar,
-              Delhi 110007. In this document "Tyashin", "we" and "us" mean Aapastech Private
-              Limited.
+              Tyashin is run by two companies in the same group. If you pay in Indian rupees,
+              or use Tyashin in India without paying, your contract is with{' '}
+              <strong>Aapastech Private Limited</strong>, a company registered in India (CIN
+              U72900DL2022PTC395508, registered office 8/3, 2nd Floor, Roop Nagar, Delhi
+              110007; principal place of business 1st Floor, 145, Sector 44, Gurugram, Haryana
+              122003), which is also the data fiduciary for your personal data. If you pay in
+              any other currency, or use Tyashin outside India without paying, your contract is
+              with <strong>Aapastech OÜ</strong>, a company registered in Estonia (registry
+              code 16453146, VAT EE102489493, Tornimäe tn 3 // 5 // 7, 10145 Tallinn), which is
+              the controller of your personal data under the EU General Data Protection
+              Regulation. Aapastech Private Limited builds and operates the platform for both.
+              In this document "Tyashin", "we" and "us" mean whichever of them you deal with.
             </p>
 
             <h2 id="roles">2. Roles</h2>
@@ -46,6 +54,11 @@ export default function DpaPage() {
               fiduciary (the controller, under laws that use that word) and we are your
               processor. Personal data about you and your team as our account holders is not
               Site Data; our <a href="/privacy">privacy policy</a> covers it.
+            </p>
+            <p>
+              If you are a customer of Aapastech OÜ, this Addendum is the contract between you
+              and Aapastech OÜ required by Article 28 of the EU General Data Protection
+              Regulation.
             </p>
 
             <h2 id="scope">3. Scope and duration</h2>
@@ -111,19 +124,15 @@ export default function DpaPage() {
             <h2 id="security">7. Security</h2>
             <p>We will keep at least these measures in place to protect Site Data:</p>
             <ul>
-              <li>encryption in transit (TLS) on every public endpoint;</li>
-              <li>encryption at rest where the provider supports it;</li>
-              <li>role-based access, with multi-factor authentication for administrative accounts;</li>
+              <li>TLS on every public endpoint;</li>
+              <li>encryption at rest provided by our hosting and database providers;</li>
+              <li>access to production systems limited to staff who need it;</li>
               <li>secrets kept in managed secret stores, never in source code;</li>
-              <li>logs of administrative and security events, kept for at least 180 days;</li>
-              <li>clocks synchronised to time sources traceable to NIC or NPL;</li>
-              <li>
-                a documented incident response process that meets the 6-hour CERT-In and
-                72-hour Data Protection Board timelines;
-              </li>
-              <li>least-privilege service accounts for each environment;</li>
-              <li>backups, with tested restores.</li>
+              <li>logging of security and administrative events;</li>
+              <li>incident response with the notification times in this Addendum;</li>
+              <li>backups provided by our database providers.</li>
             </ul>
+            <p>We are extending log retention to 180 days across all systems by 31 December 2026.</p>
 
             <h2 id="sub-processors">8. Sub-processors</h2>
             <p>
@@ -141,7 +150,8 @@ export default function DpaPage() {
               If we become aware of a personal data breach affecting Site Data, we will tell
               you without undue delay and in any case within 24 hours of becoming aware of it.
               We will give you what you need for your report to the Data Protection Board of
-              India within 72 hours:
+              India within 72 hours (or, if you are a customer of Aapastech OÜ, to your
+              supervisory authority under the GDPR):
             </p>
             <ul>
               <li>what happened, and its nature, extent, timing and location;</li>
@@ -164,18 +174,20 @@ export default function DpaPage() {
               pass the request to you promptly. We will not answer it ourselves unless you ask
               us to or the law requires it. We will help you answer these requests within the
               time the law gives you, through the admin app where it covers the request and by
-              hand where it does not.
+              hand where it does not. We will also give you reasonable help with data
+              protection impact assessments, and with consulting a supervisory authority, where
+              they concern our processing of Site Data.
             </p>
 
             <h2 id="deletion">11. Deletion or return at the end</h2>
             <p>
               When the Service ends, or earlier if you ask, we will delete Site Data or return
               a copy to you, as you choose. Some data stays longer because the law requires it.
-              Rule 8(3) of the Digital Personal Data Protection Rules, 2025 requires us to keep
-              personal data, related traffic data and processing logs for one year from
-              processing, and the CERT-In Directions of 28 April 2022 require us to keep logs
-              for 180 days. We keep that data as a sealed copy that nobody uses except to meet
-              those legal duties, and then destroy it.
+              The CERT-In Directions of 28 April 2022 require us to keep logs for 180 days, and
+              from 13 May 2027 Rule 8(3) of the Digital Personal Data Protection Rules, 2025
+              will require us to keep personal data, related traffic data and processing logs
+              for one year from processing. We keep data held for these reasons as a sealed
+              copy that nobody uses except to meet those legal duties, and then destroy it.
             </p>
 
             <h2 id="audits">12. Information and audits</h2>
@@ -194,6 +206,13 @@ export default function DpaPage() {
               Act, 2023, and we will not transfer Site Data to any country the Government of
               India restricts by notification.
             </p>
+            <p>
+              If you are a customer of Aapastech OÜ, transfers of Site Data outside the European
+              Economic Area, to Aapastech Private Limited in India and to sub-processors
+              outside the European Economic Area, are covered by the EU Standard Contractual
+              Clauses (Commission Implementing Decision (EU) 2021/914), Module 3, which are
+              incorporated into this Addendum by reference. We will send you a copy on request.
+            </p>
 
             <h2 id="your-duties">14. Your responsibilities</h2>
             <p>You must:</p>
@@ -203,6 +222,10 @@ export default function DpaPage() {
                 requires it, and publish a privacy notice on your site that tells people what
                 you collect, why, who processes it for you (including Tyashin) and how they can
                 use their rights;
+              </li>
+              <li>
+                where your site has visitors in the European Union, get their consent before
+                your site stores or reads non-essential cookies or other data on their devices;
               </li>
               <li>
                 not collect personal data of children under 18 unless you have the verifiable

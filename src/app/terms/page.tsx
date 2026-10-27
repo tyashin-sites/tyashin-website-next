@@ -5,7 +5,7 @@ import LegalDoc from '@/components/LegalDoc';
 export const metadata = pageMetadata({
   title: 'Terms of Service',
   description:
-    'The user agreement for Tyashin, run by Aapastech Private Limited: the service, billing, rules for content you host, AI content, data processing, liability and Indian law.',
+    'The user agreement for Tyashin (Aapastech Private Limited in India, Aapastech OÜ elsewhere): the service, billing, rules for content you host, AI content, data processing and liability.',
   path: '/terms',
 });
 
@@ -35,10 +35,18 @@ export default function TermsPage() {
 
             <h2 id="who-we-are">1. Who we are</h2>
             <p>
-              Tyashin is run by Aapastech Private Limited, a company registered in India (CIN
-              U72900DL2022PTC395508) with its registered office at 8/3, 2nd Floor, Roop Nagar,
-              Delhi 110007. In this document "Tyashin", "we" and "us" mean Aapastech Private
-              Limited.
+              Tyashin is run by two companies in the same group. If you pay in Indian rupees,
+              or use Tyashin in India without paying, your contract is with{' '}
+              <strong>Aapastech Private Limited</strong>, a company registered in India (CIN
+              U72900DL2022PTC395508, registered office 8/3, 2nd Floor, Roop Nagar, Delhi
+              110007; principal place of business 1st Floor, 145, Sector 44, Gurugram, Haryana
+              122003), which is also the data fiduciary for your personal data. If you pay in
+              any other currency, or use Tyashin outside India without paying, your contract is
+              with <strong>Aapastech OÜ</strong>, a company registered in Estonia (registry
+              code 16453146, VAT EE102489493, Tornimäe tn 3 // 5 // 7, 10145 Tallinn), which is
+              the controller of your personal data under the EU General Data Protection
+              Regulation. Aapastech Private Limited builds and operates the platform for both.
+              In this document "Tyashin", "we" and "us" mean whichever of them you deal with.
             </p>
 
             <h2 id="service">2. The service</h2>
@@ -203,11 +211,16 @@ export default function TermsPage() {
             </p>
 
             <h2 id="liability">12. Disclaimers and liability</h2>
+            <p>The Service is provided "as is" without warranties of any kind.</p>
             <p>
-              The Service is provided "as is" without warranties of any kind. To the maximum
-              extent permitted by law, Tyashin is not liable for indirect or consequential
-              damages, and our total liability is limited to the fees you paid in the twelve
-              months preceding the claim.
+              Each party's total liability under these terms is limited to the fees you paid in
+              the 12 months before the event giving rise to the claim. For breaches of data
+              protection or confidentiality obligations the limit is three times that amount.
+              These limits do not apply to fraud, wilful misconduct, your obligation to pay
+              fees, or your responsibility for your own content and for personal data you had
+              no right to give us. Neither party is liable for indirect or consequential loss,
+              or for lost profits, except in case of fraud. Nothing in these terms limits
+              liability that the law does not allow to be limited.
             </p>
 
             <h2 id="termination">13. Termination</h2>
@@ -245,11 +258,23 @@ export default function TermsPage() {
             <h2 id="contact">17. Contact</h2>
             <p>
               Questions about these terms? Email{' '}
-              <a href="mailto:contact@aapastech.com">contact@aapastech.com</a> or write to
-              Aapastech Private Limited, 8/3, 2nd Floor, Roop Nagar, Delhi 110007, India.
+              <a href="mailto:contact@aapastech.com">contact@aapastech.com</a>, or write to the
+              company you deal with:
             </p>
+            <ul>
+              <li>
+                <strong>Aapastech Private Limited</strong>, CIN U72900DL2022PTC395508.
+                Registered office (for legal notices): 8/3, 2nd Floor, Roop Nagar, Delhi 110007,
+                India. Principal place of business: 1st Floor, 145, Sector 44, Gurugram, Haryana
+                122003, India.
+              </li>
+              <li>
+                <strong>Aapastech OÜ</strong>, registry code 16453146, VAT EE102489493.
+                Tornimäe tn 3 // 5 // 7, 10145 Tallinn, Estonia.
+              </li>
+            </ul>
             <p>
-              Ask us at the address above if you need these terms in Hindi or in another
+              Ask us at contact@aapastech.com if you need these terms in Hindi or in another
               language listed in the Eighth Schedule to the Constitution of India, and we will
               send them within 7 days.
             </p>
