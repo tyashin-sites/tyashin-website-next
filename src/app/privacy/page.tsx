@@ -188,8 +188,8 @@ export default function PrivacyPage() {
               <li>
                 <strong>14818032 Canada Inc.</strong> (Canada), our group company. It is the
                 controller for users outside India, the European Union and the United Kingdom.
-                It operates YOM together with Aapastech Private Limited, holds our Stripe
-                account, and processes personal data for Aapastech OÜ. The European Commission
+                It operates YOM together with Aapastech Private Limited, bills its own
+                customers, and processes personal data for Aapastech OÜ. The European Commission
                 and the United Kingdom recognise Canada as giving adequate protection.
               </li>
               <li>
@@ -210,8 +210,8 @@ export default function PrivacyPage() {
               </li>
               <li>
                 <strong>Stripe</strong> (United States and other countries where Stripe
-                operates). Takes card payments from customers outside India. The Stripe account
-                is held by 14818032 Canada Inc.
+                operates). Takes card payments from customers outside India, for Aapastech OÜ (European
+                Union and United Kingdom) and 14818032 Canada Inc. (everywhere else).
               </li>
               <li>
                 <strong>Resend</strong> (United States). Sends emails from Tyashin, such as

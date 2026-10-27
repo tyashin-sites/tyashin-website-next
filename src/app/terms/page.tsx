@@ -85,10 +85,9 @@ export default function TermsPage() {
               your invoices and payment method in your account billing settings.
             </p>
             <p>
-              Card payments from customers outside India are currently collected by 14818032
-              Canada Inc. For customers in the European Union or the United Kingdom it collects
-              them as billing and collection agent for Aapastech OÜ. This does not change who
-              your contract is with.
+              Each company bills and collects payment from its own customers: Aapastech Private
+              Limited in India, Aapastech OÜ in the European Union and the United Kingdom, and
+              14818032 Canada Inc. everywhere else.
             </p>
 
             <h2 id="content-rules">5. Rules for content you put on Tyashin</h2>
