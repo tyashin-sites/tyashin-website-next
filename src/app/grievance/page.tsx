@@ -6,7 +6,7 @@ import LegalDoc from '@/components/LegalDoc';
 const base = pageMetadata({
   title: 'Grievance Officer',
   description:
-    'Complain to Tyashin (Aapastech Private Limited and Aapastech OÜ) about our service, content we host or your personal data: how to complain, response times and appeals.',
+    'Complain to Tyashin about our service, content we host or your personal data: how to complain, response times, and appeals in India, the EU, the UK and Canada.',
   path: '/grievance',
 });
 
@@ -112,25 +112,47 @@ export default function GrievancePage() {
               <li>
                 In the European Union you can complain to the Estonian Data Protection
                 Inspectorate (Andmekaitse Inspektsioon, <a href="https://www.aki.ee">www.aki.ee</a>)
-                or to the data protection authority where you live. Shikha Gupta is also the
-                privacy contact for Aapastech OÜ.
+                or to the data protection authority where you live. In the United Kingdom you
+                can complain to the Information Commissioner's Office{' '}
+                (<a href="https://ico.org.uk">ico.org.uk</a>). Shikha Gupta is also the privacy
+                contact for Aapastech OÜ.
+              </li>
+              <li>
+                In Canada you can contact the Office of the Privacy Commissioner of Canada, and
+                in Quebec the Commission d'accès à l'information. Shikha Gupta is also our
+                Privacy Officer for 14818032 Canada Inc. and the person in charge of the
+                protection of personal information for Quebec{' '}
+                (<a href="mailto:contact@aapastech.com">contact@aapastech.com</a>,{' '}
+                <a href="tel:+14378000190">+1 437 800 0190</a>).
               </li>
             </ul>
 
             <p>
-              <strong>Who runs Tyashin.</strong> Tyashin is run by two companies in the same
-              group. If you pay in Indian rupees, or use Tyashin in India without paying, your
-              contract is with <strong>Aapastech Private Limited</strong>, a company registered
-              in India (CIN U72900DL2022PTC395508, registered office 8/3, 2nd Floor, Roop
-              Nagar, Delhi 110007; principal place of business 1st Floor, 145, Sector 44,
-              Gurugram, Haryana 122003), which is also the data fiduciary for your personal
-              data. If you pay in any other currency, or use Tyashin outside India without
-              paying, your contract is with <strong>Aapastech OÜ</strong>, a company registered
-              in Estonia (registry code 16453146, VAT EE102489493, Tornimäe tn 3 // 5 // 7,
-              10145 Tallinn), which is the controller of your personal data under the EU
-              General Data Protection Regulation. Aapastech Private Limited builds and operates
-              the platform for both. In this document "Tyashin", "we" and "us" mean whichever
-              of them you deal with.
+              <strong>Who runs Tyashin.</strong> Tyashin is run by three companies in the same
+              group. Which one you deal with depends on where you are. For a business account, that is the country of the
+              business's billing address.
+            </p>
+            <ul>
+              <li>
+                <strong>India:</strong> Aapastech Private Limited (CIN U72900DL2022PTC395508;
+                registered office 8/3, 2nd Floor, Roop Nagar, Delhi 110007; principal place of
+                business 1st Floor, 145, Sector 44, Gurugram, Haryana 122003). It is the data
+                fiduciary for your personal data under Indian law.
+              </li>
+              <li>
+                <strong>European Union and United Kingdom:</strong> Aapastech OÜ (registry code
+                16453146, VAT EE102489493, Tornimäe tn 3 // 5 // 7, 10145 Tallinn, Estonia). It
+                is the controller of your personal data under the GDPR and the UK GDPR.
+              </li>
+              <li>
+                <strong>Everywhere else:</strong> 14818032 Canada Inc. (Burlington, Ontario,
+                Canada). It is the controller of your personal data.
+              </li>
+            </ul>
+            <p>
+              The three companies share engineering, hosting and support, and each processes
+              personal data for the others under a written intra-group agreement. In this
+              document "Tyashin", "we" and "us" mean whichever of them you deal with.
             </p>
 
             <p>

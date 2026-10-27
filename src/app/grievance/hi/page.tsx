@@ -106,11 +106,24 @@ export default function GrievanceHindiPage() {
                 बोर्ड से शिकायत कर सकते हैं।
               </li>
               <li>
-                यूरोपीय संघ में आप एस्टोनिया के डेटा संरक्षण निरीक्षणालय (
-                <span lang="et">Andmekaitse Inspektsioon</span>,{' '}
+                यूरोपीय संघ में आप एस्टोनिया के डेटा संरक्षण निरीक्षणालय{' '}
+                (<span lang="et">Andmekaitse Inspektsioon</span>,{' '}
                 <a href="https://www.aki.ee">www.aki.ee</a>) से, या जहाँ आप रहते हैं वहाँ के डेटा
-                संरक्षण प्राधिकरण से शिकायत कर सकते हैं। शिखा गुप्ता <span lang="et">Aapastech OÜ</span>{' '}
-                के लिए भी निजता संपर्क हैं।
+                संरक्षण प्राधिकरण से शिकायत कर सकते हैं। यूनाइटेड किंगडम में आप सूचना आयुक्त
+                कार्यालय (<span lang="en">Information Commissioner's Office</span>,{' '}
+                <a href="https://ico.org.uk">ico.org.uk</a>) से शिकायत कर सकते हैं। शिखा गुप्ता{' '}
+                <span lang="et">Aapastech OÜ</span> के लिए भी निजता संपर्क हैं।
+              </li>
+              <li>
+                कनाडा में आप कनाडा के निजता आयुक्त कार्यालय (
+                <span lang="en">Office of the Privacy Commissioner of Canada</span>) से संपर्क कर
+                सकते हैं, और क्यूबेक में{' '}
+                <span lang="fr">Commission d'accès à l'information</span> से। शिखा गुप्ता{' '}
+                <span lang="en">14818032 Canada Inc.</span> की निजता अधिकारी (
+                <span lang="en">Privacy Officer</span>) भी हैं और क्यूबेक के लिए व्यक्तिगत
+                जानकारी के संरक्षण की ज़िम्मेदार व्यक्ति भी हैं (
+                <a href="mailto:contact@aapastech.com">contact@aapastech.com</a>,{' '}
+                <a href="tel:+14378000190">+1 437 800 0190</a>)।
               </li>
             </ul>
 
@@ -163,6 +176,35 @@ export default function GrievanceHindiPage() {
               नकली चित्र या वीडियो, बनाना भी इन्हीं कानूनों के तहत दंडनीय हो सकता है। AI से बनी
               सामग्री पर लगे लेबल या मेटाडेटा न हटाएँ। हम हर तीन महीने में कम से कम एक बार सभी
               उपयोगकर्ताओं को इन नियमों की याद दिलाते हैं।
+            </p>
+
+            <h2 id="who-we-are">हम कौन हैं</h2>
+            <p lang="en">
+              Tyashin is run by three companies in the same group. Which one you deal with
+              depends on where you are. For a business account, that is the country of the
+              business's billing address.
+            </p>
+            <ul lang="en">
+              <li>
+                <strong>India:</strong> Aapastech Private Limited (CIN U72900DL2022PTC395508;
+                registered office 8/3, 2nd Floor, Roop Nagar, Delhi 110007; principal place of
+                business 1st Floor, 145, Sector 44, Gurugram, Haryana 122003). It is the data
+                fiduciary for your personal data under Indian law.
+              </li>
+              <li>
+                <strong>European Union and United Kingdom:</strong> Aapastech OÜ (registry code
+                16453146, VAT EE102489493, Tornimäe tn 3 // 5 // 7, 10145 Tallinn, Estonia). It
+                is the controller of your personal data under the GDPR and the UK GDPR.
+              </li>
+              <li>
+                <strong>Everywhere else:</strong> 14818032 Canada Inc. (Burlington, Ontario,
+                Canada). It is the controller of your personal data.
+              </li>
+            </ul>
+            <p lang="en">
+              The three companies share engineering, hosting and support, and each processes
+              personal data for the others under a written intra-group agreement. In this
+              document "Tyashin", "we" and "us" mean whichever of them you deal with.
             </p>
 
             <p>

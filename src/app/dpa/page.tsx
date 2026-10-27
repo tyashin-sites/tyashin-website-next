@@ -33,18 +33,31 @@ export default function DpaPage() {
 
             <h2 id="who-we-are">1. Who we are</h2>
             <p>
-              Tyashin is run by two companies in the same group. If you pay in Indian rupees,
-              or use Tyashin in India without paying, your contract is with{' '}
-              <strong>Aapastech Private Limited</strong>, a company registered in India (CIN
-              U72900DL2022PTC395508, registered office 8/3, 2nd Floor, Roop Nagar, Delhi
-              110007; principal place of business 1st Floor, 145, Sector 44, Gurugram, Haryana
-              122003), which is also the data fiduciary for your personal data. If you pay in
-              any other currency, or use Tyashin outside India without paying, your contract is
-              with <strong>Aapastech OÜ</strong>, a company registered in Estonia (registry
-              code 16453146, VAT EE102489493, Tornimäe tn 3 // 5 // 7, 10145 Tallinn), which is
-              the controller of your personal data under the EU General Data Protection
-              Regulation. Aapastech Private Limited builds and operates the platform for both.
-              In this document "Tyashin", "we" and "us" mean whichever of them you deal with.
+              Tyashin is run by three companies in the same group. Which one you deal with
+              depends on where you are. For a business account, that is the country of the
+              business's billing address.
+            </p>
+            <ul>
+              <li>
+                <strong>India:</strong> Aapastech Private Limited (CIN U72900DL2022PTC395508;
+                registered office 8/3, 2nd Floor, Roop Nagar, Delhi 110007; principal place of
+                business 1st Floor, 145, Sector 44, Gurugram, Haryana 122003). It is the data
+                fiduciary for your personal data under Indian law.
+              </li>
+              <li>
+                <strong>European Union and United Kingdom:</strong> Aapastech OÜ (registry code
+                16453146, VAT EE102489493, Tornimäe tn 3 // 5 // 7, 10145 Tallinn, Estonia). It
+                is the controller of your personal data under the GDPR and the UK GDPR.
+              </li>
+              <li>
+                <strong>Everywhere else:</strong> 14818032 Canada Inc. (Burlington, Ontario,
+                Canada). It is the controller of your personal data.
+              </li>
+            </ul>
+            <p>
+              The three companies share engineering, hosting and support, and each processes
+              personal data for the others under a written intra-group agreement. In this
+              document "Tyashin", "we" and "us" mean whichever of them you deal with.
             </p>
 
             <h2 id="roles">2. Roles</h2>
@@ -56,9 +69,9 @@ export default function DpaPage() {
               Site Data; our <a href="/privacy">privacy policy</a> covers it.
             </p>
             <p>
-              If you are a customer of Aapastech OÜ, this Addendum is the contract between you
-              and Aapastech OÜ required by Article 28 of the EU General Data Protection
-              Regulation.
+              If you are in the European Union or the United Kingdom, Aapastech OÜ is your
+              processor, and this Addendum is the contract between you and Aapastech OÜ
+              required by Article 28 of the GDPR and of the UK GDPR.
             </p>
 
             <h2 id="scope">3. Scope and duration</h2>
@@ -150,8 +163,8 @@ export default function DpaPage() {
               If we become aware of a personal data breach affecting Site Data, we will tell
               you without undue delay and in any case within 24 hours of becoming aware of it.
               We will give you what you need for your report to the Data Protection Board of
-              India within 72 hours (or, if you are a customer of Aapastech OÜ, to your
-              supervisory authority under the GDPR):
+              India within 72 hours (or, if you are in the European Union or the United
+              Kingdom, to your supervisory authority under the GDPR or the UK GDPR):
             </p>
             <ul>
               <li>what happened, and its nature, extent, timing and location;</li>
@@ -207,11 +220,14 @@ export default function DpaPage() {
               India restricts by notification.
             </p>
             <p>
-              If you are a customer of Aapastech OÜ, transfers of Site Data outside the European
-              Economic Area, to Aapastech Private Limited in India and to sub-processors
-              outside the European Economic Area, are covered by the EU Standard Contractual
-              Clauses (Commission Implementing Decision (EU) 2021/914), Module 3, which are
-              incorporated into this Addendum by reference. We will send you a copy on request.
+              If you are in the European Union or the United Kingdom, transfers of Site Data to
+              14818032 Canada Inc. in Canada rely on the adequacy decisions of the European
+              Commission and the United Kingdom. Transfers to Aapastech Private Limited in India,
+              and to sub-processors in other countries not covered by an adequacy decision, are
+              covered by the EU Standard Contractual Clauses (Commission Implementing Decision
+              (EU) 2021/914), Module 3, together with the UK International Data Transfer
+              Addendum issued by the Information Commissioner. Both are incorporated into this
+              Addendum by reference, and we will send you a copy on request.
             </p>
 
             <h2 id="your-duties">14. Your responsibilities</h2>
@@ -224,7 +240,8 @@ export default function DpaPage() {
                 use their rights;
               </li>
               <li>
-                where your site has visitors in the European Union, get their consent before
+                where your site has visitors in the European Union or the United Kingdom, get
+                their consent before
                 your site stores or reads non-essential cookies or other data on their devices;
               </li>
               <li>

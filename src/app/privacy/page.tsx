@@ -5,7 +5,7 @@ import LegalDoc from '@/components/LegalDoc';
 export const metadata = pageMetadata({
   title: 'Privacy Policy',
   description:
-    'What personal data Tyashin (Aapastech Private Limited in India, Aapastech OÜ elsewhere) collects and why, who we share it with, how long we keep it, your rights and how to complain.',
+    'What personal data Tyashin collects and why, who we share it with, how long we keep it, your rights in India, the EU, the UK and elsewhere, and how to complain.',
   path: '/privacy',
 });
 
@@ -34,18 +34,31 @@ export default function PrivacyPage() {
 
             <h2 id="who-we-are">1. Who we are</h2>
             <p>
-              Tyashin is run by two companies in the same group. If you pay in Indian rupees,
-              or use Tyashin in India without paying, your contract is with{' '}
-              <strong>Aapastech Private Limited</strong>, a company registered in India (CIN
-              U72900DL2022PTC395508, registered office 8/3, 2nd Floor, Roop Nagar, Delhi
-              110007; principal place of business 1st Floor, 145, Sector 44, Gurugram, Haryana
-              122003), which is also the data fiduciary for your personal data. If you pay in
-              any other currency, or use Tyashin outside India without paying, your contract is
-              with <strong>Aapastech OÜ</strong>, a company registered in Estonia (registry
-              code 16453146, VAT EE102489493, Tornimäe tn 3 // 5 // 7, 10145 Tallinn), which is
-              the controller of your personal data under the EU General Data Protection
-              Regulation. Aapastech Private Limited builds and operates the platform for both.
-              In this document "Tyashin", "we" and "us" mean whichever of them you deal with.
+              Tyashin is run by three companies in the same group. Which one you deal with
+              depends on where you are. For a business account, that is the country of the
+              business's billing address.
+            </p>
+            <ul>
+              <li>
+                <strong>India:</strong> Aapastech Private Limited (CIN U72900DL2022PTC395508;
+                registered office 8/3, 2nd Floor, Roop Nagar, Delhi 110007; principal place of
+                business 1st Floor, 145, Sector 44, Gurugram, Haryana 122003). It is the data
+                fiduciary for your personal data under Indian law.
+              </li>
+              <li>
+                <strong>European Union and United Kingdom:</strong> Aapastech OÜ (registry code
+                16453146, VAT EE102489493, Tornimäe tn 3 // 5 // 7, 10145 Tallinn, Estonia). It
+                is the controller of your personal data under the GDPR and the UK GDPR.
+              </li>
+              <li>
+                <strong>Everywhere else:</strong> 14818032 Canada Inc. (Burlington, Ontario,
+                Canada). It is the controller of your personal data.
+              </li>
+            </ul>
+            <p>
+              The three companies share engineering, hosting and support, and each processes
+              personal data for the others under a written intra-group agreement. In this
+              document "Tyashin", "we" and "us" mean whichever of them you deal with.
             </p>
             <p>
               For the personal data described in sections 2 and 3, the company you deal with
@@ -169,13 +182,15 @@ export default function PrivacyPage() {
             <ul>
               <li>
                 <strong>Aapastech Private Limited</strong> (India), our group company. Builds
-                and operates the platform, and processes personal data for customers of
-                Aapastech OÜ.
+                and operates the platform, and processes personal data for Aapastech OÜ and
+                14818032 Canada Inc.
               </li>
               <li>
-                <strong>14818032 Canada Inc.</strong> (Canada), our group company. Operates YOM
-                together with Aapastech Private Limited, and processes personal data for
-                customers of Aapastech OÜ.
+                <strong>14818032 Canada Inc.</strong> (Canada), our group company. It is the
+                controller for users outside India, the European Union and the United Kingdom.
+                It operates YOM together with Aapastech Private Limited, holds our Stripe
+                account, and processes personal data for Aapastech OÜ. The European Commission
+                and the United Kingdom recognise Canada as giving adequate protection.
               </li>
               <li>
                 <strong>Cloudflare, Inc.</strong> (United States; global network). Hosts and
@@ -191,11 +206,12 @@ export default function PrivacyPage() {
               </li>
               <li>
                 <strong>Razorpay Software Private Limited</strong> (India). Takes payments in
-                Indian rupees.
+                Indian rupees. The Razorpay account is held by Aapastech Private Limited.
               </li>
               <li>
                 <strong>Stripe</strong> (United States and other countries where Stripe
-                operates). Takes payments in other currencies.
+                operates). Takes card payments from customers outside India. The Stripe account
+                is held by 14818032 Canada Inc.
               </li>
               <li>
                 <strong>Resend</strong> (United States). Sends emails from Tyashin, such as
@@ -263,23 +279,28 @@ export default function PrivacyPage() {
               identity, but only with information we already hold.
             </p>
 
-            <h2 id="gdpr">7. Your rights under the GDPR</h2>
+            <h2 id="gdpr">7. Your rights under the GDPR and the UK GDPR</h2>
             <p>
-              <strong>If your contract is with Aapastech OÜ.</strong> Aapastech OÜ is the
-              controller. We process your account and billing data to perform our contract with
-              you, tax records to meet legal obligations, and security logs, fraud checks and
-              aggregate usage statistics on the basis of our legitimate interest in running a
-              safe and reliable service; you can object to that last use at any time. We send
-              marketing email only with your consent. You can ask for access to your data,
-              correction, deletion, restriction, a portable copy, and you can object or
+              <strong>If you are in the European Union or the United Kingdom.</strong> Aapastech
+              OÜ is the controller. We process your account and billing data to perform our
+              contract with you, tax records to meet legal obligations, and security logs, fraud
+              checks and aggregate usage statistics on the basis of our legitimate interest in
+              running a safe and reliable service; you can object to that last use at any time.
+              We send marketing email only with your consent. You can ask for access to your
+              data, correction, deletion, restriction, a portable copy, and you can object or
               withdraw consent, by emailing{' '}
               <a href="mailto:contact@aapastech.com">contact@aapastech.com</a>. You can complain
               to the Estonian Data Protection Inspectorate (Andmekaitse Inspektsioon,{' '}
-              <a href="https://www.aki.ee">www.aki.ee</a>) or to the authority where you live.
-              Our group company Aapastech Private Limited in India operates the platform for
-              Aapastech OÜ, and some of our service providers are in the United States; these
-              transfers are covered by the European Commission's Standard Contractual Clauses,
-              and you can ask us for a copy.
+              <a href="https://www.aki.ee">www.aki.ee</a>), to the authority where you live, or
+              in the United Kingdom to the Information Commissioner's Office{' '}
+              (<a href="https://ico.org.uk">ico.org.uk</a>). Our group companies operate the
+              services for Aapastech OÜ: 14818032 Canada Inc. in Canada, which the European
+              Commission and the United Kingdom recognise as giving adequate protection, and
+              Aapastech Private Limited in India. Some of our service providers are in the
+              United States. Transfers to India and the United States are covered by the
+              European Commission's Standard Contractual Clauses with the UK Addendum, or by the
+              EU-U.S. and UK-U.S. Data Privacy Framework where the provider is certified. You
+              can ask us for a copy.
             </p>
 
             <h2 id="retention">8. How long we keep data</h2>
@@ -323,15 +344,18 @@ export default function PrivacyPage() {
             <p>
               Contact our Grievance Officer (see <a href="/grievance">/grievance</a>). If you
               are not satisfied, you can complain to the Data Protection Board of India once
-              the relevant provisions apply. If your contract is with Aapastech OÜ, section 7
-              explains how to complain to a data protection authority in the European Union.
+              the relevant provisions apply. If you are in the European Union or the United
+              Kingdom, section 7 explains how to complain to a data protection authority. If
+              you are in Canada, the <a href="/grievance">Grievance Officer page</a> explains
+              how to contact the Office of the Privacy Commissioner of Canada.
             </p>
             <p>
               <strong>Grievance Officer:</strong> Shikha Gupta, Aapastech Private Limited, 8/3,
               2nd Floor, Roop Nagar, Delhi 110007, India. Email{' '}
               <a href="mailto:contact@aapastech.com">contact@aapastech.com</a>, phone{' '}
               <a href="tel:+919667747082">+91 96677 47082</a>. Shikha Gupta is also the privacy
-              contact for Aapastech OÜ.
+              contact for Aapastech OÜ and our Privacy Officer for 14818032 Canada Inc.{' '}
+              (<a href="tel:+14378000190">+1 437 800 0190</a>).
             </p>
 
             <h2 id="changes">13. Changes to this policy</h2>
@@ -356,6 +380,9 @@ export default function PrivacyPage() {
               <li>
                 <strong>Aapastech OÜ</strong>, registry code 16453146, VAT EE102489493.
                 Tornimäe tn 3 // 5 // 7, 10145 Tallinn, Estonia.
+              </li>
+              <li>
+                <strong>14818032 Canada Inc.</strong>, Burlington, Ontario, Canada.
               </li>
             </ul>
             <p>

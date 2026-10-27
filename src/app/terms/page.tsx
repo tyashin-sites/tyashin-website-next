@@ -5,7 +5,7 @@ import LegalDoc from '@/components/LegalDoc';
 export const metadata = pageMetadata({
   title: 'Terms of Service',
   description:
-    'The user agreement for Tyashin (Aapastech Private Limited in India, Aapastech OÜ elsewhere): the service, billing, rules for content you host, AI content, data processing and liability.',
+    'The user agreement for Tyashin: who you contract with, the service, billing, rules for content you host, AI content, data processing, liability and governing law.',
   path: '/terms',
 });
 
@@ -35,18 +35,31 @@ export default function TermsPage() {
 
             <h2 id="who-we-are">1. Who we are</h2>
             <p>
-              Tyashin is run by two companies in the same group. If you pay in Indian rupees,
-              or use Tyashin in India without paying, your contract is with{' '}
-              <strong>Aapastech Private Limited</strong>, a company registered in India (CIN
-              U72900DL2022PTC395508, registered office 8/3, 2nd Floor, Roop Nagar, Delhi
-              110007; principal place of business 1st Floor, 145, Sector 44, Gurugram, Haryana
-              122003), which is also the data fiduciary for your personal data. If you pay in
-              any other currency, or use Tyashin outside India without paying, your contract is
-              with <strong>Aapastech OÜ</strong>, a company registered in Estonia (registry
-              code 16453146, VAT EE102489493, Tornimäe tn 3 // 5 // 7, 10145 Tallinn), which is
-              the controller of your personal data under the EU General Data Protection
-              Regulation. Aapastech Private Limited builds and operates the platform for both.
-              In this document "Tyashin", "we" and "us" mean whichever of them you deal with.
+              Tyashin is run by three companies in the same group. Which one you deal with
+              depends on where you are. For a business account, that is the country of the
+              business's billing address.
+            </p>
+            <ul>
+              <li>
+                <strong>India:</strong> Aapastech Private Limited (CIN U72900DL2022PTC395508;
+                registered office 8/3, 2nd Floor, Roop Nagar, Delhi 110007; principal place of
+                business 1st Floor, 145, Sector 44, Gurugram, Haryana 122003). It is the data
+                fiduciary for your personal data under Indian law.
+              </li>
+              <li>
+                <strong>European Union and United Kingdom:</strong> Aapastech OÜ (registry code
+                16453146, VAT EE102489493, Tornimäe tn 3 // 5 // 7, 10145 Tallinn, Estonia). It
+                is the controller of your personal data under the GDPR and the UK GDPR.
+              </li>
+              <li>
+                <strong>Everywhere else:</strong> 14818032 Canada Inc. (Burlington, Ontario,
+                Canada). It is the controller of your personal data.
+              </li>
+            </ul>
+            <p>
+              The three companies share engineering, hosting and support, and each processes
+              personal data for the others under a written intra-group agreement. In this
+              document "Tyashin", "we" and "us" mean whichever of them you deal with.
             </p>
 
             <h2 id="service">2. The service</h2>
@@ -70,6 +83,12 @@ export default function TermsPage() {
               payment gateways. Subscriptions renew automatically until cancelled. Fees are
               non-refundable except where required by law or expressly stated. You can view
               your invoices and payment method in your account billing settings.
+            </p>
+            <p>
+              Card payments from customers outside India are currently collected by 14818032
+              Canada Inc. For customers in the European Union or the United Kingdom it collects
+              them as billing and collection agent for Aapastech OÜ. This does not change who
+              your contract is with.
             </p>
 
             <h2 id="content-rules">5. Rules for content you put on Tyashin</h2>
@@ -240,9 +259,13 @@ export default function TermsPage() {
 
             <h2 id="governing-law">15. Governing law and courts</h2>
             <p>
-              These terms are governed by the laws of India. The courts at Delhi have exclusive
-              jurisdiction over any dispute arising out of or in connection with these terms
-              or the Service, unless the law requires otherwise.
+              If you are in India, Indian law governs these terms and the courts at Delhi have
+              jurisdiction. If you are in the European Union or the United Kingdom, Estonian law
+              governs them and the Harju County Court in Tallinn has jurisdiction, but you keep
+              any protection that the mandatory law of the country where you live gives
+              consumers. Everywhere else, the laws of the Province of Ontario and the federal
+              laws of Canada that apply there govern them, and the courts of Ontario have
+              jurisdiction.
             </p>
 
             <h2 id="grievances">16. Complaints and our Grievance Officer</h2>
@@ -271,6 +294,9 @@ export default function TermsPage() {
               <li>
                 <strong>Aapastech OÜ</strong>, registry code 16453146, VAT EE102489493.
                 Tornimäe tn 3 // 5 // 7, 10145 Tallinn, Estonia.
+              </li>
+              <li>
+                <strong>14818032 Canada Inc.</strong>, Burlington, Ontario, Canada.
               </li>
             </ul>
             <p>
