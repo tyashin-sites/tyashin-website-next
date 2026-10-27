@@ -286,8 +286,8 @@ export default function PrivacyPage() {
             <p>
               We keep personal data while your account is active and as long as we need it for
               the purpose you gave it for, then delete it. Some records stay longer because the
-              law requires it: invoices and tax records for 8 years, and security logs for at
-              least 180 days. From 13 May 2027 Indian law will also require us to keep personal
+              law requires it: invoices and tax records for 8 years, and security logs for 180 days under Indian cyber security rules (we are extending this to
+              every system by 31 December 2026). From 13 May 2027 Indian law will also require us to keep personal
               data, related traffic data and processing logs for one year from processing. From
               then, when we delete your data from our systems we will keep a sealed copy for
               the rest of that year, which nobody uses except to meet that legal duty, and then
