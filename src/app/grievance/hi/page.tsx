@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { pageMetadata } from '@/lib/seo';
 import Reveal from '@/components/Reveal';
 import LegalDoc from '@/components/LegalDoc';
+import GrievanceForm from '@/components/GrievanceForm';
 
 const base = pageMetadata({
   title: 'शिकायत अधिकारी',
@@ -63,6 +64,8 @@ export default function GrievanceHindiPage() {
               निजी डेटा के बारे में अनुरोध हो तो बताएँ कि आप कौन सा उत्पाद इस्तेमाल करते हैं और
               हमारे साथ कौन सा ईमेल पता इस्तेमाल करते हैं।
             </p>
+
+            <GrievanceForm lang="hi" />
 
             <p>
               <strong>आगे क्या होगा।</strong>
