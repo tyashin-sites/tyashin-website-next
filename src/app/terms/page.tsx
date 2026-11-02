@@ -25,7 +25,7 @@ export default function TermsPage() {
           <h1 className="mt-4 text-4xl font-semibold sm:text-5xl">
             Terms of <span className="text-gradient">Service</span>
           </h1>
-          <p className="mt-5 text-white/55">Last updated: 26 October 2026</p>
+          <p className="mt-5 text-white/55">Last updated: 2 November 2026</p>
           <p className="mt-2 text-white/55">
             <a
               href="/terms/hi"
@@ -312,9 +312,13 @@ export default function TermsPage() {
               </li>
             </ul>
             <p>
-              Ask us at contact@aapastech.com if you need these terms in Hindi or in another
-              language listed in the Eighth Schedule to the Constitution of India, and we will
-              send them within 7 days.
+              A Hindi version is available:{' '}
+              <a href="/terms/hi" lang="hi" hrefLang="hi">
+                हिन्दी में पढ़ें
+              </a>
+              . Ask us at contact@aapastech.com if you need these terms in another language
+              listed in the Eighth Schedule to the Constitution of India, and we will send them
+              within 7 days.
             </p>
           </LegalDoc>
         </Reveal>

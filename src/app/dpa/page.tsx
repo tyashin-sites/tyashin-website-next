@@ -19,7 +19,7 @@ export default function DpaPage() {
           <h1 className="mt-4 text-4xl font-semibold sm:text-5xl">
             Data Processing <span className="text-gradient">Addendum</span>
           </h1>
-          <p className="mt-5 text-white/55">Last updated: 26 October 2026</p>
+          <p className="mt-5 text-white/55">Last updated: 2 November 2026</p>
         </Reveal>
 
         <Reveal delay={0.05}>

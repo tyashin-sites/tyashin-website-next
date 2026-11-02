@@ -427,9 +427,13 @@ export default function PrivacyPage() {
               </li>
             </ul>
             <p>
-              Ask us at contact@aapastech.com if you need this policy in Hindi or in another
-              language listed in the Eighth Schedule to the Constitution of India, and we will
-              send it within 7 days.
+              A Hindi version is available:{' '}
+              <a href="/privacy/hi" lang="hi" hrefLang="hi">
+                हिन्दी में पढ़ें
+              </a>
+              . Ask us at contact@aapastech.com if you need this policy in another language
+              listed in the Eighth Schedule to the Constitution of India, and we will send it
+              within 7 days.
             </p>
           </LegalDoc>
         </Reveal>

@@ -32,7 +32,7 @@ export default function TermsHindiPage() {
           <h1 className="mt-4 text-4xl font-semibold sm:text-5xl">
             सेवा की <span className="text-gradient">शर्तें</span>
           </h1>
-          <p className="mt-5 text-white/55">अंतिम अपडेट: 26 अक्टूबर 2026</p>
+          <p className="mt-5 text-white/55">अंतिम अपडेट: 2 नवंबर 2026</p>
           <p className="mt-2 text-white/55">
             <a
               href="/terms"
@@ -358,9 +358,13 @@ export default function TermsHindiPage() {
               </li>
             </ul>
             <p>
-              अगर आपको ये शर्तें हिंदी में या भारत के संविधान की आठवीं अनुसूची में दी गई किसी दूसरी
-              भाषा में चाहिए, तो हमसे contact@aapastech.com पर पूछें, और हम इन्हें 7 दिनों के भीतर
-              भेज देंगे।
+              ये शर्तें अंग्रेज़ी में भी उपलब्ध हैं:{' '}
+              <a href="/terms" lang="en" hrefLang="en">
+                Read in English
+              </a>
+              । अगर आपको ये शर्तें भारत के संविधान की आठवीं अनुसूची में दी गई किसी दूसरी भाषा में
+              चाहिए, तो हमसे contact@aapastech.com पर पूछें, और हम इन्हें 7 दिनों के भीतर भेज
+              देंगे।
             </p>
           </LegalDoc>
         </Reveal>
