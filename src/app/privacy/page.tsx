@@ -1,13 +1,19 @@
+import type { Metadata } from 'next';
 import { pageMetadata } from '@/lib/seo';
 import Reveal from '@/components/Reveal';
 import LegalDoc from '@/components/LegalDoc';
 
-export const metadata = pageMetadata({
+const base = pageMetadata({
   title: 'Privacy Policy',
   description:
     'What personal data Tyashin collects and why, who we share it with, how long we keep it, your rights in India, the EU, the UK and elsewhere, and how to complain.',
   path: '/privacy',
 });
+
+export const metadata: Metadata = {
+  ...base,
+  alternates: { canonical: '/privacy', languages: { en: '/privacy', hi: '/privacy/hi' } },
+};
 
 export default function PrivacyPage() {
   return (
@@ -20,6 +26,16 @@ export default function PrivacyPage() {
             Privacy <span className="text-gradient">Policy</span>
           </h1>
           <p className="mt-5 text-white/55">Last updated: 2 November 2026</p>
+          <p className="mt-2 text-white/55">
+            <a
+              href="/privacy/hi"
+              lang="hi"
+              hrefLang="hi"
+              className="underline underline-offset-2 hover:text-white/80"
+            >
+              हिन्दी में पढ़ें
+            </a>
+          </p>
         </Reveal>
 
         <Reveal delay={0.05}>
