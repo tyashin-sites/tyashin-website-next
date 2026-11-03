@@ -48,11 +48,7 @@ export default function GrievancePage() {
               <br />
               Aapastech Private Limited
               <br />
-              8/3, 2nd Floor, Roop Nagar, Delhi 110007, India (registered office; send legal
-              notices here)
-              <br />
-              1st Floor, 145, Sector 44, Gurugram, Haryana 122003, India (principal place of
-              business)
+              8/3, 2nd Floor, Roop Nagar, Delhi 110007, India (registered office)
               <br />
               Email: <a href="mailto:contact@aapastech.com">contact@aapastech.com</a>
               <br />
@@ -138,9 +134,8 @@ export default function GrievancePage() {
             <ul>
               <li>
                 <strong>India:</strong> Aapastech Private Limited (CIN U72900DL2022PTC395508;
-                registered office 8/3, 2nd Floor, Roop Nagar, Delhi 110007; principal place of
-                business 1st Floor, 145, Sector 44, Gurugram, Haryana 122003). It is the data
-                fiduciary for your personal data under Indian law.
+                registered office 8/3, 2nd Floor, Roop Nagar, Delhi 110007, India). It is the
+                data fiduciary for your personal data under Indian law.
               </li>
               <li>
                 <strong>European Union and United Kingdom:</strong> Aapastech OÜ (registry code

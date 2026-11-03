@@ -190,9 +190,8 @@ export default function GrievanceHindiPage() {
             <ul lang="en">
               <li>
                 <strong>India:</strong> Aapastech Private Limited (CIN U72900DL2022PTC395508;
-                registered office 8/3, 2nd Floor, Roop Nagar, Delhi 110007; principal place of
-                business 1st Floor, 145, Sector 44, Gurugram, Haryana 122003). It is the data
-                fiduciary for your personal data under Indian law.
+                registered office 8/3, 2nd Floor, Roop Nagar, Delhi 110007, India). It is the
+                data fiduciary for your personal data under Indian law.
               </li>
               <li>
                 <strong>European Union and United Kingdom:</strong> Aapastech OÜ (registry code
