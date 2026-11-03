@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { pageMetadata } from '@/lib/seo';
 import Reveal from '@/components/Reveal';
 import LegalDoc from '@/components/LegalDoc';
+import GrievanceForm from '@/components/GrievanceForm';
 
 const base = pageMetadata({
   title: 'Grievance Officer',
@@ -62,6 +63,8 @@ export default function GrievancePage() {
               product you use and the email address you use with us, so we can find your
               records without asking for more than we need.
             </p>
+
+            <GrievanceForm lang="en" />
 
             <p>
               <strong>What happens next.</strong>
