@@ -1,13 +1,19 @@
+import type { Metadata } from 'next';
 import { pageMetadata } from '@/lib/seo';
 import Reveal from '@/components/Reveal';
 import LegalDoc from '@/components/LegalDoc';
 
-export const metadata = pageMetadata({
+const base = pageMetadata({
   title: 'Terms of Service',
   description:
     'The user agreement for Tyashin: who you contract with, the service, billing, rules for content you host, AI content, data processing, liability and governing law.',
   path: '/terms',
 });
+
+export const metadata: Metadata = {
+  ...base,
+  alternates: { canonical: '/terms', languages: { en: '/terms', hi: '/terms/hi' } },
+};
 
 export default function TermsPage() {
   return (
@@ -19,7 +25,17 @@ export default function TermsPage() {
           <h1 className="mt-4 text-4xl font-semibold sm:text-5xl">
             Terms of <span className="text-gradient">Service</span>
           </h1>
-          <p className="mt-5 text-white/55">Last updated: 26 October 2026</p>
+          <p className="mt-5 text-white/55">Last updated: 2 November 2026</p>
+          <p className="mt-2 text-white/55">
+            <a
+              href="/terms/hi"
+              lang="hi"
+              hrefLang="hi"
+              className="underline underline-offset-2 hover:text-white/80"
+            >
+              हिन्दी में पढ़ें
+            </a>
+          </p>
         </Reveal>
 
         <Reveal delay={0.05}>
@@ -296,9 +312,13 @@ export default function TermsPage() {
               </li>
             </ul>
             <p>
-              Ask us at contact@aapastech.com if you need these terms in Hindi or in another
-              language listed in the Eighth Schedule to the Constitution of India, and we will
-              send them within 7 days.
+              A Hindi version is available:{' '}
+              <a href="/terms/hi" lang="hi" hrefLang="hi">
+                हिन्दी में पढ़ें
+              </a>
+              . Ask us at contact@aapastech.com if you need these terms in another language
+              listed in the Eighth Schedule to the Constitution of India, and we will send them
+              within 7 days.
             </p>
           </LegalDoc>
         </Reveal>

@@ -1,13 +1,19 @@
+import type { Metadata } from 'next';
 import { pageMetadata } from '@/lib/seo';
 import Reveal from '@/components/Reveal';
 import LegalDoc from '@/components/LegalDoc';
 
-export const metadata = pageMetadata({
+const base = pageMetadata({
   title: 'Privacy Policy',
   description:
     'What personal data Tyashin collects and why, who we share it with, how long we keep it, your rights in India, the EU, the UK and elsewhere, and how to complain.',
   path: '/privacy',
 });
+
+export const metadata: Metadata = {
+  ...base,
+  alternates: { canonical: '/privacy', languages: { en: '/privacy', hi: '/privacy/hi' } },
+};
 
 export default function PrivacyPage() {
   return (
@@ -19,7 +25,17 @@ export default function PrivacyPage() {
           <h1 className="mt-4 text-4xl font-semibold sm:text-5xl">
             Privacy <span className="text-gradient">Policy</span>
           </h1>
-          <p className="mt-5 text-white/55">Last updated: 26 October 2026</p>
+          <p className="mt-5 text-white/55">Last updated: 2 November 2026</p>
+          <p className="mt-2 text-white/55">
+            <a
+              href="/privacy/hi"
+              lang="hi"
+              hrefLang="hi"
+              className="underline underline-offset-2 hover:text-white/80"
+            >
+              हिन्दी में पढ़ें
+            </a>
+          </p>
         </Reveal>
 
         <Reveal delay={0.05}>
@@ -302,7 +318,35 @@ export default function PrivacyPage() {
               can ask us for a copy.
             </p>
 
-            <h2 id="retention">8. How long we keep data</h2>
+            <h2 id="canada">8. Your rights in Canada</h2>
+            <p>
+              <strong>If you are in Canada.</strong> 14818032 Canada Inc. is the controller.
+              Under the Personal Information Protection and Electronic Documents Act (PIPEDA)
+              you can ask for access to the personal information we hold about you and ask us
+              to correct it. You can withdraw your consent at any time, subject to legal or
+              contractual limits and reasonable notice, and we will tell you what that means
+              for the service. You can also challenge how we comply with PIPEDA. Write to our
+              Privacy Officer at <a href="mailto:contact@aapastech.com">contact@aapastech.com</a>.
+              If you are not satisfied with our answer, you can complain to the Office of the
+              Privacy Commissioner of Canada (<a href="https://www.priv.gc.ca">priv.gc.ca</a>).
+            </p>
+            <p>
+              <strong>If you are in Quebec.</strong> Quebec&apos;s Act respecting the protection
+              of personal information in the private sector, as amended by Law 25, gives you the
+              same rights of access and correction. You can also ask us to stop disseminating
+              your personal information, or to de-index a link attached to your name that gives
+              access to it, where the law allows. You can ask to receive the computerized
+              personal information we collected from you in a structured, commonly used
+              technological format. If we make a decision about you based exclusively on
+              automated processing of your personal information, we will tell you, and you can
+              submit your observations to a member of our staff who can review the decision.
+              You can reach the person in charge of the protection of personal information at{' '}
+              <a href="mailto:contact@aapastech.com">contact@aapastech.com</a>. You can complain
+              to the Commission d&apos;accès à l&apos;information du Québec (
+              <a href="https://www.cai.gouv.qc.ca">cai.gouv.qc.ca</a>).
+            </p>
+
+            <h2 id="retention">9. How long we keep data</h2>
             <p>
               We keep personal data while your account is active and as long as we need it for
               the purpose you gave it for, then delete it. Some records stay longer because the
@@ -314,7 +358,7 @@ export default function PrivacyPage() {
               destroy it.
             </p>
 
-            <h2 id="transfers">9. Where data goes</h2>
+            <h2 id="transfers">10. Where data goes</h2>
             <p>
               We use service providers in other countries, listed on our{' '}
               <a href="#sub-processors">sub-processors list</a>. Transfers out of India follow
@@ -322,7 +366,7 @@ export default function PrivacyPage() {
               transfer data to any country the Government of India restricts.
             </p>
 
-            <h2 id="security">10. Security</h2>
+            <h2 id="security">11. Security</h2>
             <p>
               We keep a documented information security programme: encryption in transit,
               access limited to staff who need it, logging, and incident response. If a breach
@@ -330,7 +374,7 @@ export default function PrivacyPage() {
               requires.
             </p>
 
-            <h2 id="children">11. Children</h2>
+            <h2 id="children">12. Children</h2>
             <p>
               Tyashin is a service for businesses and is not for anyone under 18. Do not create
               an account or send us personal data if you are under 18. If you think a child
@@ -339,7 +383,7 @@ export default function PrivacyPage() {
               delete it.
             </p>
 
-            <h2 id="complaints">12. Complaints and our Grievance Officer</h2>
+            <h2 id="complaints">13. Complaints and our Grievance Officer</h2>
             <p>
               Contact our Grievance Officer (see <a href="/grievance">/grievance</a>). If you
               are not satisfied, you can complain to the Data Protection Board of India once
@@ -357,14 +401,14 @@ export default function PrivacyPage() {
               (<a href="tel:+14378000190">+1 437 800 0190</a>).
             </p>
 
-            <h2 id="changes">13. Changes to this policy</h2>
+            <h2 id="changes">14. Changes to this policy</h2>
             <p>
               We may update this policy. When we do, we change the date at the top of this
               page, and if a change matters to you we tell you by email or in the product
               before it takes effect.
             </p>
 
-            <h2 id="contact">14. Contact us</h2>
+            <h2 id="contact">15. Contact us</h2>
             <p>
               Email <a href="mailto:contact@aapastech.com">contact@aapastech.com</a>, or write to
               the company you deal with:
@@ -383,9 +427,13 @@ export default function PrivacyPage() {
               </li>
             </ul>
             <p>
-              Ask us at contact@aapastech.com if you need this policy in Hindi or in another
-              language listed in the Eighth Schedule to the Constitution of India, and we will
-              send it within 7 days.
+              A Hindi version is available:{' '}
+              <a href="/privacy/hi" lang="hi" hrefLang="hi">
+                हिन्दी में पढ़ें
+              </a>
+              . Ask us at contact@aapastech.com if you need this policy in another language
+              listed in the Eighth Schedule to the Constitution of India, and we will send it
+              within 7 days.
             </p>
           </LegalDoc>
         </Reveal>
