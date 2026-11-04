@@ -250,8 +250,8 @@ export default function TermsPage() {
             </ul>
             <p>
               If your Tyashin account was opened before 3 November 2026, this part of section 9
-              applies to it from 4 December 2026, and we will not turn YOM analytics on for your
-              sites before then.
+              applies to it 30 days after we email you about it, and never before 4 December
+              2026. We will not turn YOM analytics on for your sites before then.
             </p>
 
             <h2 id="aggregated-data">10. Aggregated and de-identified data</h2>
