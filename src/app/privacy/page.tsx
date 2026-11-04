@@ -25,7 +25,7 @@ export default function PrivacyPage() {
           <h1 className="mt-4 text-4xl font-semibold sm:text-5xl">
             Privacy <span className="text-gradient">Policy</span>
           </h1>
-          <p className="mt-5 text-white/55">Last updated: 2 November 2026</p>
+          <p className="mt-5 text-white/55">Last updated: 3 November 2026</p>
           <p className="mt-2 text-white/55">
             <a
               href="/privacy/hi"
@@ -122,6 +122,15 @@ export default function PrivacyPage() {
               assistant on tyashin.com, we keep the conversation. We also keep the emails and
               WhatsApp messages you send us. We use all of this to answer you, support you and
               send the updates you asked for.
+            </p>
+            <p>
+              <strong>Your sites' results.</strong> For each site you run on Tyashin we keep a
+              record of results: the number of leads, orders and chat conversations, and the
+              value of orders. It holds nothing about your visitors. If you run your business
+              as an individual, these figures can relate to you, so we treat them as your
+              personal data. We use them to run, bill, secure and improve Tyashin, and keep them
+              while your account is open. Section 9 of our <a href="/terms">terms</a> explains
+              this and the YOM analytics account we open for your sites.
             </p>
             <p>
               <strong>Visits to tyashin.com.</strong> When you browse tyashin.com we record the

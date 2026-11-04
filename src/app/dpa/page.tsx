@@ -19,7 +19,7 @@ export default function DpaPage() {
           <h1 className="mt-4 text-4xl font-semibold sm:text-5xl">
             Data Processing <span className="text-gradient">Addendum</span>
           </h1>
-          <p className="mt-5 text-white/55">Last updated: 2 November 2026</p>
+          <p className="mt-5 text-white/55">Last updated: 3 November 2026</p>
         </Reveal>
 
         <Reveal delay={0.05}>
@@ -123,7 +123,14 @@ export default function DpaPage() {
               other written instructions we agree with you. We will tell you if we think an
               instruction breaks the law. We do not use Site Data for our own purposes. By
               accepting the Terms you also instruct us to produce the aggregated statistics
-              described in section 10 of the Terms. We may process Site Data where the law
+              described in section 10 of the Terms, and to open and run a YOM analytics account
+              for your sites as section 9 of the Terms describes. YOM is run by our group
+              companies and is on our sub-processors list. We may see the reports in that
+              account only to show them to you in Tyashin and to support you, and we stop when
+              you remove our access in YOM or your Tyashin account ends. The record of results
+              described in section 9 of the Terms (counts and values of leads, orders and chat
+              conversations) holds nothing that identifies your visitors, so it is not Site
+              Data, and we use it for the purposes that section gives. We may process Site Data where the law
               requires us to, and if so we will tell you first unless the law forbids it.
             </p>
 
