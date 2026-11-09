@@ -32,7 +32,8 @@ function escapeXml(value: string): string {
 }
 
 export function GET(): Response {
-  const lastmod = new Date().toISOString().slice(0, 10); // YYYY-MM-DD (build date)
+  // No <lastmod>: the site has no per-page change dates, and the build date
+  // would tell Google every page changed on every deploy.
 
   const urls = getSiteRoutes()
     .map((route) => {
@@ -40,7 +41,6 @@ export function GET(): Response {
       return [
         "  <url>",
         `    <loc>${loc}</loc>`,
-        `    <lastmod>${lastmod}</lastmod>`,
         `    <changefreq>${route.changeFrequency}</changefreq>`,
         `    <priority>${route.priority.toFixed(1)}</priority>`,
         "  </url>",
