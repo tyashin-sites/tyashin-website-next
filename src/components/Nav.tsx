@@ -42,7 +42,7 @@ export default function Nav() {
         }`}
       >
         <Link href="/" className="flex items-center gap-2">
-          <Wordmark className="h-6" />
+          <Wordmark className="h-6" logoClassName="h-10" />
         </Link>
 
         <div className="hidden items-center gap-1 md:flex">

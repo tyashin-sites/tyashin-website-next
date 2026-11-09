@@ -51,7 +51,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-5">
           <div className="col-span-2">
-            <Wordmark className="h-7" />
+            <Wordmark className="h-7" logoClassName="h-14" />
             <p className="mt-4 max-w-xs text-sm text-white/55">
               The AI growth &amp; commerce OS for modern storefronts. Built on the edge, priced for
               the real world.

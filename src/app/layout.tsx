@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import SiteShell from "@/components/SiteShell";
+import { BrandLogoProvider } from "@/components/BrandLogoContext";
+import { getBrandLogos } from "@/lib/brand-kit";
 import { OG_IMAGE, SITE_URL } from "@/lib/seo";
 
 // Self-hosted, preloaded, swap — no render-blocking external font request,
@@ -53,11 +55,13 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // Brand kit first: the logo uploaded in Tyashin replaces the built-in wordmark.
+  const logos = await getBrandLogos();
   return (
     // Inline `backgroundColor: #06070A` (colors.ink.DEFAULT) on BOTH <html>
     // and <body> so the dark canvas paints on the very first frame — before
@@ -70,7 +74,9 @@ export default function RootLayout({
       style={{ backgroundColor: '#06070A' }}
     >
       <body style={{ backgroundColor: '#06070A' }}>
-        <SiteShell>{children}</SiteShell>
+        <BrandLogoProvider logos={logos}>
+          <SiteShell>{children}</SiteShell>
+        </BrandLogoProvider>
       </body>
     </html>
   );

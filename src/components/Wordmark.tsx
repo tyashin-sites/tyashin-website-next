@@ -1,7 +1,33 @@
 'use client';
 
-/** Tyashin wordmark: a gradient glyph mark + word. */
-export default function Wordmark({ className }: { className?: string }) {
+import { useBrandLogos } from './BrandLogoContext';
+
+/**
+ * Tyashin brand mark. Brand-kit logo FIRST (uploaded in the Tyashin admin,
+ * read at runtime); the built-in gradient glyph + word below is only the
+ * fallback when the brand kit has no logo. This site is dark, so the
+ * brand kit's dark-background logo is preferred.
+ */
+export default function Wordmark({
+  className,
+  logoClassName = 'h-10',
+}: {
+  className?: string;
+  /** Height of the brand-kit logo image (it is a stacked lockup, so taller than the glyph). */
+  logoClassName?: string;
+}) {
+  const { dark, light } = useBrandLogos();
+  const logo = dark || light;
+  if (logo) {
+    return (
+      <img
+        src={logo}
+        alt="Tyashin"
+        className={`block w-auto max-w-[200px] object-contain ${logoClassName}`}
+        decoding="async"
+      />
+    );
+  }
   return (
     <span className={`inline-flex items-center gap-2 ${className ?? ''}`}>
       <svg viewBox="0 0 32 32" className="h-full w-auto" fill="none" aria-hidden="true">
