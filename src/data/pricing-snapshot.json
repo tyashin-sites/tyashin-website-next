@@ -1,0 +1,756 @@
+{
+  "displayCurrency": "USD",
+  "pluginCurrency": "USD",
+  "symbol": "$",
+  "gateway": "stripe",
+  "country": null,
+  "platform": {
+    "plans": [
+      {
+        "tier": "free",
+        "displayName": "Free",
+        "price": 0,
+        "priceFormatted": "Free",
+        "currency": "USD",
+        "interval": "month",
+        "features": [
+          "Get online and get found.",
+          "Your first website build, free",
+          "Connect your own domain",
+          "1 team member",
+          "100 MB storage"
+        ],
+        "recommended": false
+      },
+      {
+        "tier": "starter",
+        "displayName": "Starter",
+        "price": 19,
+        "priceFormatted": "$19",
+        "currency": "USD",
+        "interval": "month",
+        "features": [
+          "For a growing solo store.",
+          "1,500 AI credits a month to build and change your site",
+          "Change your site by describing what you want",
+          "Connect your own domain",
+          "1 team member",
+          "1 GB storage"
+        ],
+        "recommended": false
+      },
+      {
+        "tier": "pro",
+        "displayName": "Pro",
+        "price": 49,
+        "priceFormatted": "$49",
+        "currency": "USD",
+        "interval": "month",
+        "features": [
+          "Switch growth to autopilot.",
+          "4,000 AI credits a month to build and change your site",
+          "Change your site by describing what you want",
+          "Connect your own domain",
+          "3 team members",
+          "5 GB storage",
+          "CRM & E-commerce plugins"
+        ],
+        "recommended": true
+      },
+      {
+        "tier": "business",
+        "displayName": "Business",
+        "price": 99,
+        "priceFormatted": "$99",
+        "currency": "USD",
+        "interval": "month",
+        "features": [
+          "Scale with the whole stack.",
+          "10,000 AI credits a month to build and change your site",
+          "Change your site by describing what you want",
+          "Connect your own domain",
+          "5 team members",
+          "25 GB storage",
+          "All plugins",
+          "Priority support"
+        ],
+        "recommended": false
+      }
+    ]
+  },
+  "promises": {
+    "trialDays": 0,
+    "cardRequiredToStart": false,
+    "freeBuildCredits": 500,
+    "freeBuildRequires": "verified_email",
+    "plans": [
+      {
+        "plan": "free",
+        "aiCreditsPerMonth": 0,
+        "freeBuildCredits": 500,
+        "editByPrompt": false,
+        "customDomain": true,
+        "teamMembers": 1,
+        "storageBytes": 104857600,
+        "extras": []
+      },
+      {
+        "plan": "starter",
+        "aiCreditsPerMonth": 1500,
+        "freeBuildCredits": 0,
+        "editByPrompt": true,
+        "customDomain": true,
+        "teamMembers": 1,
+        "storageBytes": 1073741824,
+        "extras": []
+      },
+      {
+        "plan": "pro",
+        "aiCreditsPerMonth": 4000,
+        "freeBuildCredits": 0,
+        "editByPrompt": true,
+        "customDomain": true,
+        "teamMembers": 3,
+        "storageBytes": 5368709120,
+        "extras": [
+          "CRM & E-commerce plugins"
+        ]
+      },
+      {
+        "plan": "business",
+        "aiCreditsPerMonth": 10000,
+        "freeBuildCredits": 0,
+        "editByPrompt": true,
+        "customDomain": true,
+        "teamMembers": 5,
+        "storageBytes": 26843545600,
+        "extras": [
+          "All plugins",
+          "Priority support"
+        ]
+      }
+    ]
+  },
+  "copyRules": [
+    {
+      "id": "ai-generations-per-month",
+      "pattern": "AI generations?\\s*(?:/|per|a)\\s*mo",
+      "flags": "i",
+      "message": "Plans include AI credits a month, not a number of \"AI generations\"."
+    },
+    {
+      "id": "trial",
+      "pattern": "\\b(?:\\d+[- ]day\\s+)?(?:free\\s+)?trial\\b",
+      "flags": "i",
+      "message": "There is no trial in billing."
+    }
+  ],
+  "plugins": [
+    {
+      "id": "analytics",
+      "name": "YourOwnMetrics (YOM)",
+      "description": "Privacy-first website analytics powered by YOM. Track page views, sessions, and custom events without third-party cookies.",
+      "category": "analytics",
+      "pluginType": "aapastech-service",
+      "icon": "bar_chart",
+      "pricingModel": "included",
+      "billingManagedBy": "tyashin",
+      "hasPaidTiers": true,
+      "currency": "USD",
+      "symbol": "$",
+      "recurringValue": null,
+      "tiers": [
+        {
+          "tier": "free",
+          "displayName": "Included",
+          "price": 0,
+          "priceFormatted": "Free",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "50,000 page views / month",
+            "30-day retention",
+            "Basic dashboard"
+          ]
+        },
+        {
+          "tier": "pro",
+          "displayName": "Pro",
+          "price": 19,
+          "priceFormatted": "$19",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "500,000 page views / month",
+            "1-year retention",
+            "Custom events + funnels",
+            "Real-time dashboard"
+          ],
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "id": "google-analytics",
+      "name": "Google Analytics 4",
+      "description": "Integrate Google Analytics 4 for comprehensive website analytics.",
+      "category": "analytics",
+      "pluginType": "oauth-integration",
+      "icon": "analytics",
+      "pricingModel": "free",
+      "billingManagedBy": "vendor",
+      "hasPaidTiers": false,
+      "currency": "USD",
+      "symbol": "$",
+      "recurringValue": null,
+      "tiers": []
+    },
+    {
+      "id": "facebook-pixel",
+      "name": "Facebook Pixel",
+      "description": "Track conversions and optimize Facebook/Meta ads.",
+      "category": "marketing",
+      "pluginType": "third-party",
+      "icon": "campaign",
+      "pricingModel": "free",
+      "billingManagedBy": "vendor",
+      "hasPaidTiers": false,
+      "currency": "USD",
+      "symbol": "$",
+      "recurringValue": null,
+      "tiers": []
+    },
+    {
+      "id": "google-tag",
+      "name": "Google Tag (gtag.js)",
+      "description": "Add the Google tag to every page — Google Ads conversion tracking and GA4. Paste a tag ID, or connect Google to fetch it in two clicks.",
+      "category": "marketing",
+      "pluginType": "third-party",
+      "icon": "sell",
+      "pricingModel": "free",
+      "billingManagedBy": "vendor",
+      "hasPaidTiers": false,
+      "currency": "USD",
+      "symbol": "$",
+      "recurringValue": null,
+      "tiers": []
+    },
+    {
+      "id": "newsletter",
+      "name": "Newsletter",
+      "description": "Collect email subscribers and manage newsletter campaigns.",
+      "category": "marketing",
+      "pluginType": "builtin",
+      "icon": "mail",
+      "pricingModel": "included",
+      "billingManagedBy": "tyashin",
+      "hasPaidTiers": false,
+      "currency": "USD",
+      "symbol": "$",
+      "recurringValue": null,
+      "tiers": []
+    },
+    {
+      "id": "ecommerce",
+      "name": "E-Commerce Storefront",
+      "description": "Full-featured e-commerce: products, categories, cart, checkout, orders, coupons, and payment gateways (Stripe & Razorpay).",
+      "category": "ecommerce",
+      "pluginType": "builtin",
+      "icon": "storefront",
+      "pricingModel": "included",
+      "billingManagedBy": "tyashin",
+      "hasPaidTiers": false,
+      "currency": "USD",
+      "symbol": "$",
+      "recurringValue": null,
+      "tiers": []
+    },
+    {
+      "id": "contact-form",
+      "name": "Contact Form & Lead Capture",
+      "description": "Capture, qualify, and route website leads — configurable form fields, spam protection, CRM sync, email + Slack routing, auto-reply, and a booking CTA on submit.",
+      "category": "communication",
+      "pluginType": "builtin",
+      "icon": "contact_mail",
+      "pricingModel": "freemium",
+      "billingManagedBy": "tyashin",
+      "hasPaidTiers": true,
+      "currency": "USD",
+      "symbol": "$",
+      "recurringValue": {
+        "headline": "Every visitor who fills your form is a lead — capture, qualify and route them without lifting a finger",
+        "points": [
+          "Leads land in an inbox you can filter, assign and export — never lost in an email thread.",
+          "Qualification fields (company, category, budget) tell you WHO is asking before you reply.",
+          "New leads post straight to your Slack channel and your CRM the moment they submit.",
+          "Auto-reply + a booking CTA (e.g. Calendly) turn a form fill into a booked call.",
+          "Spam protection keeps the inbox clean so your team only sees real prospects."
+        ]
+      },
+      "tiers": [
+        {
+          "tier": "free",
+          "displayName": "Free",
+          "price": 0,
+          "priceFormatted": "Free",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "Unlimited-field* capture (name, email, phone, message)",
+            "Lead inbox with status & assignment",
+            "Email notifications to your team",
+            "Automatic CRM contact + activity sync",
+            "Honeypot spam protection",
+            "100 leads / month"
+          ]
+        },
+        {
+          "tier": "starter",
+          "displayName": "Starter",
+          "price": 9,
+          "priceFormatted": "$9",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "Everything in Free",
+            "Form builder: company, category & budget fields",
+            "Auto-reply email to the lead",
+            "Booking (Calendly) CTA on submit",
+            "CSV export",
+            "1,000 leads / month"
+          ]
+        },
+        {
+          "tier": "pro",
+          "displayName": "Pro",
+          "price": 19,
+          "priceFormatted": "$19",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "Everything in Starter",
+            "Slack / webhook lead routing",
+            "hCaptcha spam protection",
+            "Conversion events for analytics",
+            "10,000 leads / month"
+          ],
+          "recommended": true
+        },
+        {
+          "tier": "business",
+          "displayName": "Business",
+          "price": 49,
+          "priceFormatted": "$49",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "Everything in Pro",
+            "Unlimited custom fields",
+            "Priority spam filtering",
+            "50,000 leads / month"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "consent-manager",
+      "name": "Consent Manager",
+      "description": "GDPR/CCPA compliant cookie consent management.",
+      "category": "compliance",
+      "pluginType": "builtin",
+      "icon": "cookie",
+      "pricingModel": "included",
+      "billingManagedBy": "tyashin",
+      "hasPaidTiers": false,
+      "currency": "USD",
+      "symbol": "$",
+      "recurringValue": null,
+      "tiers": []
+    },
+    {
+      "id": "blog",
+      "name": "Blog / CMS",
+      "description": "Full-featured blog with categories, tags, SEO, and scheduling.",
+      "category": "content",
+      "pluginType": "builtin",
+      "icon": "article",
+      "pricingModel": "paid",
+      "billingManagedBy": "tyashin",
+      "hasPaidTiers": true,
+      "currency": "USD",
+      "symbol": "$",
+      "recurringValue": {
+        "headline": "A content engine that compounds — fresh, indexable posts every week without you lifting a finger",
+        "points": [
+          "Every week we research what is trending in YOUR industry across Google Trends, Reddit, Substack and industry RSS, then queue ready-to-write topic ideas you can browse and generate with one click.",
+          "AI researches topics tied to YOUR products and trends, writes the post, generates fitting images, and publishes — fully autonomous.",
+          "Every published post lands in your sitemap and gets picked up by Google automatically, growing the surface area you can be found on.",
+          "Posts subtly weave in your products as part of genuinely useful, shareable stories — traffic that also converts.",
+          "Varied editorial layouts and realistic imagery keep the blog looking hand-made, not templated.",
+          "The longer it runs, the more long-tail search traffic accumulates — content is an asset, not a one-off."
+        ]
+      },
+      "tiers": [
+        {
+          "tier": "free",
+          "displayName": "Free",
+          "price": 0,
+          "priceFormatted": "Free",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "Full blog CMS (posts, categories, tags, SEO, RSS)",
+            "Auto-mode: 2 AI draft posts / month (review before publish)",
+            "5 trend-driven topic suggestions / month — browse & one-click generate",
+            "1 AI image per post"
+          ]
+        },
+        {
+          "tier": "starter",
+          "displayName": "Starter",
+          "price": 19,
+          "priceFormatted": "$19",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "Everything in Free",
+            "Auto-publish (hands-off) or draft mode",
+            "8 AI posts / month",
+            "20 trend-driven topic suggestions / month",
+            "Up to 2 AI images per post",
+            "Choose your posting cadence"
+          ]
+        },
+        {
+          "tier": "pro",
+          "displayName": "Pro",
+          "price": 49,
+          "priceFormatted": "$49",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "Everything in Starter",
+            "20 AI posts / month",
+            "50 trend-driven topic suggestions / month (multi-source: Google Trends, Reddit, Substack, RSS)",
+            "Up to 3 AI images per post (incl. infographics)",
+            "Product-aware topic selection",
+            "Accelerated indexing (IndexNow)"
+          ],
+          "recommended": true
+        },
+        {
+          "tier": "business",
+          "displayName": "Business",
+          "price": 129,
+          "priceFormatted": "$129",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "Everything in Pro",
+            "60 AI posts / month",
+            "120 trend-driven topic suggestions / month (multi-source research)",
+            "Up to 4 AI images per post",
+            "Realistic product-photoshoot imagery",
+            "Priority generation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "testimonials",
+      "name": "Customer Testimonials",
+      "description": "Collect testimonials through personal invite links, moderate them, and publish them on your site exactly as your customers wrote them, with consent and a self-serve withdraw link.",
+      "category": "content",
+      "pluginType": "builtin",
+      "icon": "format_quote",
+      "pricingModel": "free",
+      "billingManagedBy": "tyashin",
+      "hasPaidTiers": false,
+      "currency": "USD",
+      "symbol": "$",
+      "recurringValue": null,
+      "tiers": []
+    },
+    {
+      "id": "instagram-reels",
+      "name": "Instagram Reels Showcase",
+      "description": "Curate Instagram Reels onto your home page and product pages, with a moderated \"tag us to get featured\" campaign for customer content.",
+      "category": "content",
+      "pluginType": "builtin",
+      "icon": "video_library",
+      "pricingModel": "free",
+      "billingManagedBy": "tyashin",
+      "hasPaidTiers": false,
+      "currency": "USD",
+      "symbol": "$",
+      "recurringValue": null,
+      "tiers": []
+    },
+    {
+      "id": "chatbot",
+      "name": "AI Chatbot",
+      "description": "AI-powered customer support chatbot with RAG knowledge base, product catalog awareness, live data queries, and conversation analytics.",
+      "category": "communication",
+      "pluginType": "aapastech-service",
+      "icon": "smart_toy",
+      "pricingModel": "paid",
+      "billingManagedBy": "tyashin",
+      "hasPaidTiers": true,
+      "currency": "USD",
+      "symbol": "$",
+      "recurringValue": null,
+      "tiers": [
+        {
+          "tier": "free",
+          "displayName": "Free",
+          "price": 0,
+          "priceFormatted": "Free",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "100 conversations / month",
+            "FAQ auto-responses",
+            "Basic knowledge base"
+          ]
+        },
+        {
+          "tier": "starter",
+          "displayName": "Starter",
+          "price": 9,
+          "priceFormatted": "$9",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "1,000 conversations / month",
+            "Cached responses",
+            "Full knowledge base + RAG",
+            "Email support"
+          ]
+        },
+        {
+          "tier": "pro",
+          "displayName": "Pro",
+          "price": 29,
+          "priceFormatted": "$29",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "10,000 conversations / month",
+            "Live data queries (orders, inventory)",
+            "AI-generated responses",
+            "Priority support",
+            "Custom personality + tone"
+          ],
+          "recommended": true
+        },
+        {
+          "tier": "business",
+          "displayName": "Business",
+          "price": 99,
+          "priceFormatted": "$99",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "50,000 conversations / month",
+            "Multi-language",
+            "Human handoff routing",
+            "Dedicated success manager"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thridify",
+      "name": "Thridify 3D & AR Viewer",
+      "description": "Show your products in interactive 3D and AR. Connect your Thridify account and published experiences appear on your product pages automatically — poster-first, zero code.",
+      "category": "ecommerce",
+      "pluginType": "aapastech-service",
+      "icon": "view_in_ar",
+      "pricingModel": "free",
+      "billingManagedBy": "vendor",
+      "hasPaidTiers": false,
+      "currency": "USD",
+      "symbol": "$",
+      "recurringValue": null,
+      "tiers": [],
+      "link": "https://thridify.com"
+    },
+    {
+      "id": "seo-copilot",
+      "name": "SEO Co-Pilot",
+      "description": "Make your site discoverable on Google and ChatGPT. Auto-generates schema.org + FAQ markup, keeps your sitemap and llms.txt in lock-step with your catalog, runs recurring SEO audits, and researches the keywords your buyers actually search.",
+      "category": "marketing",
+      "pluginType": "aapastech-service",
+      "icon": "trending_up",
+      "pricingModel": "paid",
+      "billingManagedBy": "tyashin",
+      "hasPaidTiers": true,
+      "currency": "USD",
+      "symbol": "$",
+      "recurringValue": {
+        "headline": "SEO is upkeep, not a one-time setup — your subscription works every single day",
+        "points": [
+          "Your sitemap, llms.txt and schema stay in lock-step with your live catalog automatically: new products get indexed, sold-out ones pruned.",
+          "As your site grows, AI keeps your schema + FAQ markup accurate — so you stay eligible for Google rich results and AI-search (ChatGPT/Perplexity/Gemini) citations.",
+          "Recurring automated audits catch SEO problems the moment you edit a page or add a product.",
+          "Monthly AI research credits draft your target-audience positioning from your live site in one click — so your llms.txt and schema speak to the right buyers (Pro & Business).",
+          "A monthly report lands in your inbox summarizing what changed and what improved."
+        ]
+      },
+      "tiers": [
+        {
+          "tier": "free",
+          "displayName": "Free",
+          "price": 0,
+          "priceFormatted": "Free",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "Technical SEO foundations (canonical, sitemap, robots, llms.txt)",
+            "Schema.org Organization + WebSite injection",
+            "Per-page schema (Product, Breadcrumb, Article) auto-injected",
+            "Unlimited catalog indexing (full sitemap)",
+            "1 SEO audit / month"
+          ]
+        },
+        {
+          "tier": "starter",
+          "displayName": "Starter",
+          "price": 9,
+          "priceFormatted": "$9",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "Everything in Free",
+            "AI auto-detect business type",
+            "Daily SEO audits + email alerts on new issues",
+            "Core Web Vitals monitoring (real field data)",
+            "Email support"
+          ]
+        },
+        {
+          "tier": "pro",
+          "displayName": "Pro",
+          "price": 29,
+          "priceFormatted": "$29",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "Everything in Starter",
+            "AI-generated FAQ schema",
+            "AI audience research — 3 credits / month",
+            "SEO Autopilot — keyword & trend research (one-click apply)",
+            "Directory / OTA recommendations",
+            "Local Presence setup for physical & service-area businesses (guided)",
+            "Google Search Console — rankings, coverage & auto-index submission",
+            "Priority support"
+          ],
+          "recommended": true
+        },
+        {
+          "tier": "business",
+          "displayName": "Business",
+          "price": 99,
+          "priceFormatted": "$99",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "Everything in Pro",
+            "AI audience research — 10 credits / month",
+            "SEO Autopilot — proposes keywords, trends & blog topics (one-click apply)",
+            "Weekly blog topics fed to the Blog plugin",
+            "Backlink outreach drafts + send",
+            "Ranking tracking — full top-50 queries + priority index queue",
+            "Dedicated success manager"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aeo",
+      "name": "AI Answer Visibility",
+      "description": "Tracks whether AI assistants like ChatGPT, Gemini and Claude recommend your business for the questions buyers ask, measures competitor share of voice and the sources AI cites, and audits whether AI crawlers can read your site.",
+      "category": "marketing",
+      "pluginType": "aapastech-service",
+      "icon": "travel_explore",
+      "pricingModel": "paid",
+      "billingManagedBy": "tyashin",
+      "hasPaidTiers": true,
+      "currency": "USD",
+      "symbol": "$",
+      "recurringValue": {
+        "headline": "AI answers change every week — your subscription keeps asking and measuring",
+        "points": [
+          "Every week we ask the AI assistants your buyers use (ChatGPT, Gemini, Claude, with Perplexity and Grok coming) the questions they ask, and record who gets recommended.",
+          "Answers shift as engines re-index and retrain, so visibility is a trend, not a one-time check — we report it as a rolling rate, never one lucky answer.",
+          "We re-check that AI crawlers can still read your site — a CDN or robots.txt change can silently remove you from AI answers.",
+          "You see which websites AI trusts in your niche, so you know exactly where being listed or reviewed would help."
+        ]
+      },
+      "tiers": [
+        {
+          "tier": "free",
+          "displayName": "Free",
+          "price": 0,
+          "priceFormatted": "Free",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "5 buyer questions, checked monthly",
+            "2 AI engines (Gemini + ChatGPT today)",
+            "AI-crawler readiness audit",
+            "AI visibility score"
+          ]
+        },
+        {
+          "tier": "starter",
+          "displayName": "Starter",
+          "price": 19,
+          "priceFormatted": "$19",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "Everything in Free",
+            "20 buyer questions, checked weekly",
+            "3 AI engines (Gemini, ChatGPT, Claude today)",
+            "Track up to 3 competitors",
+            "Sources AI cites for your questions"
+          ]
+        },
+        {
+          "tier": "pro",
+          "displayName": "Pro",
+          "price": 49,
+          "priceFormatted": "$49",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "Everything in Starter",
+            "50 buyer questions, checked weekly",
+            "Every engine we support (Gemini, ChatGPT, Claude today; Perplexity and Grok as they launch)",
+            "Track up to 5 competitors",
+            "Competitor share of voice",
+            "Missed questions sent to your Blog plugin as answer-first topics (2/week)"
+          ],
+          "recommended": true
+        },
+        {
+          "tier": "business",
+          "displayName": "Business",
+          "price": 149,
+          "priceFormatted": "$149",
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "Everything in Pro",
+            "150 buyer questions, checked weekly",
+            "Every engine we support, incl. new ones as they launch",
+            "Track up to 10 competitors",
+            "Missed questions sent to your Blog plugin as answer-first topics (4/week)",
+            "Priority support"
+          ]
+        }
+      ]
+    }
+  ]
+}

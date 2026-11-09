@@ -55,7 +55,7 @@ export const FAQ_GROUPS: FaqGroup[] = [
       },
       {
         q: 'Is there a free tier?',
-        a: 'The power plugins — AI chatbot, SEO Co-Pilot, auto-blogging and analytics — each include a free tier so you can try them before you commit to a paid tier.',
+        a: "Yes. The Free plan costs nothing, and your first website build is free once you confirm your email, so you see your site before you pay anything. To keep changing it by describing what you want, pick a paid plan; each one adds AI credits every month. The power plugins (AI chatbot, SEO Co-Pilot, auto-blogging and analytics) have free tiers too, so you can try them first.",
       },
       {
         q: 'Which currency will I be billed in?',

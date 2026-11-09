@@ -8,6 +8,8 @@
  * bundled USD snapshot so the page is never empty.
  */
 
+import snapshot from '@/data/pricing-snapshot.json';
+
 const API_BASE: string =
   process.env.NEXT_PUBLIC_TYASHIN_API_URL ?? 'https://website-api.tyashin.com';
 
@@ -48,6 +50,13 @@ export interface AllPricing {
   country: string | null;
   platform: { plans: Tier[] };
   plugins: PluginPricing[];
+  /** Structured plan promises from the platform (lib/billing/plan-facts.ts). */
+  promises?: {
+    trialDays: number;
+    cardRequiredToStart: boolean;
+    freeBuildCredits: number;
+    freeBuildRequires: string;
+  };
 }
 
 export async function fetchAllPricing(
@@ -68,256 +77,10 @@ export async function fetchAllPricing(
   }
 }
 
-/** Bundled USD snapshot — only used when the live API can't be reached. */
-export const FALLBACK: AllPricing = {
-  displayCurrency: 'USD',
-  pluginCurrency: 'USD',
-  symbol: '$',
-  gateway: 'stripe',
-  country: null,
-  platform: {
-    plans: [
-      {
-        tier: 'free',
-        displayName: 'Free',
-        price: 0,
-        priceFormatted: 'Free',
-        currency: 'USD',
-        interval: 'month',
-        features: [
-          'Get online and get found.',
-          '1 team member',
-          '10K API requests/mo',
-          '100 MB storage',
-          '1 AI generation/mo',
-        ],
-      },
-      {
-        tier: 'starter',
-        displayName: 'Starter',
-        price: 19,
-        priceFormatted: '$19',
-        currency: 'USD',
-        interval: 'month',
-        features: [
-          'For a growing solo store.',
-          '1 team member',
-          '10K API requests/mo',
-          '1 GB storage',
-          '5 AI generations/mo',
-          'Custom domain',
-        ],
-      },
-      {
-        tier: 'pro',
-        displayName: 'Pro',
-        price: 49,
-        priceFormatted: '$49',
-        currency: 'USD',
-        interval: 'month',
-        recommended: true,
-        features: [
-          'Switch growth to autopilot.',
-          '3 team members',
-          '100K API requests/mo',
-          '5 GB storage',
-          '10 AI generations/mo',
-          'CRM & E-commerce plugins',
-        ],
-      },
-      {
-        tier: 'business',
-        displayName: 'Business',
-        price: 99,
-        priceFormatted: '$99',
-        currency: 'USD',
-        interval: 'month',
-        features: [
-          'Scale with the whole stack.',
-          '5 team members',
-          '500K API requests/mo',
-          '25 GB storage',
-          '25 AI generations/mo',
-          'All plugins',
-          'Priority support',
-        ],
-      },
-    ],
-  },
-  plugins: [
-    {
-      id: 'chatbot',
-      name: 'AI Chatbot',
-      description:
-        'AI customer support with RAG knowledge base, product catalog awareness, live data queries, and conversation analytics.',
-      category: 'support',
-      pluginType: 'aapastech-service',
-      pricingModel: 'paid',
-      billingManagedBy: 'tyashin',
-      hasPaidTiers: true,
-      currency: 'USD',
-      symbol: '$',
-      recurringValue: null,
-      tiers: [
-        {
-          tier: 'free',
-          displayName: 'Free',
-          price: 0,
-          priceFormatted: 'Free',
-          currency: 'USD',
-          interval: 'month',
-          features: ['100 conversations/mo', 'FAQ auto-responses'],
-        },
-        {
-          tier: 'starter',
-          displayName: 'Starter',
-          price: 9,
-          priceFormatted: '$9',
-          currency: 'USD',
-          interval: 'month',
-          features: ['1,000 conversations/mo', 'Full RAG knowledge base'],
-        },
-        {
-          tier: 'pro',
-          displayName: 'Pro',
-          price: 29,
-          priceFormatted: '$29',
-          currency: 'USD',
-          interval: 'month',
-          recommended: true,
-          features: ['10,000 conversations/mo', 'Live order & stock queries', 'Custom personality'],
-        },
-        {
-          tier: 'business',
-          displayName: 'Business',
-          price: 99,
-          priceFormatted: '$99',
-          currency: 'USD',
-          interval: 'month',
-          features: ['50,000 conversations/mo', 'Human handoff', 'Multi-language'],
-        },
-      ],
-    },
-    {
-      id: 'seo-copilot',
-      name: 'SEO Co-Pilot',
-      description:
-        'Get discoverable on Google and ChatGPT — auto schema, meta fixes, daily audits, and ranking monitoring.',
-      category: 'marketing',
-      pluginType: 'aapastech-service',
-      pricingModel: 'paid',
-      billingManagedBy: 'tyashin',
-      hasPaidTiers: true,
-      currency: 'USD',
-      symbol: '$',
-      recurringValue: null,
-      tiers: [
-        {
-          tier: 'free',
-          displayName: 'Free',
-          price: 0,
-          priceFormatted: 'Free',
-          currency: 'USD',
-          interval: 'month',
-          features: ['Technical SEO foundations', 'Schema.org injection'],
-        },
-        {
-          tier: 'pro',
-          displayName: 'Pro',
-          price: 29,
-          priceFormatted: '$29',
-          currency: 'USD',
-          interval: 'month',
-          recommended: true,
-          features: ['AI FAQ schema', 'Ranking tracking', 'SEO Autopilot'],
-        },
-      ],
-    },
-    {
-      id: 'blog',
-      name: 'Blog / CMS',
-      description:
-        'Full blog with categories, tags, SEO — plus AI autonomous writing that publishes indexable posts every week.',
-      category: 'content',
-      pluginType: 'builtin',
-      pricingModel: 'included',
-      billingManagedBy: 'tyashin',
-      hasPaidTiers: true,
-      currency: 'USD',
-      symbol: '$',
-      recurringValue: null,
-      tiers: [
-        {
-          tier: 'free',
-          displayName: 'Free',
-          price: 0,
-          priceFormatted: 'Free',
-          currency: 'USD',
-          interval: 'month',
-          features: ['Full blog CMS', '2 AI draft posts/mo'],
-        },
-        {
-          tier: 'pro',
-          displayName: 'Pro',
-          price: 49,
-          priceFormatted: '$49',
-          currency: 'USD',
-          interval: 'month',
-          recommended: true,
-          features: ['20 AI posts/mo', 'Product-aware topics', 'IndexNow'],
-        },
-      ],
-    },
-    {
-      id: 'analytics',
-      name: 'YourOwnMetrics',
-      description:
-        'Privacy-first, cookieless analytics. Page views, sessions, and custom events — no third-party cookies.',
-      category: 'analytics',
-      pluginType: 'aapastech-service',
-      pricingModel: 'included',
-      billingManagedBy: 'tyashin',
-      hasPaidTiers: true,
-      currency: 'USD',
-      symbol: '$',
-      recurringValue: null,
-      tiers: [
-        {
-          tier: 'included',
-          displayName: 'Included',
-          price: 0,
-          priceFormatted: 'Free',
-          currency: 'USD',
-          interval: 'month',
-          features: ['50,000 page views/mo', '30-day retention'],
-        },
-        {
-          tier: 'pro',
-          displayName: 'Pro',
-          price: 19,
-          priceFormatted: '$19',
-          currency: 'USD',
-          interval: 'month',
-          recommended: true,
-          features: ['500,000 page views/mo', 'Custom events + funnels'],
-        },
-      ],
-    },
-    {
-      id: 'thridify',
-      name: 'Thridify 3D & AR',
-      description:
-        'Best-in-class 3D product viewing, 360° spin and app-free AR — let shoppers configure your products and place them in their space at true scale. Subscribe via Thridify; it connects to your Tyashin store in a click.',
-      category: 'experience',
-      pluginType: 'vendor-service',
-      pricingModel: 'paid',
-      billingManagedBy: 'thridify',
-      hasPaidTiers: false,
-      currency: 'USD',
-      symbol: '$',
-      recurringValue: null,
-      tiers: [],
-      link: 'https://thridify.com',
-    },
-  ],
-};
+/**
+ * Bundled USD snapshot, used only when the live API can't be reached. It is
+ * GENERATED from the live API (`npm run pricing:snapshot`) and the prebuild
+ * promise check fails the build when it drifts from the platform, so the
+ * offline page can never promise something the platform does not do.
+ */
+export const FALLBACK: AllPricing = snapshot as AllPricing;

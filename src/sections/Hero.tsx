@@ -89,7 +89,7 @@ export default function Hero() {
         </div>
 
         <p className="hero-in mt-6 text-xs text-white/50" style={{ animationDelay: '0.48s' }}>
-          No card required · Free plan forever · Multi-currency payments built in
+          No card required · Your first website build is free · Multi-currency payments built in
         </p>
       </motion.div>
 

@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/check-promises.mjs",
     "build": "next build",
     "start": "next start",
-    "deploy": "npx @opennextjs/cloudflare"
+    "deploy": "npx @opennextjs/cloudflare",
+    "pricing:snapshot": "node scripts/snapshot-pricing.mjs",
+    "check:promises": "node scripts/check-promises.mjs"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.20.13",

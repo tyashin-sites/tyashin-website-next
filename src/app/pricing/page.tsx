@@ -7,7 +7,7 @@ import CTA from "@/sections/CTA";
 export const metadata = pageMetadata({
   title: "Pricing — free to start, one subscription",
   description:
-    "Free to start, no card. One subscription replaces a dozen tools, billed in your currency via Razorpay (India) or Stripe. Every plugin has a free tier.",
+    "Free to start, no card, and your first website build is free. Paid plans add AI credits every month, billed in your currency via Razorpay (India) or Stripe.",
   path: "/pricing",
 });
 
