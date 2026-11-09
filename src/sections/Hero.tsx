@@ -5,6 +5,7 @@ import { useRef } from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import AuroraCanvas from '@/components/AuroraCanvas';
 import Button from '@/components/Button';
+import { SIGNUP_URL } from '@/lib/app-links';
 
 const headline = ['Your storefront,', 'now a self-growing', 'business.'];
 
@@ -79,7 +80,7 @@ export default function Hero() {
           className="hero-in mt-10 flex flex-wrap items-center justify-center gap-3"
           style={{ animationDelay: '0.38s' }}
         >
-          <Button href="https://admin.tyashin.com">
+          <Button href={SIGNUP_URL}>
             Start free <ArrowRight className="h-4 w-4" />
           </Button>
           <Button href="#demo" variant="ghost">

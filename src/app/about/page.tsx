@@ -1,6 +1,7 @@
 import { pageMetadata } from '@/lib/seo';
 import Reveal from '@/components/Reveal';
 import Button from '@/components/Button';
+import { SIGNUP_URL } from '@/lib/app-links';
 
 export const metadata = pageMetadata({
   title: 'About Tyashin',
@@ -70,7 +71,7 @@ export default function AboutPage() {
 
         <Reveal delay={0.15}>
           <div className="mt-14 flex flex-wrap items-center justify-center gap-4">
-            <Button href="https://admin.tyashin.com" className="px-6 py-3">
+            <Button href={SIGNUP_URL} className="px-6 py-3">
               Get started
             </Button>
             <a

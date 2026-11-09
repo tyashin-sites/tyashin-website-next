@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Magnetic from "./Magnetic";
 import Button from "./Button";
 import Wordmark from "./Wordmark";
+import { SIGNUP_URL } from '@/lib/app-links';
 
 const LINKS = [
   { label: "Platform", href: "/platform" },
@@ -75,7 +76,7 @@ export default function Nav() {
           >
             Sign in
           </a>
-          <Button href="https://admin.tyashin.com" className="px-5 py-2.5">
+          <Button href={SIGNUP_URL} className="px-5 py-2.5">
             Start free
           </Button>
         </div>

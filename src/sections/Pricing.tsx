@@ -6,15 +6,15 @@ import Button from '@/components/Button';
 import { cn } from '@/lib/utils';
 import { usePricing } from '@/lib/usePricing';
 import type { Tier } from '@/lib/pricing';
+import { SIGNUP_URL } from '@/lib/app-links';
 
 const CTA_LABEL: Record<string, string> = {
   free: 'Start free',
-  starter: 'Start 14-day trial',
-  pro: 'Start 14-day trial',
+  starter: 'Choose Starter',
+  pro: 'Choose Pro',
   business: 'Talk to us',
 };
 
-const SIGNUP_URL = 'https://admin.tyashin.com';
 const CONTACT_URL = '/contact';
 
 function ctaHrefFor(tier: string): string {
