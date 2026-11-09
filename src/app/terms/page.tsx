@@ -6,7 +6,7 @@ import LegalDoc from '@/components/LegalDoc';
 const base = pageMetadata({
   title: 'Terms of Service',
   description:
-    'The user agreement for Tyashin: who you contract with, the service, billing, rules for content you host, AI content, data processing, liability and governing law.',
+    'The user agreement for Tyashin: who you contract with, the service, billing, rules for content you host, AI content, data processing, website analytics, liability and governing law.',
   path: '/terms',
 });
 
@@ -25,7 +25,7 @@ export default function TermsPage() {
           <h1 className="mt-4 text-4xl font-semibold sm:text-5xl">
             Terms of <span className="text-gradient">Service</span>
           </h1>
-          <p className="mt-5 text-white/55">Last updated: 2 November 2026</p>
+          <p className="mt-5 text-white/55">Last updated: 3 November 2026</p>
           <p className="mt-2 text-white/55">
             <a
               href="/terms/hi"
@@ -192,6 +192,66 @@ export default function TermsPage() {
               processor. The <a href="/dpa">Tyashin Data Processing Addendum</a> forms part of
               these terms and applies to that data. If the addendum and these terms conflict
               about that data, the addendum applies.
+            </p>
+
+            <h3 id="website-analytics">Website analytics and your YOM account</h3>
+            <p>
+              Sites on Tyashin can include analytics from YOM (Your Own Metrics), an analytics
+              service run by our group. When we turn it on for your account, this is how it
+              works.
+            </p>
+            <ul>
+              <li>
+                <strong>Your YOM account.</strong> We open a YOM account in your business's name,
+                with a project for each of your sites, and run it for you. You authorise us to
+                do this. You see the reports inside Tyashin. You can claim the YOM account at any
+                time and use YOM directly, and when you do, YOM's{' '}
+                <a href="https://yom.aapastech.com/terms">Terms of Service</a> also apply to your
+                use of YOM. After claiming, you can remove our access in YOM under Settings,
+                Access. We then stop showing those reports in Tyashin.
+              </li>
+              <li>
+                <strong>Turning it off.</strong> You can turn analytics off for any site in its
+                plugin settings. We will not turn it back on unless you ask us to.
+              </li>
+              <li>
+                <strong>Your visitors' data.</strong> Analytics data about your visitors is Site
+                Data. It is yours, and the <a href="/dpa">Data Processing Addendum</a> applies to
+                it.
+              </li>
+              <li>
+                <strong>What we keep for ourselves.</strong> We keep a record of results on each
+                site: the number of leads, orders and chat conversations, and the value of
+                orders. It holds nothing that identifies your visitors. We use it to run, bill,
+                secure and improve Tyashin, and in combined statistics only as section 10
+                allows.
+              </li>
+              <li>
+                <strong>Consent.</strong> For visitors in India, the European Union, the United
+                Kingdom, Switzerland and Quebec, and anywhere we cannot tell, analytics does not
+                store anything on the visitor's device or give them an ID until they agree in
+                your site's cookie banner. These defaults help you, but they are not legal
+                advice. You are still responsible for your privacy notice and for any consent
+                the law requires, as section 14 of the Data Processing Addendum says.
+              </li>
+              <li>
+                <strong>The numbers are estimates.</strong> Ad blockers, browser settings and
+                visitors who refuse cookies mean some visits are never counted. Don't treat the
+                figures as exact, and don't rely on them alone for decisions about money, staff
+                or legal matters. Section 12 applies to analytics like the rest of the Service.
+              </li>
+              <li>
+                <strong>When you leave Tyashin.</strong> If you have not claimed the YOM account,
+                we keep it for 30 days after your Tyashin account ends so you can claim it or
+                export your data, and then delete it as section 11 of the Data Processing
+                Addendum says. If you have claimed it, it stays yours under YOM's terms, and
+                from then on YOM's own plans and fees apply to it.
+              </li>
+            </ul>
+            <p>
+              If your Tyashin account was opened before 3 November 2026, this part of section 9
+              applies to it 30 days after we email you about it, and never before 4 December
+              2026. We will not turn YOM analytics on for your sites before then.
             </p>
 
             <h2 id="aggregated-data">10. Aggregated and de-identified data</h2>
