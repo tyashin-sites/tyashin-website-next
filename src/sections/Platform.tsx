@@ -42,7 +42,7 @@ const ITEMS: Item[] = [
   {
     icon: ShoppingBag,
     title: 'Full e-commerce',
-    body: 'Products, variants, cart, checkout, orders, coupons, shipping zones, regional tax rules, returns, reviews, cash-on-delivery.',
+    body: 'Products, variants, cart, checkout, orders, coupons, shipping zones, regional tax rules, returns, reviews, cash-on-delivery. Not selling yet? Your shop still goes live, with a launch list where the prices will be.',
   },
   {
     icon: Users,
