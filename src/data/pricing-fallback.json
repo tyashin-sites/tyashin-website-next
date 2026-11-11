@@ -9,10 +9,26 @@
       "sites": 1,
       "seats": 1,
       "typicalMonth": [
-        { "op": "blog_post", "label": "blog post", "count": 1 },
-        { "op": "chatbot_reply", "label": "chatbot replies", "count": 15 }
+        {
+          "op": "blog.post",
+          "label": "AI blog post with cover image",
+          "count": 1
+        },
+        {
+          "op": "chatbot.reply",
+          "label": "Chatbot reply",
+          "count": 15
+        }
       ],
-      "featureLines": ["See your site live before you pay anything."]
+      "featureLines": [
+        "5,000 visits a month",
+        "300 AI credits a month",
+        "1 site",
+        "1 team seat",
+        "Every feature included",
+        "Connect your own domain",
+        "Your first website build, free"
+      ]
     },
     {
       "plan": "starter",
@@ -22,12 +38,36 @@
       "sites": 2,
       "seats": 3,
       "typicalMonth": [
-        { "op": "blog_post", "label": "blog posts", "count": 4 },
-        { "op": "chatbot_reply", "label": "chatbot replies", "count": 100 },
-        { "op": "seo_research", "label": "SEO research runs", "count": 2 },
-        { "op": "ai_image", "label": "images", "count": 4 }
+        {
+          "op": "blog.post",
+          "label": "AI blog post with cover image",
+          "count": 4
+        },
+        {
+          "op": "chatbot.reply",
+          "label": "Chatbot reply",
+          "count": 100
+        },
+        {
+          "op": "seo.research",
+          "label": "SEO research run",
+          "count": 2
+        },
+        {
+          "op": "image.generate",
+          "label": "AI image",
+          "count": 4
+        }
       ],
-      "featureLines": ["For a small business getting found."]
+      "featureLines": [
+        "25,000 visits a month",
+        "2,000 AI credits a month",
+        "2 sites",
+        "3 team seats",
+        "Every feature included",
+        "Connect your own domain",
+        "Change your site by describing what you want"
+      ]
     },
     {
       "plan": "pro",
@@ -37,13 +77,41 @@
       "sites": 5,
       "seats": 10,
       "typicalMonth": [
-        { "op": "blog_post", "label": "blog posts", "count": 8 },
-        { "op": "chatbot_reply", "label": "chatbot replies", "count": 250 },
-        { "op": "seo_research", "label": "SEO research runs", "count": 4 },
-        { "op": "site_edit", "label": "site edits", "count": 2 },
-        { "op": "ai_image", "label": "images", "count": 5 }
+        {
+          "op": "blog.post",
+          "label": "AI blog post with cover image",
+          "count": 8
+        },
+        {
+          "op": "chatbot.reply",
+          "label": "Chatbot reply",
+          "count": 250
+        },
+        {
+          "op": "seo.research",
+          "label": "SEO research run",
+          "count": 4
+        },
+        {
+          "op": "studio.edit",
+          "label": "Site edit",
+          "count": 2
+        },
+        {
+          "op": "image.generate",
+          "label": "AI image",
+          "count": 5
+        }
       ],
-      "featureLines": ["For a business growing on content and chat."]
+      "featureLines": [
+        "100,000 visits a month",
+        "5,000 AI credits a month",
+        "5 sites",
+        "10 team seats",
+        "Every feature included",
+        "Connect your own domain",
+        "Change your site by describing what you want"
+      ]
     },
     {
       "plan": "business",
@@ -53,35 +121,112 @@
       "sites": 20,
       "seats": 25,
       "typicalMonth": [
-        { "op": "blog_post", "label": "blog posts", "count": 12 },
-        { "op": "chatbot_reply", "label": "chatbot replies", "count": 500 },
-        { "op": "seo_research", "label": "SEO research runs", "count": 8 },
-        { "op": "site_edit", "label": "site edits", "count": 4 },
-        { "op": "ai_image", "label": "images", "count": 28 }
+        {
+          "op": "blog.post",
+          "label": "AI blog post with cover image",
+          "count": 12
+        },
+        {
+          "op": "chatbot.reply",
+          "label": "Chatbot reply",
+          "count": 500
+        },
+        {
+          "op": "seo.research",
+          "label": "SEO research run",
+          "count": 8
+        },
+        {
+          "op": "studio.edit",
+          "label": "Site edit",
+          "count": 4
+        },
+        {
+          "op": "image.generate",
+          "label": "AI image",
+          "count": 28
+        }
       ],
-      "featureLines": ["For busy sites and several brands."]
+      "featureLines": [
+        "500,000 visits a month",
+        "10,000 AI credits a month",
+        "20 sites",
+        "25 team seats",
+        "Every feature included",
+        "Connect your own domain",
+        "Change your site by describing what you want"
+      ]
     }
   ],
   "prices": {
-    "USD": { "starter": 19, "pro": 49, "business": 99, "topup": 10 },
-    "INR": { "starter": 1499, "pro": 3999, "business": 7999, "topup": 799 },
-    "EUR": { "starter": 18, "pro": 47, "business": 94, "topup": 9.5 },
-    "GBP": { "starter": 16, "pro": 41, "business": 82, "topup": 8.5 },
-    "CAD": { "starter": 28, "pro": 72, "business": 144, "topup": 14.5 },
-    "JPY": { "starter": 3000, "pro": 7800, "business": 15600, "topup": 1600 },
-    "AUD": { "starter": 31, "pro": 79, "business": 159, "topup": 16 },
-    "SGD": { "starter": 27, "pro": 68, "business": 138, "topup": 14 },
-    "AED": { "starter": 74, "pro": 189, "business": 382, "topup": 39 }
+    "USD": {
+      "topup": 10,
+      "starter": 19,
+      "pro": 49,
+      "business": 99
+    },
+    "INR": {
+      "topup": 799,
+      "starter": 1499,
+      "pro": 3999,
+      "business": 7999
+    },
+    "EUR": {
+      "topup": 9.5,
+      "starter": 18,
+      "pro": 47,
+      "business": 94
+    },
+    "GBP": {
+      "topup": 8.5,
+      "starter": 16,
+      "pro": 41,
+      "business": 82
+    },
+    "CAD": {
+      "topup": 14.5,
+      "starter": 28,
+      "pro": 72,
+      "business": 144
+    },
+    "JPY": {
+      "topup": 1600,
+      "starter": 3000,
+      "pro": 7800,
+      "business": 15600
+    },
+    "AUD": {
+      "topup": 16,
+      "starter": 31,
+      "pro": 79,
+      "business": 159
+    },
+    "SGD": {
+      "topup": 14,
+      "starter": 27,
+      "pro": 68,
+      "business": 138
+    },
+    "AED": {
+      "topup": 39,
+      "starter": 74,
+      "pro": 189,
+      "business": 382
+    }
   },
-  "topup": { "credits": 1000, "maxUnits": 0, "validityMonths": 12 },
+  "topup": {
+    "credits": 1000,
+    "maxUnits": 100,
+    "validityMonths": 12
+  },
   "included": [
-    "Hosting",
+    "Site hosting and serving",
     "SSL certificate",
     "Custom domain",
     "Sitemap",
-    "llms.txt",
-    "Schema markup",
-    "Forms",
+    "llms.txt for AI search",
+    "Schema markup (JSON-LD)",
+    "Forms and lead inbox",
     "CRM",
     "Online store",
     "Newsletter",
@@ -90,11 +235,33 @@
     "SEO audits (non-AI)"
   ],
   "creditExamples": [
-    { "op": "chatbot_reply", "label": "Chatbot reply", "credits": 9 },
-    { "op": "ai_image", "label": "AI image", "credits": 40 },
-    { "op": "seo_research", "label": "SEO research run", "credits": 140 },
-    { "op": "blog_post", "label": "AI blog post with cover image", "credits": 165 },
-    { "op": "site_edit", "label": "Site edit by the AI", "credits": 320 }
+    {
+      "op": "chatbot.reply",
+      "label": "Chatbot reply",
+      "credits": 9
+    },
+    {
+      "op": "blog.post",
+      "label": "AI blog post with cover image",
+      "credits": 165
+    },
+    {
+      "op": "image.generate",
+      "label": "AI image",
+      "credits": 40
+    },
+    {
+      "op": "seo.research",
+      "label": "SEO research run",
+      "credits": 140
+    },
+    {
+      "op": "studio.edit",
+      "label": "Site edit",
+      "credits": 320
+    }
   ],
-  "enterprise": { "contactUrl": "/contact" }
+  "enterprise": {
+    "contactUrl": "https://tyashin.com/contact"
+  }
 }

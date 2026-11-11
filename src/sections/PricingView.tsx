@@ -24,6 +24,22 @@ const APPROX_OPS = new Set(['site_edit']);
 const MAX_PER_ROW = 100_000;
 
 /** Only same-site paths and https links are followed from the payload. */
+/** Reads "15 chatbot replies", not the API's singular label "15 Chatbot reply". */
+const TYPICAL_PHRASES: Record<string, [string, string]> = {
+  'chatbot.reply': ['chatbot reply', 'chatbot replies'],
+  'blog.post': ['AI blog post', 'AI blog posts'],
+  'image.generate': ['AI image', 'AI images'],
+  'seo.research': ['SEO research run', 'SEO research runs'],
+  'studio.edit': ['site edit', 'site edits'],
+};
+
+function typicalPhrase(op: string, label: string, count: number): string {
+  const known = TYPICAL_PHRASES[op];
+  if (known) return count === 1 ? known[0] : known[1];
+  const lower = label.charAt(0).toLowerCase() + label.slice(1);
+  return count === 1 ? lower : `${lower}s`;
+}
+
 function safeHref(url: string): string {
   return /^\/(?!\/)/.test(url) || /^https:\/\//i.test(url) ? url : '/contact';
 }
@@ -136,7 +152,9 @@ export default function PricingView({ initial }: { initial: InitialPricing }) {
 
 function PlanCard({ plan, price }: { plan: PlanV2; price: string }) {
   const highlight = plan.plan === HIGHLIGHT_PLAN;
-  const typical = plan.typicalMonth.map((t) => `${formatNumber(t.count)} ${t.label}`).join(', ');
+  const typical = plan.typicalMonth
+    .map((t) => `${formatNumber(t.count)} ${typicalPhrase(t.op, t.label, t.count)}`)
+    .join(', ');
 
   return (
     <div
