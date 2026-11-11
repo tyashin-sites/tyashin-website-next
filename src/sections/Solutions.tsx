@@ -51,10 +51,10 @@ const SOLUTIONS = [
     label: 'Agencies',
     icon: Building2,
     headline: 'Run many client sites from one workspace.',
-    body: 'Multi-project workspace with role-based access, per-plan feature gating, and white-labelable platform pages. One place, many brands.',
+    body: 'Multi-project workspace with role-based access, every feature on every plan, and white-labelable platform pages. One place, many brands.',
     points: [
       'Owner / admin / editor / viewer roles',
-      'Per-project isolation & billing',
+      'Per-project isolation, one subscription',
       'Customer-owned GitHub repos',
       'White-label platform pages',
     ],

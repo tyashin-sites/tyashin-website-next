@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tyashin — AI growth & commerce OS",
     description:
-      "Make your storefront a self-growing business. AI chatbot, SEO autopilot, global payments, plugin marketplace — on the edge.",
+      "Make your storefront a self-growing business. AI chatbot, SEO autopilot and global payments, with every feature on every plan.",
     type: "website",
     url: SITE_URL,
     siteName: "Tyashin",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Tyashin — AI growth & commerce OS",
     description:
-      "Make your storefront a self-growing business. AI chatbot, SEO autopilot, global payments, plugin marketplace — on the edge.",
+      "Make your storefront a self-growing business. AI chatbot, SEO autopilot and global payments, with every feature on every plan.",
     images: [OG_IMAGE.url],
   },
   icons: { icon: "/favicon.svg" },

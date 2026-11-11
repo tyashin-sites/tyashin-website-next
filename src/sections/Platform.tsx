@@ -92,7 +92,7 @@ const ITEMS: Item[] = [
   {
     icon: UsersRound,
     title: 'Teams & roles',
-    body: 'Owner / admin / editor / viewer access, email invites, and feature gating enforced server-side.',
+    body: 'Owner / admin / editor / viewer access, email invites, and access enforced server-side.',
   },
   {
     icon: Code2,

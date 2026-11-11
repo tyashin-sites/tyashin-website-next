@@ -16,7 +16,7 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
       { label: 'SEO Autopilot', href: '/platform' },
       { label: 'Auto-Blogging', href: '/platform' },
       { label: 'Payments', href: '/platform' },
-      { label: 'Plugins', href: '/platform' },
+      { label: 'All features', href: '/platform' },
     ],
   },
   {

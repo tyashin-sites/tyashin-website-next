@@ -1,6 +1,26 @@
 import type { FaqItem } from '@/sections/FAQ';
+import { fallbackPricing, formatMoney, formatNumber as fmt, type PlanV2 } from './pricing';
 
 export type FaqGroup = { title: string; items: FaqItem[] };
+
+/**
+ * The pricing answers quote numbers. They are read from the checked-in pricing
+ * (src/data/pricing-fallback.json), the same file the prebuild parity check
+ * compares with the platform, so this copy cannot drift from the price cards.
+ * Money is quoted in USD here because this text also feeds the FAQPage JSON-LD.
+ */
+const USD = fallbackPricing('USD');
+const TOPUP = USD.topup;
+const FREE = USD.plans[0];
+const APPROX_OPS = new Set(['site_edit']);
+/** Lower-case the first letter for mid-sentence use, leaving acronyms (AI, SEO, SSL, CRM) alone. */
+const lower = (s: string) => (/^[A-Z]{2}/.test(s) ? s : s.charAt(0).toLowerCase() + s.slice(1));
+const listPlans = (value: (p: PlanV2) => string) =>
+  USD.plans.map((p) => `${p.name} ${value(p)}`).join(', ');
+const CREDIT_COSTS = USD.creditExamples
+  .map((c) => `${lower(c.label)} (${APPROX_OPS.has(c.op) ? 'about ' : ''}${fmt(c.credits)})`)
+  .join(', ');
+const INCLUDED = USD.included.map(lower).join(', ');
 
 /**
  * Full FAQ used by /faq. Single source of truth — the page renders these
@@ -51,15 +71,47 @@ export const FAQ_GROUPS: FaqGroup[] = [
     items: [
       {
         q: 'How does pricing work?',
-        a: 'You pay a plan for the platform itself, and power features are available as separate add-ons so you only pay for what you switch on. Current plans and numbers are on the pricing page.',
+        a: `One subscription per business, sized by your traffic. Every feature is on every plan, so there is nothing to buy feature by feature. AI work is paid in credits, and each plan includes credits every month. You only need two numbers to choose: visits a month (${listPlans((p) => fmt(p.visitsPerMonth))}) and credits a month (${listPlans((p) => fmt(p.creditsPerMonth))}). Enterprise is quoted. Prices are on the pricing page in your currency.`,
       },
       {
-        q: 'Is there a free tier?',
-        a: "Yes. The Free plan costs nothing, and your first website build is free once you confirm your email, so you see your site before you pay anything. To keep changing it by describing what you want, pick a paid plan; each one adds AI credits every month. The power plugins (AI chatbot, SEO Co-Pilot, auto-blogging and analytics) have free tiers too, so you can try them first.",
+        q: 'What is a credit?',
+        a: `A credit is the unit that pays for work done by AI. Each plan comes with a monthly allowance, and each AI action takes a set number of credits from it: ${CREDIT_COSTS}. Credits are one pool, so you can spend them on any mix of these.`,
+      },
+      {
+        q: 'What uses credits, and what never does?',
+        a: `Only AI work uses credits: chatbot replies, AI blog posts, AI images, SEO research runs and site edits made by the AI. These never use credits, on any plan: ${INCLUDED}.`,
+      },
+      {
+        q: 'Do unused credits carry over?',
+        a: `The monthly allowance does not. It expires at the end of each billing month and a fresh allowance starts. Top-up credits are different: they stay valid for ${TOPUP.validityMonths} months from the day you buy them.`,
+      },
+      {
+        q: 'What is a top-up?',
+        a: `A top-up is ${fmt(TOPUP.credits)} extra credits for ${formatMoney(TOPUP.price, USD.currency)} (US dollars; the pricing page shows it in your currency). You can buy as many as you need, and they are valid for ${TOPUP.validityMonths} months. Your monthly allowance is always spent first, so top-up credits are only touched when the allowance runs out.`,
+      },
+      {
+        q: 'What happens when I run out of credits?',
+        a: 'AI features pause until your next monthly allowance arrives or you buy a top-up. Your site stays up, and everything that does not use credits keeps working: the store, forms, CRM, newsletter and analytics. The chatbot stops answering with AI and offers visitors your contact form instead, so you do not lose the enquiry.',
+      },
+      {
+        q: 'What happens if I go over my traffic limit?',
+        a: 'Nothing breaks. Traffic is a soft limit, and we never take a site down for traffic. If you keep going over month after month, we will ask you to move to the plan that fits.',
+      },
+      {
+        q: 'Is the first build free?',
+        a: "Yes. A new site's first build is free and does not use credits, so you see your site before you pay anything.",
+      },
+      {
+        q: 'Is there a free plan?',
+        a: `Yes. The Free plan costs nothing and needs no card. It includes ${fmt(FREE.visitsPerMonth)} visits and ${fmt(FREE.creditsPerMonth)} credits a month, ${FREE.sites} site and ${FREE.seats} seat, with the same features as the paid plans.`,
+      },
+      {
+        q: 'Can I change plan?',
+        a: 'Yes, at any time, from your billing settings. If your traffic or your AI use grows, move up. If it drops, move down.',
       },
       {
         q: 'Which currency will I be billed in?',
-        a: "Currency is detected from your shopper's location and locked to their order. Payments route to the gateway that serves that market — Stripe for cards and wallets, Razorpay where local rails like UPI and cash on delivery matter.",
+        a: 'We set prices in nine currencies: INR, USD, EUR, GBP, CAD, JPY, AUD, SGD and AED. Your billing currency is fixed when you sign up. Taxes such as GST or VAT are added at checkout. Payments go through Razorpay in India and Stripe elsewhere.',
       },
       {
         q: 'Can I cancel any time?',

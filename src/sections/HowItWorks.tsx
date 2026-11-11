@@ -15,13 +15,13 @@ const STEPS = [
     n: '02',
     icon: Palette,
     title: 'Brand it once',
-    body: 'Drop in colors, logo, and fonts. Your brand kit flows into checkout, emails, the chatbot, and every plugin surface automatically.',
+    body: 'Drop in colors, logo, and fonts. Your brand kit flows into checkout, emails, the chatbot, and every page your customers see.',
   },
   {
     n: '03',
     icon: TrendingUp,
     title: 'Switch on growth',
-    body: 'Flip on the AI chatbot, SEO autopilot, and auto-blogging. Opt-in, plan-gated, and working while you sleep.',
+    body: 'Turn on the AI chatbot, SEO research and AI blog posts. They are on every plan, opt-in, and paid from your monthly credits.',
   },
   {
     n: '04',

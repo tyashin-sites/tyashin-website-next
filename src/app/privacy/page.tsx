@@ -92,7 +92,7 @@ export default function PrivacyPage() {
               contact you about it.
             </p>
             <p>
-              <strong>Billing.</strong> If you buy a plan or an add-on, we keep your billing
+              <strong>Billing.</strong> If you buy a plan or a credit top-up, we keep your billing
               details, the products you bought, your invoices and your payment records. You
               enter card or bank details with Razorpay or Stripe, not with us; they tell us
               whether a payment succeeded and give us a reference for it. We use this data to

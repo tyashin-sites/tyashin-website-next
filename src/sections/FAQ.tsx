@@ -26,8 +26,8 @@ export const FAQS: FaqItem[] = [
     a: "Currency is detected from your shopper's location and locked to their order. Payments route to the gateway that serves that market — Stripe for cards and wallets, Razorpay where UPI, cash-on-delivery and local tax rules matter. You don't wire anything up.",
   },
   {
-    q: "What's included vs. paid?",
-    a: 'Your plan includes the storefront, e-commerce, newsletter, contact forms and consent. Power plugins — AI chatbot, SEO Co-Pilot, auto-blogging and advanced analytics — are billed separately, with a free tier on each.',
+    q: "What's included, and what uses credits?",
+    a: 'Every feature is on every plan. Hosting, your domain, the store, CRM, forms, newsletter and analytics are included and never use credits. AI work (chatbot replies, AI blog posts, AI images, SEO research and site edits made by the AI) is paid from the credits your plan includes each month.',
   },
   {
     q: 'Is it really fast and private?',
@@ -90,7 +90,7 @@ export function FaqAccordion({
   );
 }
 
-export default function FAQ() {
+export default function FAQ({ items = FAQS }: { items?: FaqItem[] }) {
   return (
     <section id="faq" className="relative py-28">
       <div className="mx-auto max-w-3xl px-6">
@@ -107,7 +107,7 @@ export default function FAQ() {
         </Reveal>
 
         <div className="mt-12">
-          <FaqAccordion items={FAQS} defaultOpen={0} />
+          <FaqAccordion items={items} defaultOpen={0} />
         </div>
       </div>
     </section>

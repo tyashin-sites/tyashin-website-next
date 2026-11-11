@@ -97,7 +97,7 @@ export default function ChatShowcase() {
                 'Real-time stock & order lookups',
                 'Multi-currency, EMI-aware answers',
                 'Auto-trained from your own content',
-                'Metered & billed per plan, brand-aware',
+                'On every plan, paid in credits',
               ].map((b) => (
                 <li key={b} className="flex items-center gap-3">
                   <span className="bg-accent-gradient text-ink inline-flex h-5 w-5 items-center justify-center rounded-full">

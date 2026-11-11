@@ -70,8 +70,8 @@ const AT_A_GLANCE = [
   },
   {
     dim: 'AI features',
-    usual: 'Third-party add-ons, priced and managed separately',
-    tyashin: 'Chatbot, SEO Co-Pilot and auto-blogging built in, each with a free tier',
+    usual: 'Separate tools, each with its own price and login',
+    tyashin: 'Chatbot, SEO research and AI blog posts on every plan, paid from one monthly credit allowance',
   },
   {
     dim: 'Making everyday changes',
