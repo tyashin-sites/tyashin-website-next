@@ -25,7 +25,7 @@ export default function TermsPage() {
           <h1 className="mt-4 text-4xl font-semibold sm:text-5xl">
             Terms of <span className="text-gradient">Service</span>
           </h1>
-          <p className="mt-5 text-white/55">Last updated: 3 November 2026</p>
+          <p className="mt-5 text-white/55">Last updated: 11 November 2026</p>
           <p className="mt-2 text-white/55">
             <a
               href="/terms/hi"
@@ -92,12 +92,66 @@ export default function TermsPage() {
               an account.
             </p>
 
-            <h2 id="billing">4. Plans, billing and renewals</h2>
+            <h2 id="billing">4. Plans, credits, billing and renewals</h2>
             <p>
-              Paid plans and add-ons are billed in advance on a recurring basis via our
-              payment gateways. Subscriptions renew automatically until cancelled. Fees are
-              non-refundable except where required by law or expressly stated. You can view
-              your invoices and payment method in your account billing settings.
+              <strong>Plans.</strong> You subscribe to one plan per business. A plan sets how
+              much traffic (visits) and how many credits are included each month, and how many
+              sites and team seats you can have. Every feature of the Service is available on
+              every plan. Current plans and prices are on our{' '}
+              <a href="/pricing">pricing page</a>. Paid plans are billed in advance for each
+              billing month through our payment gateways and renew automatically until you
+              cancel. You can cancel or change your plan in your account billing settings,
+              where you can also see your invoices and payment method.
+            </p>
+            <p>
+              <strong>Credits.</strong> Work done by AI (for example a chatbot reply, an
+              AI-written blog post, an AI image, an SEO research run or a site edit made by
+              the AI) is paid for in credits. A credit is a prepaid unit that can only be used
+              inside the Service. Credits are not money. They have no cash value, cannot be
+              refunded or exchanged for cash, and cannot be sold or transferred to another
+              person or account, except where the law gives you a right that we cannot
+              exclude.
+            </p>
+            <p>
+              <strong>Monthly allowance.</strong> Each plan includes a credit allowance for
+              each billing month. Any part of the allowance you do not use expires at the end
+              of that billing month and does not carry over.
+            </p>
+            <p>
+              <strong>Top-ups.</strong> You can buy extra credits as top-ups. Top-up credits
+              are valid for 12 months from the date of purchase and expire after that. Your
+              monthly allowance is always used before your top-up credits.
+            </p>
+            <p>
+              <strong>Credit costs.</strong> The number of credits each action uses is shown
+              on the pricing page. We may change these costs. When we do, we will give notice
+              of the change on the pricing page before it takes effect. A change does not
+              affect credits you have already spent.
+            </p>
+            <p>
+              <strong>When credits run out.</strong> AI features pause until your next
+              monthly allowance starts or you buy a top-up. Your site stays online, and the
+              features that do not use credits keep working.
+            </p>
+            <p>
+              <strong>Traffic.</strong> The traffic allowance is a soft limit. We do not take
+              a site offline for going over it. If your traffic is persistently above your
+              plan's allowance, you must move to a plan that covers it. We will tell you
+              first and give you reasonable time to change.
+            </p>
+            <p>
+              <strong>Regional prices and currency.</strong> We set prices separately for
+              each currency we bill in. They are not conversions of one another at an
+              exchange rate. Your billing currency is fixed when you sign up and stays the
+              same for that account.
+            </p>
+            <p>
+              <strong>Taxes.</strong> Prices do not include taxes. GST, VAT and similar taxes
+              that apply are added at checkout and shown on your invoice.
+            </p>
+            <p>
+              <strong>Refunds.</strong> Fees, including fees for top-ups, are non-refundable
+              except where the law requires a refund or we expressly say otherwise.
             </p>
             <p>
               Each company bills and collects payment from its own customers: Aapastech Private
