@@ -8,9 +8,13 @@ Cloudflare Workers via OpenNext.
 
 - Animation-rich, dark, edge-rendered marketing site (framer-motion + Lenis + a canvas
   constellation hero + custom magnetic cursor).
-- **Pricing is live, not hardcoded** — fetched from the platform's single pricing getter at
-  `GET /api/v1/billing/all-pricing`, localised to the visitor's currency (geo → USD fallback),
-  with a bundled snapshot so the page never breaks.
+- **Pricing comes from the platform** — one plan per business, sized by traffic, every feature
+  included, AI work paid in credits. Fetched server-side from the platform's pricing getter
+  (`GET /api/v1/billing/all-pricing`, payload `version: 2`) in the visitor's currency
+  (Cloudflare country → currency, USD when unknown). `src/data/pricing-fallback.json` holds the
+  same numbers for all nine currencies and is used whenever the API fails or answers with
+  anything other than version 2. `npm run check:promises` (prebuild) compares the two;
+  `npm run pricing:snapshot` regenerates the fallback from the live API.
 - Pages: `/` (single-scroll overview), `/platform`, `/solutions`, `/pricing`.
 
 ## Develop

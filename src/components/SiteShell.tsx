@@ -3,7 +3,6 @@
 import { type ReactNode } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useLenis } from "@/lib/useLenis";
-import { PricingProvider } from "@/lib/usePricing";
 import Cursor from "@/components/Cursor";
 import Nav from "@/components/Nav";
 import Footer from "@/sections/Footer";
@@ -19,7 +18,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
   });
 
   return (
-    <PricingProvider>
+    <>
       <Cursor />
       <div className="grain" />
       <motion.div
@@ -33,6 +32,6 @@ export default function SiteShell({ children }: { children: ReactNode }) {
           container, so it leaves the sticky scroll-pin sections intact. */}
       <main className="relative overflow-x-clip">{children}</main>
       <Footer />
-    </PricingProvider>
+    </>
   );
 }

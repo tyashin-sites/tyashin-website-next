@@ -1,0 +1,100 @@
+{
+  "version": 2,
+  "plans": [
+    {
+      "plan": "free",
+      "name": "Free",
+      "visitsPerMonth": 5000,
+      "creditsPerMonth": 300,
+      "sites": 1,
+      "seats": 1,
+      "typicalMonth": [
+        { "op": "blog_post", "label": "blog post", "count": 1 },
+        { "op": "chatbot_reply", "label": "chatbot replies", "count": 15 }
+      ],
+      "featureLines": ["See your site live before you pay anything."]
+    },
+    {
+      "plan": "starter",
+      "name": "Starter",
+      "visitsPerMonth": 25000,
+      "creditsPerMonth": 2000,
+      "sites": 2,
+      "seats": 3,
+      "typicalMonth": [
+        { "op": "blog_post", "label": "blog posts", "count": 4 },
+        { "op": "chatbot_reply", "label": "chatbot replies", "count": 100 },
+        { "op": "seo_research", "label": "SEO research runs", "count": 2 },
+        { "op": "ai_image", "label": "images", "count": 4 }
+      ],
+      "featureLines": ["For a small business getting found."]
+    },
+    {
+      "plan": "pro",
+      "name": "Pro",
+      "visitsPerMonth": 100000,
+      "creditsPerMonth": 5000,
+      "sites": 5,
+      "seats": 10,
+      "typicalMonth": [
+        { "op": "blog_post", "label": "blog posts", "count": 8 },
+        { "op": "chatbot_reply", "label": "chatbot replies", "count": 250 },
+        { "op": "seo_research", "label": "SEO research runs", "count": 4 },
+        { "op": "site_edit", "label": "site edits", "count": 2 },
+        { "op": "ai_image", "label": "images", "count": 5 }
+      ],
+      "featureLines": ["For a business growing on content and chat."]
+    },
+    {
+      "plan": "business",
+      "name": "Business",
+      "visitsPerMonth": 500000,
+      "creditsPerMonth": 10000,
+      "sites": 20,
+      "seats": 25,
+      "typicalMonth": [
+        { "op": "blog_post", "label": "blog posts", "count": 12 },
+        { "op": "chatbot_reply", "label": "chatbot replies", "count": 500 },
+        { "op": "seo_research", "label": "SEO research runs", "count": 8 },
+        { "op": "site_edit", "label": "site edits", "count": 4 },
+        { "op": "ai_image", "label": "images", "count": 28 }
+      ],
+      "featureLines": ["For busy sites and several brands."]
+    }
+  ],
+  "prices": {
+    "USD": { "starter": 19, "pro": 49, "business": 99, "topup": 10 },
+    "INR": { "starter": 1499, "pro": 3999, "business": 7999, "topup": 799 },
+    "EUR": { "starter": 18, "pro": 47, "business": 94, "topup": 9.5 },
+    "GBP": { "starter": 16, "pro": 41, "business": 82, "topup": 8.5 },
+    "CAD": { "starter": 28, "pro": 72, "business": 144, "topup": 14.5 },
+    "JPY": { "starter": 3000, "pro": 7800, "business": 15600, "topup": 1600 },
+    "AUD": { "starter": 31, "pro": 79, "business": 159, "topup": 16 },
+    "SGD": { "starter": 27, "pro": 68, "business": 138, "topup": 14 },
+    "AED": { "starter": 74, "pro": 189, "business": 382, "topup": 39 }
+  },
+  "topup": { "credits": 1000, "maxUnits": 0, "validityMonths": 12 },
+  "included": [
+    "Hosting",
+    "SSL certificate",
+    "Custom domain",
+    "Sitemap",
+    "llms.txt",
+    "Schema markup",
+    "Forms",
+    "CRM",
+    "Online store",
+    "Newsletter",
+    "Analytics",
+    "Image optimization",
+    "SEO audits (non-AI)"
+  ],
+  "creditExamples": [
+    { "op": "chatbot_reply", "label": "Chatbot reply", "credits": 9 },
+    { "op": "ai_image", "label": "AI image", "credits": 40 },
+    { "op": "seo_research", "label": "SEO research run", "credits": 140 },
+    { "op": "blog_post", "label": "AI blog post with cover image", "credits": 165 },
+    { "op": "site_edit", "label": "Site edit by the AI", "credits": 320 }
+  ],
+  "enterprise": { "contactUrl": "/contact" }
+}

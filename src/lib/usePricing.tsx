@@ -1,47 +1,31 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
-import { fetchAllPricing, FALLBACK, type AllPricing } from './pricing';
-
-interface PricingState {
-  data: AllPricing;
-  live: boolean;
-  loading: boolean;
-}
-
-const PricingContext = createContext<PricingState | null>(null);
+import { useEffect, useState } from 'react';
+import { fetchAllPricing, type PricingResult } from './pricing';
+import type { InitialPricing } from './pricing-server';
 
 /**
- * Fetches pricing ONCE, localised to the visitor's currency. Currency is
- * resolved entirely server-side from the Cloudflare geo header (visitor's
- * country → currency, USD fallback) by the platform's getAllPricing business
- * logic — there is intentionally no client-side currency override.
+ * Pricing for the page. It starts from what the server already rendered
+ * (fetched server-side in the visitor's currency), so there is no loading
+ * state and no currency flash.
+ *
+ * Only when the server could not tell the visitor's country does the browser
+ * ask the pricing API once: called from the browser, the API geo-detects the
+ * visitor itself. A fallback answer never replaces what is on screen.
  */
-export function PricingProvider({ children }: { children: ReactNode }) {
-  const [data, setData] = useState<AllPricing>(FALLBACK);
-  const [live, setLive] = useState(false);
-  const [loading, setLoading] = useState(true);
+export function usePricing(initial: InitialPricing): PricingResult {
+  const [state, setState] = useState<PricingResult>({ data: initial.data, live: initial.live });
 
   useEffect(() => {
+    if (initial.geoResolved) return;
     let cancelled = false;
     fetchAllPricing().then((res) => {
-      if (cancelled) return;
-      setData(res.data);
-      setLive(res.live);
-      setLoading(false);
+      if (!cancelled && res.live) setState(res);
     });
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [initial.geoResolved]);
 
-  return (
-    <PricingContext.Provider value={{ data, live, loading }}>{children}</PricingContext.Provider>
-  );
-}
-
-export function usePricing(): PricingState {
-  const ctx = useContext(PricingContext);
-  if (!ctx) throw new Error('usePricing must be used within PricingProvider');
-  return ctx;
+  return state;
 }

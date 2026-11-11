@@ -4,7 +4,7 @@
   "framework": "nextjs",
   "kind": "marketing-site",
   "pages": ["/", "/platform", "/solutions", "/pricing"],
-  "notes": "Tyashin's own marketing website. Pricing is fetched live from the public /api/v1/billing/all-pricing getter — never hardcoded.",
+  "notes": "Tyashin's own marketing website. Pricing is fetched server-side from the public /api/v1/billing/all-pricing getter (version 2), with src/data/pricing-fallback.json as the checked-in fallback.",
   "tyashinOwnedRoutes": [
     "/brand-kit.css",
     "/tyashin-runtime.js",
